@@ -1,0 +1,15 @@
+module pipe_drawer(clk, reset, done, pipe_x, pipe_y, x, y);
+	
+	input logic clk, reset;
+	input logic [10:0] pipe_x, pipe_y;
+	
+	output logic done;
+	output logic [10:0] x, y;
+	
+	
+
+
+
+
+
+endmodule // pipe_drawer

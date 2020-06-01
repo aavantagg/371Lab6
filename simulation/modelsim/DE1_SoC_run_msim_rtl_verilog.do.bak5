@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab1/Lab1 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab1/Lab1/car_counter.sv}
+
