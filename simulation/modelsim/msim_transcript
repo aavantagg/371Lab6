@@ -11,207 +11,158 @@
 # Copying C:/intelFPGA/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/Lab\ 6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/VGA_framebuffer.sv}
+# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:05:54 on May 31,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/VGA_framebuffer.sv 
+# Start time: 21:39:58 on Jun 01,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv 
 # -- Compiling module VGA_framebuffer
 # 
 # Top level modules:
 # 	VGA_framebuffer
-# End time: 20:05:54 on May 31,2020, Elapsed time: 0:00:00
+# End time: 21:39:58 on Jun 01,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/Lab\ 6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/clear_screen.sv}
+# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:05:54 on May 31,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/clear_screen.sv 
+# Start time: 21:39:58 on Jun 01,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv 
 # -- Compiling module clear_screen
 # -- Compiling module clear_screen_testbench
 # 
 # Top level modules:
 # 	clear_screen_testbench
-# End time: 20:05:55 on May 31,2020, Elapsed time: 0:00:01
+# End time: 21:39:58 on Jun 01,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/Lab\ 6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv}
+# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:05:55 on May 31,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv 
+# Start time: 21:39:58 on Jun 01,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
+# -- Compiling module pipe_drawer
+# -- Compiling module pipe_drawer_testbench
+# 
+# Top level modules:
+# 	pipe_drawer_testbench
+# End time: 21:39:58 on Jun 01,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:39:59 on Jun 01,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv 
+# -- Compiling module bird_drawer
+# -- Compiling module bird_drawer_testbench
+# 
+# Top level modules:
+# 	bird_drawer_testbench
+# End time: 21:39:59 on Jun 01,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:39:59 on Jun 01,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv 
 # -- Compiling module Display_Manager
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(46): 'pipe1' already declared in this scope.
 # -- Compiling module Display_Manager_testbench
-# End time: 20:05:55 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# 
+# Top level modules:
+# 	Display_Manager_testbench
+# End time: 21:39:59 on Jun 01,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:39:59 on Jun 01,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(43): (vlog-2730) Undefined variable: 'clear_en'.
+# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(44): (vlog-2730) Undefined variable: 'clear_done'.
+# ** Error (suppressible): C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(69): (vlog-2388) 'clear_en' already declared in this scope (DE1_SoC).
+# ** Error (suppressible): C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(69): (vlog-2388) 'clear_done' already declared in this scope (DE1_SoC).
+# End time: 21:39:59 on Jun 01,2020, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
 # ** Error: C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 10
+# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 13
 # C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
 #     while executing
-# "vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/Lab\ 6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/..."
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv}
+# "vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6..."
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:06:05 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv 
-# -- Compiling module Display_Manager
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(46): 'pipe1' already declared in this scope.
-# -- Compiling module Display_Manager_testbench
-# End time: 20:06:05 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:06:59 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv 
-# -- Compiling module Display_Manager
-# -- Compiling module Display_Manager_testbench
+# Start time: 21:40:07 on Jun 01,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv 
+# -- Compiling module bird_drawer
+# -- Compiling module bird_drawer_testbench
 # 
 # Top level modules:
-# 	Display_Manager_testbench
-# End time: 20:06:59 on May 31,2020, Elapsed time: 0:00:00
+# 	bird_drawer_testbench
+# End time: 21:40:07 on Jun 01,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.Display_Manager_testbench
-# vsim work.Display_Manager_testbench 
-# Start time: 20:07:02 on May 31,2020
+vsim work.bird_drawer_testbench
+# vsim work.bird_drawer_testbench 
+# Start time: 21:40:11 on Jun 01,2020
 # Loading sv_std.std
-# Loading work.Display_Manager_testbench
-# Loading work.Display_Manager
-# Loading work.clear_screen
-# ** Error: (vsim-3033) C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(39): Instantiation of 'pipe_drawer' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /Display_Manager_testbench/dut File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv
-#         Searched libraries:
-#             C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:07:03 on May 31,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/pipe_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:07:11 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_testbench
-# End time: 20:07:11 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# Loading work.bird_drawer_testbench
+# Loading work.bird_drawer
 vsim work.Display_Manager_testbench
+# End time: 21:40:17 on Jun 01,2020, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
 # vsim work.Display_Manager_testbench 
-# Start time: 20:07:13 on May 31,2020
+# Start time: 21:40:17 on Jun 01,2020
 # Loading sv_std.std
 # Loading work.Display_Manager_testbench
 # Loading work.Display_Manager
 # Loading work.clear_screen
 # Loading work.pipe_drawer
-add wave -position end  sim:/Display_Manager_testbench/clk
-add wave -position end  sim:/Display_Manager_testbench/reset
-add wave -position end  sim:/Display_Manager_testbench/color
+# Loading work.bird_drawer
+# WARNING: No extended dataflow license exists
 add wave -position end  sim:/Display_Manager_testbench/x
 add wave -position end  sim:/Display_Manager_testbench/y
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(104)
-#    Time: 30740150 ps  Iteration: 1  Instance: /Display_Manager_testbench
-# Break in Module Display_Manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv line 104
-quit -sim
-# End time: 21:21:43 on May 31,2020, Elapsed time: 1:14:30
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/pipe_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:21:49 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_testbench
-# End time: 21:21:49 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:21:50 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv 
-# -- Compiling module Display_Manager
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(3): In, out, or inout does not appear in port list: led.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(3): In, out, or inout does not appear in port list: led2.
-# -- Compiling module Display_Manager_testbench
-# End time: 21:21:51 on May 31,2020, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:22:10 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv 
-# -- Compiling module Display_Manager
-# -- Compiling module Display_Manager_testbench
-# 
-# Top level modules:
-# 	Display_Manager_testbench
-# End time: 21:22:10 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/pipe_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:22:13 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_testbench
-# End time: 21:22:13 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.Display_Manager_testbench
-# vsim work.Display_Manager_testbench 
-# Start time: 21:22:15 on May 31,2020
-# Loading sv_std.std
-# Loading work.Display_Manager_testbench
-# Loading work.Display_Manager
-# Loading work.clear_screen
-# Loading work.pipe_drawer
 add wave -position end  sim:/Display_Manager_testbench/clk
-add wave -position end  sim:/Display_Manager_testbench/reset
-add wave -position end  sim:/Display_Manager_testbench/x
-add wave -position end  sim:/Display_Manager_testbench/y
 add wave -position end  sim:/Display_Manager_testbench/color
 add wave -position end  sim:/Display_Manager_testbench/dut/ps
+add wave -position end  sim:/Display_Manager_testbench/dut/bx
+add wave -position end  sim:/Display_Manager_testbench/dut/by
 run -all
-# Break key hit
-# Break in Module Display_Manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv line 109
-quit -sim
-# End time: 21:23:52 on May 31,2020, Elapsed time: 0:01:37
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:24:00 on May 31,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv 
-# -- Compiling module Display_Manager
-# -- Compiling module Display_Manager_testbench
-# 
-# Top level modules:
-# 	Display_Manager_testbench
-# End time: 21:24:00 on May 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Break key hit
-vsim work.Display_Manager_testbench
-# vsim work.Display_Manager_testbench 
-# Start time: 21:24:08 on May 31,2020
-# Loading sv_std.std
-# Loading work.Display_Manager_testbench
-# Loading work.Display_Manager
-# Loading work.clear_screen
-# Loading work.pipe_drawer
-add wave -position end  sim:/Display_Manager_testbench/clk
-add wave -position end  sim:/Display_Manager_testbench/reset
-add wave -position end  sim:/Display_Manager_testbench/color
-add wave -position end  sim:/Display_Manager_testbench/x
-add wave -position end  sim:/Display_Manager_testbench/y
-add wave -position end  sim:/Display_Manager_testbench/dut/ps
-run -all
-# Break key hit
-# Simulation stop requested.
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv(113)
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv(138)
 #    Time: 100000150 ps  Iteration: 1  Instance: /Display_Manager_testbench
-# Break in Module Display_Manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/Lab 6/Display_Manager.sv line 113
-add wave -position end  sim:/Display_Manager_testbench/dut/pipe1_done
-add wave -position end  sim:/Display_Manager_testbench/dut/pipe2_done
-add wave -position end  sim:/Display_Manager_testbench/dut/clear_done
+# Break in Module Display_Manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv line 138
+quit -sim
+# End time: 21:44:05 on Jun 01,2020, Elapsed time: 0:03:48
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:44:10 on Jun 01,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv 
+# -- Compiling module bird_drawer
+# -- Compiling module bird_drawer_testbench
+# 
+# Top level modules:
+# 	bird_drawer_testbench
+# End time: 21:44:10 on Jun 01,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:44:15 on Jun 01,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv 
+# -- Compiling module Display_Manager
+# -- Compiling module Display_Manager_testbench
+# 
+# Top level modules:
+# 	Display_Manager_testbench
+# End time: 21:44:15 on Jun 01,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.Display_Manager_testbench
+# vsim work.Display_Manager_testbench 
+# Start time: 21:44:17 on Jun 01,2020
+# Loading sv_std.std
+# Loading work.Display_Manager_testbench
+# Loading work.Display_Manager
+# Loading work.clear_screen
+# Loading work.pipe_drawer
+# Loading work.bird_drawer
+add wave -position end  sim:/Display_Manager_testbench/clk
+add wave -position end  sim:/Display_Manager_testbench/color
+add wave -position end  sim:/Display_Manager_testbench/x
+add wave -position end  sim:/Display_Manager_testbench/y
+add wave -position end  sim:/Display_Manager_testbench/dut/ps
 run -all
-# Break key hit
-# Simulation stop requested.
-# End time: 22:16:55 on May 31,2020, Elapsed time: 0:52:47
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv(139)
+#    Time: 100000150 ps  Iteration: 1  Instance: /Display_Manager_testbench
+# Break in Module Display_Manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv line 139
+# End time: 21:58:58 on Jun 01,2020, Elapsed time: 0:14:41
 # Errors: 0, Warnings: 0

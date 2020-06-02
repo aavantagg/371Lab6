@@ -1,0 +1,14 @@
+module bird_drawer();
+	input logic clk, reset, enable;
+	input logic [10:0] bird_x, bird_y;
+	
+	output logic done;
+	output logic [10:0] x, y;
+	
+	logic [15:0] glide_template [10:0]; 
+	
+	initial begin
+		$readmemb("bird_gliding.txt", glide_template);
+	end
+
+endmodule // bird_drawer

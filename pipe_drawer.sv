@@ -14,26 +14,28 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 	
 	always_comb begin
 		case (ps)
-			idle: if (enable) ns = line1;
-					else			ns = idle;
+			idle: if (enable & pipe_left <= 1) ns = line4; // pipe left is off edge of screen -> start at top
+					else if (enable) 				  ns = line1;
+					else				  				  ns = idle;
 					
-			line1: if (y == pipe_y + 1) ns = line2;
-					 else					ns = line1;
+			line1: if (y == pipe_y + 1)      ns = line2;
+					 else								ns = line1;
 					 
 			line2: if (x == pipe_left - bevel + 1) ns = line3;
-					 else								  ns = line2;
+					 else if (x == 1) 					ns = line4;
+					 else								      ns = line2;
 					 
 			line3: if (y == pipe_y - bevel + 1) ns = line4;
-					 else							  ns = line3;
+					 else							      ns = line3;
 					 
 			line4: if (x == pipe_right + bevel - 1) ns = line5;
-					 else									ns = line4;
+					 else									    ns = line4;
 					
 			line5: if (y == pipe_y - 1) ns = line6;
-					 else					ns = line5;
+					 else					    ns = line5;
 					
-			line6: if (x == pipe_left - 1) ns = line7;
-					 else						ns = line6;
+			line6: if ((x == pipe_left - 1) | (x == 1)) ns = line7;
+					 else						    				  ns = line6;
 					 
 			line7: if (y == 479) ns = idle;
 					 else				ns = line7;

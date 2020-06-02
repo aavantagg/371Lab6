@@ -39,13 +39,17 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 		.bird_y, 
 		.color, 
 		.x, 
-		.y);
+		.y,
+		.clear_en,
+		.clear_done);
 		
 	// temporary
 //	assign pipe1_x = 100;
 	assign pipe1_y = 250;
 //	assign pipe2_x = 400;
 	assign pipe2_y = 200;
+	assign bird_x = 100;
+	assign bird_y = 200;
 	
 	always_ff @(posedge game_clk) begin
 		if (reset) begin
@@ -60,6 +64,20 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 			pipe1_x <= pipe1_x - 1;
 			pipe2_x <= pipe2_x - 1;
 		end
+	end
+	
+	logic clear_en, clear_done, clear_lock;
+	
+	// use clr_en to only clear screen once per game clock
+	always_ff @(posedge CLOCK_50) begin
+		if (clear_en & clear_done) begin
+			clear_en <= 0;
+			clear_lock <= 1;
+		end
+		else if (~game_clk)
+			clear_lock <= 0;
+		else if (game_clk & ~clear_lock)
+			clear_en <= 1;
 	end
 	
 	VGA_framebuffer fb (
