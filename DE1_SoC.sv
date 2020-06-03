@@ -28,7 +28,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	logic color, game_clk;
 	logic reset;
 	
-	Display_Manager display (
+	display_manager display (
 		.clk			 (CLOCK_50), 
 		.reset, 
 		.pipe1_x, 
