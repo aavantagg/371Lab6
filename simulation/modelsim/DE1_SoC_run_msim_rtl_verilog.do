@@ -9,6 +9,6 @@ vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371
 vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv}
 vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
 vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv}
-vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv}
+vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv}
 vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv}
 

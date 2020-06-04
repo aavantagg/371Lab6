@@ -5,7 +5,7 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 	
 	output logic done;
 	output logic [10:0] x, y;
-	
+
 	enum {idle, line1, line2, line3, line4, line5, line6, line7} ps, ns;
 	
 	// helper variables
@@ -28,8 +28,8 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 			line3: if (y == pipe_y - bevel + 1) ns = line4;
 					 else							      ns = line3;
 					 
-			line4: if (x == pipe_right + bevel - 1) ns = line5;
-					 else									    ns = line4;
+			line4: if (x == pipe_right - 1) 	ns = line5;
+					 else								ns = line4;
 					
 			line5: if (y == pipe_y - 1) ns = line6;
 					 else					    ns = line5;
@@ -73,15 +73,15 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 			y <= pipe_y - bevel;
 		end // line4
 		else if (ps == line5) begin
-			x <= pipe_right + bevel;
+			x <= pipe_right;
 			y <= pipe_y - bevel + counter;
 		end // line5
 		else if (ps == line6) begin
-			x <= pipe_right + bevel - counter;
+			x <= pipe_right - counter;
 			y <= pipe_y;
 		end // line6
 		else if (ps == line7) begin
-			x <= pipe_right;
+			x <= pipe_right - bevel;
 			y <= pipe_y + counter;
 		end // line7
 	end // always_ff
@@ -95,8 +95,8 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 	end //always_ff
 	
 	assign done = (ps == line7) & (ns == idle);
-	assign pipe_left = pipe_x - 30;
-	assign pipe_right = pipe_x + 30;
+	assign pipe_left = pipe_x - 60;
+	assign pipe_right = pipe_x + bevel;
 	assign bevel = 10;
 
 endmodule // pipe_drawer

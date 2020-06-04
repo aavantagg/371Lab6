@@ -22,35 +22,21 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	
 	// coordinates of game objects
 	logic [10:0] pipe1_x, pipe1_y, pipe2_x, pipe2_y, bird_x, bird_y;
-	// coordinates to draw
+	
+	// coordinates for drawing
 	logic [10:0] x, y;
+	
 	logic [25:0] divided_clocks;
 	logic color, game_clk;
 	logic reset;
-	
-	display_manager display (
-		.clk			 (CLOCK_50), 
-		.reset, 
-		.pipe1_x, 
-		.pipe1_y, 
-		.pipe2_x,
-		.pipe2_y,
-		.bird_x, 
-		.bird_y, 
-		.color, 
-		.x, 
-		.y,
-		.clear_en,
-		.clear_done);
+	logic flap, game_enable;
 		
 	// temporary
-//	assign pipe1_x = 100;
 	assign pipe1_y = 250;
-//	assign pipe2_x = 400;
 	assign pipe2_y = 200;
-	assign bird_x = 100;
-	assign bird_y = 200;
-	
+//	assign bird_x = 100;
+//	assign bird_y = 200;
+
 	always_ff @(posedge game_clk) begin
 		if (reset) begin
 			pipe1_x <= 319;
@@ -60,7 +46,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 			pipe1_x <= 639;
 		else if (pipe2_x == 0)
 			pipe2_x <= 639;
-		else begin
+		else if (game_enable) begin
 			pipe1_x <= pipe1_x - 1;
 			pipe2_x <= pipe2_x - 1;
 		end
@@ -80,6 +66,20 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 			clear_en <= 1;
 	end
 	
+	display_manager display (.clk			 (CLOCK_50), 
+									 .reset, 
+									 .pipe1_x, 
+									 .pipe1_y, 
+									 .pipe2_x,
+									 .pipe2_y,
+									 .bird_x, 
+									 .bird_y, 
+									 .color,
+									 .x, 
+									 .y,
+									 .clear_en,
+									 .clear_done);
+	
 	VGA_framebuffer fb (
 		.clk50			 (CLOCK_50), 
 		.reset			 (1'b0), 
@@ -95,8 +95,14 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 		.VGA_VS,
 		.VGA_BLANK_n	 (VGA_BLANK_N), 
 		.VGA_SYNC_n		 (VGA_SYNC_N));
+		
+	bird_physics bird_height (.clk		 (game_clk), 
+									  .reset, 
+									  .enable	 (game_enable), 
+									  .flap, 
+									  .bird_x, 
+									  .bird_y);
 
-	
 	// set up clock divider and game clock
 	always_ff @(posedge CLOCK_50) begin
 		divided_clocks = divided_clocks + 1;
@@ -111,5 +117,8 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	assign HEX0 = 7'b1111111;
 	assign LEDR[9:0] = 10'b0;
 	assign reset = SW[0];
+	
+	assign flap = ~KEY[3];
+	assign game_enable = SW[9];
 endmodule
 
