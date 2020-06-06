@@ -3,11 +3,15 @@
 // Lab 6: Flappy Bird
 // This program...
 module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
-					VGA_R, VGA_G, VGA_B, VGA_BLANK_N, VGA_CLK, VGA_HS, VGA_SYNC_N, VGA_VS);
+					VGA_R, VGA_G, VGA_B, VGA_BLANK_N, VGA_CLK, VGA_HS, VGA_SYNC_N, VGA_VS,
+                    PS2_DAT, PS2_CLK);
 
 	input logic CLOCK_50;
 	input logic [3:0] KEY;
 	input logic [9:0] SW;
+
+    input PS2_DAT;
+    input PS2_CLK;
 		
 	output logic [6:0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
 	output logic [9:0] LEDR;
@@ -65,9 +69,15 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	end
 	
 	// will be replaced by keyboard (except reset)
-	assign flap = ~KEY[3];
-	assign collision = ~KEY[2]; 
-	assign restart = ~KEY[1];
+    always_ff @(posedge CLOCK_50) begin
+        if (makeBreak && key == 8'h2D) restart <= 1; // r
+        else restart <= 0;
+        if (makeBreak && key == 8'h2B) flap <= 1; // f
+        else flap <= 0;
+        if (makeBreak && key == 8'h21) collision <= 1; // c
+        else collision <= 0;
+    end // always_ff
+    
 	assign reset = ~KEY[0];
 	
 	// will be set by scoreboard
@@ -77,6 +87,19 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	assign HEX2 = 7'b1111111;
 	assign HEX1 = 7'b1111111;
 	assign HEX0 = 7'b1111111;
+
+    logic valid;
+    logic makeBreak;
+    logic [7:0] key;
+
+    keyboard_press_driver keyboard (    .CLOCK_50,
+                                        .valid,
+                                        .makeBreak,
+                                        .outCode(key),
+                                        .PS2_DAT,
+                                        .PS2_CLK,
+                                        .reset
+                                    );
 	
 	game_manager control (.clk					(CLOCK_50), 
 								 .reset, 
@@ -86,7 +109,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 								 .game_enable);
 	
 	
-	display_manager display (.clk			 (CLOCK_50), 
+	Display_Manager display (.clk			 (CLOCK_50), 
 									 .reset, 
 									 .pipe1_x, 
 									 .pipe1_y, 
