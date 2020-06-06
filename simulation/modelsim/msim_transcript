@@ -11,209 +11,84 @@
 # Copying C:/intelFPGA/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv}
+# vlog -vlog01compat -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/CLOCK25_PLL.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:08 on Jun 03,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 20:15:08 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:09 on Jun 03,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv 
-# -- Compiling module clear_screen
-# -- Compiling module clear_screen_testbench
-# 
-# Top level modules:
-# 	clear_screen_testbench
-# End time: 20:15:10 on Jun 03,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:10 on Jun 03,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_testbench
-# End time: 20:15:10 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:10 on Jun 03,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv 
-# -- Compiling module bird_drawer
-# -- Compiling module bird_drawer_testbench
-# 
-# Top level modules:
-# 	bird_drawer_testbench
-# End time: 20:15:10 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:10 on Jun 03,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv 
-# -- Compiling module display_manager
-# -- Compiling module display_manager_testbench
-# 
-# Top level modules:
-# 	display_manager_testbench
-# End time: 20:15:10 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:10 on Jun 03,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(43): (vlog-2730) Undefined variable: 'clear_en'.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(44): (vlog-2730) Undefined variable: 'clear_done'.
-# ** Error (suppressible): C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(69): (vlog-2388) 'clear_en' already declared in this scope (DE1_SoC).
-# ** Error (suppressible): C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(69): (vlog-2388) 'clear_done' already declared in this scope (DE1_SoC).
-# End time: 20:15:10 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
+# Start time: 20:06:30 on Jun 04,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/CLOCK25_PLL.vo 
+# ** Error: (vlog-7) Failed to open design unit file "C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/CLOCK25_PLL.vo" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 20:06:30 on Jun 04,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
 # ** Error: C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 13
+# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 8
 # C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
 #     while executing
-# "vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6..."
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv}
+# "vlog -vlog01compat -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/E..."
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:17 on Jun 03,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv 
-# -- Compiling module bird_physics
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv(14): (vlog-2730) Undefined variable: 'rising'.
-# -- Compiling module bird_physics_testbench
-# End time: 20:15:17 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:16:34 on Jun 03,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv 
-# -- Compiling module bird_physics
-# -- Compiling module bird_physics_testbench
+# Start time: 20:06:39 on Jun 04,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv 
+# -- Compiling module VGA_manager
+# -- Compiling module VGA_manager_testbench
 # 
 # Top level modules:
-# 	bird_physics_testbench
-# End time: 20:16:35 on Jun 03,2020, Elapsed time: 0:00:01
+# 	VGA_manager_testbench
+# End time: 20:06:39 on Jun 04,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.bird_physics_testbench
-# vsim work.bird_physics_testbench 
-# Start time: 20:16:47 on Jun 03,2020
+vsim work.VGA_manager_testbench
+# vsim work.VGA_manager_testbench 
+# Start time: 20:06:43 on Jun 04,2020
 # Loading sv_std.std
-# Loading work.bird_physics_testbench
-# Loading work.bird_physics
-add wave -position end  sim:/bird_physics_testbench/clk
-add wave -position end  sim:/bird_physics_testbench/reset
-add wave -position end  sim:/bird_physics_testbench/enable
-add wave -position end  sim:/bird_physics_testbench/flap
-add wave -position end  sim:/bird_physics_testbench/bird_x
-add wave -position end  sim:/bird_physics_testbench/bird_y
+# Loading work.VGA_manager_testbench
+# Loading work.VGA_manager
+add wave -position end  sim:/VGA_manager_testbench/dut/clk
+add wave -position end  sim:/VGA_manager_testbench/dut/reset
+add wave -position end  sim:/VGA_manager_testbench/dut/x
+add wave -position end  sim:/VGA_manager_testbench/dut/y
+add wave -position end  sim:/VGA_manager_testbench/dut/r
+add wave -position end  sim:/VGA_manager_testbench/dut/g
+add wave -position end  sim:/VGA_manager_testbench/dut/b
+add wave -position end  sim:/VGA_manager_testbench/dut/bird_template
+add wave -position end  sim:/VGA_manager_testbench/dut/bird_color
 run -all
-# Break key hit
-# Simulation stop requested.
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:17:14 on Jun 03,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(21): (vlog-2730) Undefined variable: 'pipe_bottom'.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(65): (vlog-2730) Undefined variable: 'pipe_bottom'.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(73): (vlog-2730) Undefined variable: 'pipe_bottom'.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(77): (vlog-2730) Undefined variable: 'pipe_bottom'.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(81): (vlog-2730) Undefined variable: 'pipe_bottom'.
-# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(85): (vlog-2730) Undefined variable: 'pipe_bottom'.
-# -- Compiling module pipe_drawer_top_testbench
-# End time: 21:17:14 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:17:49 on Jun 03,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 21:17:49 on Jun 03,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.pipe_drawer_top_testbench
-# End time: 21:17:57 on Jun 03,2020, Elapsed time: 1:01:10
-# Errors: 6, Warnings: 0
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 21:17:57 on Jun 03,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
-# Loading work.pipe_drawer
-# WARNING: No extended dataflow license exists
-add wave -position end  sim:/pipe_drawer_top_testbench/clk
-add wave -position end  sim:/pipe_drawer_top_testbench/reset
-add wave -position end  sim:/pipe_drawer_top_testbench/enable
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_top_testbench/done
-add wave -position end  sim:/pipe_drawer_top_testbench/x
-add wave -position end  sim:/pipe_drawer_top_testbench/y
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(143)
-#    Time: 40350 ps  Iteration: 1  Instance: /pipe_drawer_top_testbench
-# Break in Module pipe_drawer_top_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv line 143
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/counter
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv(138)
+#    Time: 21550 ps  Iteration: 1  Instance: /VGA_manager_testbench
+# Break in Module VGA_manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv line 138
 quit -sim
-# End time: 21:22:00 on Jun 03,2020, Elapsed time: 0:04:03
-# Errors: 0, Warnings: 1
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
+# End time: 20:10:51 on Jun 04,2020, Elapsed time: 0:04:08
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:22:05 on Jun 03,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
+# Start time: 20:10:54 on Jun 04,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv 
+# -- Compiling module VGA_manager
+# -- Compiling module VGA_manager_testbench
 # 
 # Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 21:22:05 on Jun 03,2020, Elapsed time: 0:00:00
+# 	VGA_manager_testbench
+# End time: 20:10:54 on Jun 04,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_top_testbench
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 21:22:12 on Jun 03,2020
+vsim work.VGA_manager_testbench
+# vsim work.VGA_manager_testbench 
+# Start time: 20:10:56 on Jun 04,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
-# Loading work.pipe_drawer
-vsim work.pipe_drawer_top_testbench
-# End time: 21:22:16 on Jun 03,2020, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 0
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 21:22:16 on Jun 03,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_top_testbench/clk
-add wave -position end  sim:/pipe_drawer_top_testbench/reset
-add wave -position end  sim:/pipe_drawer_top_testbench/enable
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_top_testbench/done
-add wave -position end  sim:/pipe_drawer_top_testbench/x
-add wave -position end  sim:/pipe_drawer_top_testbench/y
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/counter
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_right
+# Loading work.VGA_manager_testbench
+# Loading work.VGA_manager
+add wave -position end  sim:/VGA_manager_testbench/dut/bird_template
+add wave -position end  sim:/VGA_manager_testbench/dut/bird_color
 run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(143)
-#    Time: 40350 ps  Iteration: 1  Instance: /pipe_drawer_top_testbench
-# Break in Module pipe_drawer_top_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv line 143
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/ps
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv(138)
+#    Time: 21550 ps  Iteration: 1  Instance: /VGA_manager_testbench
+# Break in Module VGA_manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv line 138
+restart -f
+add wave -position end  sim:/VGA_manager_testbench/x
+add wave -position end  sim:/VGA_manager_testbench/y
+add wave -position end  sim:/VGA_manager_testbench/r
+add wave -position end  sim:/VGA_manager_testbench/g
+add wave -position end  sim:/VGA_manager_testbench/b
 run -all
-# Break key hit
-# Simulation stop requested.
-run -all
-# Break key hit
-# Simulation stop requested.
-# End time: 21:52:46 on Jun 03,2020, Elapsed time: 0:30:30
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv(138)
+#    Time: 21550 ps  Iteration: 1  Instance: /VGA_manager_testbench
+# Break in Module VGA_manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_manager.sv line 138
+# End time: 20:12:50 on Jun 04,2020, Elapsed time: 0:01:54
 # Errors: 0, Warnings: 0

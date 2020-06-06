@@ -118,7 +118,7 @@ module pipe_drawer_top_testbench();
 	pipe_drawer dut (.*);
 	
 	initial begin
-		reset = 1; enable = 0; pipe_x = 100; pipe_y = 380; @(posedge clk);
+		reset = 1; enable = 0; pipe_x = 50; pipe_y = 380; @(posedge clk);
 		reset = 0; @(posedge clk);
 		
 		@(posedge clk);

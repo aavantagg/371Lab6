@@ -8,7 +8,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	input logic CLOCK_50;
 	input logic [3:0] KEY;
 	input logic [9:0] SW;
-	
+		
 	output logic [6:0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
 	output logic [9:0] LEDR;
 	output [7:0] VGA_R;
@@ -20,25 +20,23 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	output VGA_SYNC_N;
 	output VGA_VS;
 	
+	logic reset;
+	logic [10:0] x, y;
+
 	// coordinates of game objects
 	logic [10:0] pipe1_x, pipe1_y, pipe2_x, pipe2_y, bird_x, bird_y;
 	
-	// coordinates for drawing
-	logic [10:0] x, y;
-	
 	logic [25:0] divided_clocks;
 	logic color, game_clk;
-	logic reset;
-	logic flap, game_enable;
+	logic flap, collision, game_enable, restart, game_reset;
 		
 	// temporary
 	assign pipe1_y = 250;
 	assign pipe2_y = 200;
-//	assign bird_x = 100;
-//	assign bird_y = 200;
-
+	
+	// Set pipe coordinates
 	always_ff @(posedge game_clk) begin
-		if (reset) begin
+		if (reset | game_reset) begin
 			pipe1_x <= 319;
 			pipe2_x <= 639;
 		end 
@@ -65,6 +63,28 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 		else if (game_clk & ~clear_lock)
 			clear_en <= 1;
 	end
+	
+	// will be replaced by keyboard (except reset)
+	assign flap = ~KEY[3];
+	assign collision = ~KEY[2]; 
+	assign restart = ~KEY[1];
+	assign reset = ~KEY[0];
+	
+	// will be set by scoreboard
+	assign HEX5 = 7'b1111111;
+	assign HEX4 = 7'b1111111;
+	assign HEX3 = 7'b1111111;
+	assign HEX2 = 7'b1111111;
+	assign HEX1 = 7'b1111111;
+	assign HEX0 = 7'b1111111;
+	
+	game_manager control (.clk					(CLOCK_50), 
+								 .reset, 
+								 .flap, 
+								 .collision, 
+								 .restart, 
+								 .game_enable);
+	
 	
 	display_manager display (.clk			 (CLOCK_50), 
 									 .reset, 
@@ -97,8 +117,10 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 		.VGA_SYNC_n		 (VGA_SYNC_N));
 		
 	bird_physics bird_height (.clk		 (game_clk), 
-									  .reset, 
-									  .enable	 (game_enable), 
+									  .reset		 (reset | game_reset), 
+									  .enable	 (game_enable),
+									  .game_reset,
+									  .collision, 
 									  .flap, 
 									  .bird_x, 
 									  .bird_y);
@@ -107,18 +129,10 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	always_ff @(posedge CLOCK_50) begin
 		divided_clocks = divided_clocks + 1;
 	end
+	
 	assign game_clk = divided_clocks[19];
 	
-	assign HEX5 = 7'b1111111;
-	assign HEX4 = 7'b1111111;
-	assign HEX3 = 7'b1111111;
-	assign HEX2 = 7'b1111111;
-	assign HEX1 = 7'b1111111;
-	assign HEX0 = 7'b1111111;
 	assign LEDR[9:0] = 10'b0;
-	assign reset = SW[0];
 	
-	assign flap = ~KEY[3];
-	assign game_enable = SW[9];
-endmodule
+endmodule // DE1_SoC
 
