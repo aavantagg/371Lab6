@@ -668,6 +668,9 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+set_global_assignment -name SYSTEMVERILOG_FILE score_manager.sv
+set_global_assignment -name SYSTEMVERILOG_FILE score_display.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LFSR.sv
 set_global_assignment -name VERILOG_FILE keyboard_inner_driver.v
 set_global_assignment -name VERILOG_FILE keyboard_press_driver.v
 set_global_assignment -name TEXT_FILE bird_template_color.txt

@@ -10,7 +10,7 @@ module bird_drawer(clk, reset, start, bird_x, bird_y, done, x, y);
 	logic [6:0] counter;
 	
 	initial begin
-		$readmemb("C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_template_v3.txt", template);
+		$readmemb("bird_template_v3.txt", template);
 	end
 	
 	enum {s_idle, s_drawing, s_done} ps, ns;

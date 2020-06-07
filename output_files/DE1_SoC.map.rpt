@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Sat Jun 06 20:57:30 2020
+Sun Jun 07 16:03:05 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -23,16 +23,27 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  15. Parameter Settings for User Entity Instance: keyboard_press_driver:keyboard
  16. Parameter Settings for User Entity Instance: VGA_framebuffer:fb
  17. Parameter Settings for Inferred Entity Instance: VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "VGA_framebuffer:fb"
- 20. Port Connectivity Checks: "display_manager:display"
- 21. Port Connectivity Checks: "collision_detector:checkForDead"
- 22. Port Connectivity Checks: "game_manager:control"
- 23. Port Connectivity Checks: "keyboard_press_driver:keyboard"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
- 27. Analysis & Synthesis Suppressed Messages
+ 18. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div0
+ 19. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div1
+ 20. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod0
+ 21. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div2
+ 22. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div3
+ 23. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod1
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "VGA_framebuffer:fb"
+ 26. Port Connectivity Checks: "game_manager:control"
+ 27. Port Connectivity Checks: "keyboard_press_driver:keyboard"
+ 28. Port Connectivity Checks: "score_manager:my_score|score_display:ones"
+ 29. Port Connectivity Checks: "score_manager:my_score|score_display:tens"
+ 30. Port Connectivity Checks: "score_manager:my_score|score_display:hundreds"
+ 31. Port Connectivity Checks: "score_manager:my_score|score_display:high_ones"
+ 32. Port Connectivity Checks: "score_manager:my_score|score_display:high_tens"
+ 33. Port Connectivity Checks: "score_manager:my_score|score_display:high_hundreds"
+ 34. Port Connectivity Checks: "LFSR:rand_height"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,13 +70,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun 06 20:57:30 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 07 16:03:05 2020       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 350                                         ;
+; Total registers                 ; 395                                         ;
 ; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 307,200                                     ;
@@ -183,37 +194,50 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
-; keyboard_inner_driver.v          ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v ;         ;
-; keyboard_press_driver.v          ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v ;         ;
-; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv              ;         ;
-; VGA_framebuffer.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv      ;         ;
-; clear_screen.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv         ;         ;
-; pipe_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv          ;         ;
-; bird_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv          ;         ;
-; display_manager.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv      ;         ;
-; bird_physics.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv         ;         ;
-; pipe_drawer_top.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv      ;         ;
-; game_manager.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv         ;         ;
-; collision_detector.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv   ;         ;
-; bird_template_v3.txt             ; yes             ; Auto-Found File              ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_template_v3.txt    ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
-; aglobal170.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                   ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                       ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                       ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
-; db/altsyncram_acq1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_acq1.tdf  ;         ;
-; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/decode_3na.tdf       ;         ;
-; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf          ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; score_manager.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv           ;         ;
+; score_display.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv           ;         ;
+; LFSR.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/LFSR.sv                    ;         ;
+; keyboard_inner_driver.v          ; yes             ; User Verilog HDL File        ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/keyboard_inner_driver.v    ;         ;
+; keyboard_press_driver.v          ; yes             ; User Verilog HDL File        ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/keyboard_press_driver.v    ;         ;
+; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv                 ;         ;
+; VGA_framebuffer.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/VGA_framebuffer.sv         ;         ;
+; clear_screen.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clear_screen.sv            ;         ;
+; pipe_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer.sv             ;         ;
+; bird_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv             ;         ;
+; display_manager.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv         ;         ;
+; bird_physics.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv            ;         ;
+; pipe_drawer_top.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer_top.sv         ;         ;
+; game_manager.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/game_manager.sv            ;         ;
+; collision_detector.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/collision_detector.sv      ;         ;
+; bird_template_v3.txt             ; yes             ; Auto-Found File              ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_template_v3.txt       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_acq1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/altsyncram_acq1.tdf     ;         ;
+; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/decode_3na.tdf          ;         ;
+; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/mux_chb.tdf             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_8am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/lpm_divide_8am.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_2te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/alt_u_div_2te.tdf       ;         ;
+; db/lpm_divide_5am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/lpm_divide_5am.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_sse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/alt_u_div_sse.tdf       ;         ;
+; db/lpm_divide_82m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/lpm_divide_82m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -221,16 +245,16 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 883            ;
+; Estimate of Logic utilization (ALMs needed) ; 1286           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1412           ;
-;     -- 7 input functions                    ; 36             ;
-;     -- 6 input functions                    ; 312            ;
-;     -- 5 input functions                    ; 170            ;
-;     -- 4 input functions                    ; 108            ;
-;     -- <=3 input functions                  ; 786            ;
+; Combinational ALUT usage for logic          ; 2168           ;
+;     -- 7 input functions                    ; 15             ;
+;     -- 6 input functions                    ; 382            ;
+;     -- 5 input functions                    ; 263            ;
+;     -- 4 input functions                    ; 162            ;
+;     -- <=3 input functions                  ; 1346           ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 350            ;
+; Dedicated logic registers                   ; 395            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -239,36 +263,68 @@ agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 316            ;
-; Total fan-out                               ; 7391           ;
-; Average fan-out                             ; 3.70           ;
+; Maximum fan-out                             ; 326            ;
+; Total fan-out                               ; 9788           ;
+; Average fan-out                             ; 3.50           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name           ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |DE1_SoC                                  ; 1412 (80)           ; 350 (46)                  ; 307200            ; 0          ; 98   ; 0            ; |DE1_SoC                                                                                                   ; DE1_SoC               ; work         ;
-;    |VGA_framebuffer:fb|                   ; 116 (65)            ; 28 (22)                   ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb                                                                                ; VGA_framebuffer       ; work         ;
-;       |altsyncram:framebuffer_rtl_0|      ; 51 (0)              ; 6 (0)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0                                                   ; altsyncram            ; work         ;
-;          |altsyncram_acq1:auto_generated| ; 51 (0)              ; 6 (6)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated                    ; altsyncram_acq1       ; work         ;
-;             |decode_3na:decode2|          ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|decode_3na:decode2 ; decode_3na            ; work         ;
-;             |mux_chb:mux3|                ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|mux_chb:mux3       ; mux_chb               ; work         ;
-;    |bird_physics:bird_height|             ; 101 (101)           ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|bird_physics:bird_height                                                                          ; bird_physics          ; work         ;
-;    |collision_detector:checkForDead|      ; 82 (82)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collision_detector:checkForDead                                                                   ; collision_detector    ; work         ;
-;    |display_manager:display|              ; 1004 (56)           ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                           ; display_manager       ; work         ;
-;       |bird_drawer:bird_coords|           ; 104 (104)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords                                                   ; bird_drawer           ; work         ;
-;       |clear_screen:clr|                  ; 31 (31)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|clear_screen:clr                                                          ; clear_screen          ; work         ;
-;       |pipe_drawer:pipe1_coords|          ; 166 (166)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords                                                  ; pipe_drawer           ; work         ;
-;       |pipe_drawer:pipe2_coords|          ; 176 (176)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords                                                  ; pipe_drawer           ; work         ;
-;       |pipe_drawer_top:p1_top|            ; 238 (238)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top                                                    ; pipe_drawer_top       ; work         ;
-;       |pipe_drawer_top:p2_top|            ; 233 (233)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top                                                    ; pipe_drawer_top       ; work         ;
-;    |game_manager:control|                 ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|game_manager:control                                                                              ; game_manager          ; work         ;
-;    |keyboard_press_driver:keyboard|       ; 26 (12)             ; 55 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard                                                                    ; keyboard_press_driver ; work         ;
-;       |keyboard_inner_driver:kbd|         ; 14 (14)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd                                          ; keyboard_inner_driver ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |DE1_SoC                                  ; 2168 (100)          ; 395 (64)                  ; 307200            ; 0          ; 98   ; 0            ; |DE1_SoC                                                                                                                        ; DE1_SoC               ; work         ;
+;    |LFSR:rand_height|                     ; 1 (1)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|LFSR:rand_height                                                                                                       ; LFSR                  ; work         ;
+;    |VGA_framebuffer:fb|                   ; 116 (65)            ; 28 (22)                   ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb                                                                                                     ; VGA_framebuffer       ; work         ;
+;       |altsyncram:framebuffer_rtl_0|      ; 51 (0)              ; 6 (0)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0                                                                        ; altsyncram            ; work         ;
+;          |altsyncram_acq1:auto_generated| ; 51 (0)              ; 6 (6)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated                                         ; altsyncram_acq1       ; work         ;
+;             |decode_3na:decode2|          ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|decode_3na:decode2                      ; decode_3na            ; work         ;
+;             |mux_chb:mux3|                ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|mux_chb:mux3                            ; mux_chb               ; work         ;
+;    |bird_physics:bird_height|             ; 101 (101)           ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|bird_physics:bird_height                                                                                               ; bird_physics          ; work         ;
+;    |collision_detector:checkForDead|      ; 294 (294)           ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collision_detector:checkForDead                                                                                        ; collision_detector    ; work         ;
+;    |display_manager:display|              ; 1220 (59)           ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                                                ; display_manager       ; work         ;
+;       |bird_drawer:bird_coords|           ; 102 (102)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords                                                                        ; bird_drawer           ; work         ;
+;       |clear_screen:clr|                  ; 31 (31)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|clear_screen:clr                                                                               ; clear_screen          ; work         ;
+;       |pipe_drawer:pipe1_coords|          ; 230 (230)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords                                                                       ; pipe_drawer           ; work         ;
+;       |pipe_drawer:pipe2_coords|          ; 241 (241)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords                                                                       ; pipe_drawer           ; work         ;
+;       |pipe_drawer_top:p1_top|            ; 279 (279)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top                                                                         ; pipe_drawer_top       ; work         ;
+;       |pipe_drawer_top:p2_top|            ; 278 (278)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top                                                                         ; pipe_drawer_top       ; work         ;
+;    |game_manager:control|                 ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|game_manager:control                                                                                                   ; game_manager          ; work         ;
+;    |keyboard_press_driver:keyboard|       ; 26 (12)             ; 55 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard                                                                                         ; keyboard_press_driver ; work         ;
+;       |keyboard_inner_driver:kbd|         ; 14 (14)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd                                                               ; keyboard_inner_driver ; work         ;
+;    |score_manager:my_score|               ; 307 (21)            ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score                                                                                                 ; score_manager         ; work         ;
+;       |lpm_divide:Div0|                   ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_8am:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0|lpm_divide_8am:auto_generated                                                   ; lpm_divide_8am        ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh   ; work         ;
+;                |alt_u_div_2te:divider|    ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider ; alt_u_div_2te         ; work         ;
+;       |lpm_divide:Div1|                   ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_5am:auto_generated|  ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1|lpm_divide_5am:auto_generated                                                   ; lpm_divide_5am        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_sse:divider|    ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; alt_u_div_sse         ; work         ;
+;       |lpm_divide:Div2|                   ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_8am:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2|lpm_divide_8am:auto_generated                                                   ; lpm_divide_8am        ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh   ; work         ;
+;                |alt_u_div_2te:divider|    ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider ; alt_u_div_2te         ; work         ;
+;       |lpm_divide:Div3|                   ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_5am:auto_generated|  ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3|lpm_divide_5am:auto_generated                                                   ; lpm_divide_5am        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_sse:divider|    ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; alt_u_div_sse         ; work         ;
+;       |lpm_divide:Mod0|                   ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                   ; lpm_divide_82m        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_sse:divider|    ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; alt_u_div_sse         ; work         ;
+;       |lpm_divide:Mod1|                   ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1|lpm_divide_82m:auto_generated                                                   ; lpm_divide_82m        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_sse:divider|    ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; alt_u_div_sse         ; work         ;
+;       |score_display:high_hundreds|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:high_hundreds                                                                     ; score_display         ; work         ;
+;       |score_display:high_ones|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:high_ones                                                                         ; score_display         ; work         ;
+;       |score_display:high_tens|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:high_tens                                                                         ; score_display         ; work         ;
+;       |score_display:hundreds|            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:hundreds                                                                          ; score_display         ; work         ;
+;       |score_display:ones|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:ones                                                                              ; score_display         ; work         ;
+;       |score_display:tens|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:tens                                                                              ; score_display         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -308,8 +364,12 @@ Encoding Type:  User-Encoded
 ; display_manager:display|pipe_drawer:pipe1_coords|ps[3..31] ; Stuck at GND due to stuck port data_in ;
 ; collision_detector:checkForDead|ps[1..31]                  ; Stuck at GND due to stuck port data_in ;
 ; game_manager:control|ps[2..31]                             ; Stuck at GND due to stuck port data_in ;
+; pipe1_y[9]                                                 ; Merged with pipe1_y[10]                ;
+; pipe2_y[9]                                                 ; Merged with pipe2_y[10]                ;
+; pipe2_y[10]                                                ; Stuck at GND due to stuck port data_in ;
+; pipe1_y[10]                                                ; Stuck at GND due to stuck port data_in ;
 ; divided_clocks[20..25]                                     ; Lost fanout                            ;
-; Total Number of Removed Registers = 271                    ;                                        ;
+; Total Number of Removed Registers = 275                    ;                                        ;
 +------------------------------------------------------------+----------------------------------------+
 
 
@@ -318,12 +378,12 @@ Encoding Type:  User-Encoded
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 350   ;
-; Number of registers using Synchronous Clear  ; 140   ;
-; Number of registers using Synchronous Load   ; 26    ;
+; Total registers                              ; 395   ;
+; Number of registers using Synchronous Clear  ; 186   ;
+; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 106   ;
+; Number of registers using Clock Enable       ; 140   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -342,29 +402,34 @@ Encoding Type:  User-Encoded
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|x[4]                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|score_manager:my_score|highscore[7]                               ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|x[8]                     ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|filter_scan[0]                     ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|y[4]               ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[0]               ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[7]               ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[2]             ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[3]             ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|y[10]                    ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|bird_physics:bird_height|bird_y[5]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|score_manager:my_score|score[5]                                   ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[8]                                                        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[10]                                                       ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|y[2]               ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[1]               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[10]            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[1]             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[10]            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[4]             ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|y[7]                     ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|bird_physics:bird_height|bird_y[5]                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|incnt[2] ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|x[4]               ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|x[4]             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[2]                                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[10]                                                       ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|x[8]               ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|x[7]             ;
 ; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|x[4]               ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|x[4]             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[0]                                                        ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[7]                                                        ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[10]             ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[7]              ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|x[6]             ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[9]              ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[0]              ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[1]              ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[2]              ;
-; 8:1                ; 22 bits   ; 110 LEs       ; 88 LEs               ; 22 LEs                 ; No         ; |DE1_SoC|display_manager:display|y[6]                                      ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[6]              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|Add9               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|Add9               ;
+; 8:1                ; 22 bits   ; 110 LEs       ; 88 LEs               ; 22 LEs                 ; No         ; |DE1_SoC|display_manager:display|y[2]                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
@@ -469,6 +534,144 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 7              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_8am ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_5am ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_82m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div2 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 7              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_8am ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div3 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_5am ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_82m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                            ;
 +-------------------------------------------+-------------------------------------------------+
@@ -499,42 +702,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+---------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "display_manager:display" ;
-+----------------+-------+----------+-----------------+
-; Port           ; Type  ; Severity ; Details         ;
-+----------------+-------+----------+-----------------+
-; pipe1_y[7..3]  ; Input ; Info     ; Stuck at VCC    ;
-; pipe1_y[10..8] ; Input ; Info     ; Stuck at GND    ;
-; pipe1_y[2]     ; Input ; Info     ; Stuck at GND    ;
-; pipe1_y[1]     ; Input ; Info     ; Stuck at VCC    ;
-; pipe1_y[0]     ; Input ; Info     ; Stuck at GND    ;
-; pipe2_y[7..6]  ; Input ; Info     ; Stuck at VCC    ;
-; pipe2_y[10..8] ; Input ; Info     ; Stuck at GND    ;
-; pipe2_y[5..4]  ; Input ; Info     ; Stuck at GND    ;
-; pipe2_y[2..0]  ; Input ; Info     ; Stuck at GND    ;
-; pipe2_y[3]     ; Input ; Info     ; Stuck at VCC    ;
-+----------------+-------+----------+-----------------+
-
-
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "collision_detector:checkForDead" ;
-+----------------+-------+----------+-------------------------+
-; Port           ; Type  ; Severity ; Details                 ;
-+----------------+-------+----------+-------------------------+
-; pipe1_y[7..3]  ; Input ; Info     ; Stuck at VCC            ;
-; pipe1_y[10..8] ; Input ; Info     ; Stuck at GND            ;
-; pipe1_y[2]     ; Input ; Info     ; Stuck at GND            ;
-; pipe1_y[1]     ; Input ; Info     ; Stuck at VCC            ;
-; pipe1_y[0]     ; Input ; Info     ; Stuck at GND            ;
-; pipe2_y[7..6]  ; Input ; Info     ; Stuck at VCC            ;
-; pipe2_y[10..8] ; Input ; Info     ; Stuck at GND            ;
-; pipe2_y[5..4]  ; Input ; Info     ; Stuck at GND            ;
-; pipe2_y[2..0]  ; Input ; Info     ; Stuck at GND            ;
-; pipe2_y[3]     ; Input ; Info     ; Stuck at VCC            ;
-+----------------+-------+----------+-------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "game_manager:control"                                                                                          ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -553,47 +720,111 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_manager:my_score|score_display:ones"                                                                                                                                         ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_manager:my_score|score_display:tens"                                                                                                                                         ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_manager:my_score|score_display:hundreds"                                                                                                                                     ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_manager:my_score|score_display:high_ones"                                                                                                                                    ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_manager:my_score|score_display:high_tens"                                                                                                                                    ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "score_manager:my_score|score_display:high_hundreds"                                                                                                                                ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR:rand_height"                                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; out[9..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 350                         ;
+; arriav_ff             ; 395                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 68                          ;
-;     ENA SCLR          ; 29                          ;
+;     ENA               ; 84                          ;
+;     ENA SCLR          ; 47                          ;
 ;     ENA SLD           ; 9                           ;
-;     SCLR              ; 107                         ;
-;     SCLR SLD          ; 4                           ;
-;     SLD               ; 13                          ;
-;     plain             ; 119                         ;
-; arriav_lcell_comb     ; 1416                        ;
-;     arith             ; 612                         ;
-;         0 data inputs ; 8                           ;
-;         1 data inputs ; 524                         ;
-;         2 data inputs ; 49                          ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 11                          ;
-;         5 data inputs ; 2                           ;
-;     extend            ; 36                          ;
-;         7 data inputs ; 36                          ;
-;     normal            ; 668                         ;
+;     SCLR              ; 138                         ;
+;     SCLR SLD          ; 1                           ;
+;     SLD               ; 6                           ;
+;     plain             ; 109                         ;
+; arriav_lcell_comb     ; 2178                        ;
+;     arith             ; 1057                        ;
+;         0 data inputs ; 78                          ;
+;         1 data inputs ; 751                         ;
+;         2 data inputs ; 111                         ;
+;         3 data inputs ; 70                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 22                          ;
+;     extend            ; 15                          ;
+;         7 data inputs ; 15                          ;
+;     normal            ; 948                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 52                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 97                          ;
-;         5 data inputs ; 168                         ;
-;         6 data inputs ; 312                         ;
-;     shared            ; 100                         ;
-;         1 data inputs ; 2                           ;
+;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 97                          ;
+;         3 data inputs ; 77                          ;
+;         4 data inputs ; 137                         ;
+;         5 data inputs ; 241                         ;
+;         6 data inputs ; 382                         ;
+;     shared            ; 158                         ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 115                         ;
 ;         3 data inputs ; 1                           ;
 ; boundary_port         ; 98                          ;
 ; stratixv_ram_block    ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.80                        ;
-; Average LUT depth     ; 4.20                        ;
+; Max LUT depth         ; 11.40                       ;
+; Average LUT depth     ; 5.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -612,93 +843,119 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Jun 06 20:57:07 2020
+    Info: Processing started: Sun Jun 07 16:02:47 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file score_manager.sv
+    Info (12023): Found entity 1: score_manager File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file score_display.sv
+    Info (12023): Found entity 1: score_display File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 8
+Info (12021): Found 2 design units, including 2 entities, in source file lfsr.sv
+    Info (12023): Found entity 1: LFSR File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/LFSR.sv Line: 1
+    Info (12023): Found entity 2: LFSR_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/LFSR.sv Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file keyboard_inner_driver.v
-    Info (12023): Found entity 1: keyboard_inner_driver File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v Line: 1
+    Info (12023): Found entity 1: keyboard_inner_driver File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/keyboard_inner_driver.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file keyboard_press_driver.v
-    Info (12023): Found entity 1: keyboard_press_driver File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v Line: 1
+    Info (12023): Found entity 1: keyboard_press_driver File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/keyboard_press_driver.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at DE1_SoC.sv(103): ignored dangling comma in List of Port Connections File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 103
 Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.sv
-    Info (12023): Found entity 1: DE1_SoC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 5
+    Info (12023): Found entity 1: DE1_SoC File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file vga_framebuffer.sv
-    Info (12023): Found entity 1: VGA_framebuffer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv Line: 32
+    Info (12023): Found entity 1: VGA_framebuffer File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/VGA_framebuffer.sv Line: 32
 Info (12021): Found 2 design units, including 2 entities, in source file clear_screen.sv
-    Info (12023): Found entity 1: clear_screen File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 4
-    Info (12023): Found entity 2: clear_screen_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 34
+    Info (12023): Found entity 1: clear_screen File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clear_screen.sv Line: 4
+    Info (12023): Found entity 2: clear_screen_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clear_screen.sv Line: 34
 Info (12021): Found 2 design units, including 2 entities, in source file pipe_drawer.sv
-    Info (12023): Found entity 1: pipe_drawer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 1
-    Info (12023): Found entity 2: pipe_drawer_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 109
+    Info (12023): Found entity 1: pipe_drawer File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer.sv Line: 1
+    Info (12023): Found entity 2: pipe_drawer_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer.sv Line: 109
 Info (12021): Found 2 design units, including 2 entities, in source file bird_drawer.sv
-    Info (12023): Found entity 1: bird_drawer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 1
-    Info (12023): Found entity 2: bird_drawer_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 85
+    Info (12023): Found entity 1: bird_drawer File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 1
+    Info (12023): Found entity 2: bird_drawer_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 85
 Info (12021): Found 2 design units, including 2 entities, in source file display_manager.sv
-    Info (12023): Found entity 1: display_manager File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 1
-    Info (12023): Found entity 2: display_manager_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 132
+    Info (12023): Found entity 1: display_manager File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv Line: 1
+    Info (12023): Found entity 2: display_manager_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv Line: 132
 Info (12021): Found 1 design units, including 1 entities, in source file object_clear.sv
-    Info (12023): Found entity 1: object_clear File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/object_clear.sv Line: 1
+    Info (12023): Found entity 1: object_clear File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/object_clear.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file bird_physics.sv
-    Info (12023): Found entity 1: bird_physics File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 1
-    Info (12023): Found entity 2: bird_physics_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 83
+    Info (12023): Found entity 1: bird_physics File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 1
+    Info (12023): Found entity 2: bird_physics_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 83
 Info (12021): Found 2 design units, including 2 entities, in source file pipe_drawer_top.sv
-    Info (12023): Found entity 1: pipe_drawer_top File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 1
-    Info (12023): Found entity 2: pipe_drawer_top_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 110
+    Info (12023): Found entity 1: pipe_drawer_top File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer_top.sv Line: 1
+    Info (12023): Found entity 2: pipe_drawer_top_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer_top.sv Line: 110
 Info (12021): Found 1 design units, including 1 entities, in source file game_manager.sv
-    Info (12023): Found entity 1: game_manager File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv Line: 2
+    Info (12023): Found entity 1: game_manager File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/game_manager.sv Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file collision_detector.sv
-    Info (12023): Found entity 1: collision_detector File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 1
-    Info (12023): Found entity 2: collision_detector_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 54
+    Info (12023): Found entity 1: collision_detector File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/collision_detector.sv Line: 1
+    Info (12023): Found entity 2: collision_detector_testbench File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/collision_detector.sv Line: 54
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(52): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(164): truncated value with size 32 to match size of target (26) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 164
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(169): truncated value with size 10 to match size of target (9) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 169
-Warning (10030): Net "game_reset" at DE1_SoC.sv(35) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 35
-Info (12128): Elaborating entity "keyboard_press_driver" for hierarchy "keyboard_press_driver:keyboard" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 102
-Info (12128): Elaborating entity "keyboard_inner_driver" for hierarchy "keyboard_press_driver:keyboard|keyboard_inner_driver:kbd" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v Line: 38
-Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:control" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 109
-Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:checkForDead" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 120
-Warning (10230): Verilog HDL assignment warning at collision_detector.sv(45): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 45
-Warning (10230): Verilog HDL assignment warning at collision_detector.sv(47): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 47
-Info (12128): Elaborating entity "display_manager" for hierarchy "display_manager:display" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 135
-Info (12128): Elaborating entity "clear_screen" for hierarchy "display_manager:display|clear_screen:clr" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at clear_screen.sv(18): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at clear_screen.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 21
-Info (12128): Elaborating entity "pipe_drawer" for hierarchy "display_manager:display|pipe_drawer:pipe1_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 99
-Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(103): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 103
-Info (12128): Elaborating entity "pipe_drawer_top" for hierarchy "display_manager:display|pipe_drawer_top:p1_top" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 73
-Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 99
-Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(103): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 103
-Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(105): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 105
-Info (12128): Elaborating entity "bird_drawer" for hierarchy "display_manager:display|bird_drawer:bird_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 91
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(44): truncated value with size 32 to match size of target (7) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(50): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 50
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(60): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 60
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(64): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 64
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(65): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 65
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(69): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 69
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(71): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 71
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(73): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 73
-Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(75): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 75
-Warning (10030): Net "template.data_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
-Warning (10030): Net "template.waddr_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
-Warning (10030): Net "template.we_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
-Info (12128): Elaborating entity "VGA_framebuffer" for hierarchy "VGA_framebuffer:fb" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 151
-Info (12128): Elaborating entity "bird_physics" for hierarchy "bird_physics:bird_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 160
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(51): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 51
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(57): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 57
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(59): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 59
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at bird_physics.sv(66): truncated value with size 32 to match size of target (3) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 66
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "display_manager:display|bird_drawer:bird_coords|template" is uninferred due to inappropriate RAM size File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
-Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (100) in the Memory Initialization File "C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/DE1_SoC.ram0_bird_drawer_336cc79d.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(50): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(51): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(58): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(60): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(174): truncated value with size 32 to match size of target (26) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 174
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(179): truncated value with size 10 to match size of target (8) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 179
+Warning (10030): Net "game_reset" at DE1_SoC.sv(35) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 35
+Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:rand_height" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 43
+Info (12128): Elaborating entity "score_manager" for hierarchy "score_manager:my_score" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 103
+Warning (10036): Verilog HDL or VHDL warning at score_manager.sv(13): object "new_highscore" assigned a value but never read File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at score_manager.sv(34): truncated value with size 32 to match size of target (8) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 34
+Info (12128): Elaborating entity "score_display" for hierarchy "score_manager:my_score|score_display:high_hundreds" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 42
+Warning (10030): Net "digits.data_a" at score_display.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+Warning (10030): Net "digits.waddr_a" at score_display.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+Warning (10030): Net "digits.we_a" at score_display.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+Info (12128): Elaborating entity "keyboard_press_driver" for hierarchy "keyboard_press_driver:keyboard" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 112
+Info (12128): Elaborating entity "keyboard_inner_driver" for hierarchy "keyboard_press_driver:keyboard|keyboard_inner_driver:kbd" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/keyboard_press_driver.v Line: 38
+Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:control" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 119
+Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:checkForDead" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 130
+Warning (10230): Verilog HDL assignment warning at collision_detector.sv(45): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/collision_detector.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at collision_detector.sv(47): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/collision_detector.sv Line: 47
+Info (12128): Elaborating entity "display_manager" for hierarchy "display_manager:display" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 145
+Info (12128): Elaborating entity "clear_screen" for hierarchy "display_manager:display|clear_screen:clr" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at clear_screen.sv(18): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clear_screen.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at clear_screen.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clear_screen.sv Line: 21
+Info (12128): Elaborating entity "pipe_drawer" for hierarchy "display_manager:display|pipe_drawer:pipe1_coords" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(103): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer.sv Line: 103
+Info (12128): Elaborating entity "pipe_drawer_top" for hierarchy "display_manager:display|pipe_drawer_top:p1_top" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer_top.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(103): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer_top.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(105): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/pipe_drawer_top.sv Line: 105
+Info (12128): Elaborating entity "bird_drawer" for hierarchy "display_manager:display|bird_drawer:bird_coords" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/display_manager.sv Line: 91
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(44): truncated value with size 32 to match size of target (7) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(50): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(60): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(64): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(65): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(69): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(71): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(73): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(75): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 75
+Warning (10030): Net "template.data_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 8
+Warning (10030): Net "template.waddr_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 8
+Warning (10030): Net "template.we_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 8
+Info (12128): Elaborating entity "VGA_framebuffer" for hierarchy "VGA_framebuffer:fb" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 161
+Info (12128): Elaborating entity "bird_physics" for hierarchy "bird_physics:bird_height" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 170
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(51): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(57): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(59): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at bird_physics.sv(66): truncated value with size 32 to match size of target (3) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 66
+Info (276014): Found 7 instances of uninferred RAM logic
+    Info (276004): RAM logic "display_manager:display|bird_drawer:bird_coords|template" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_drawer.sv Line: 8
+    Info (276004): RAM logic "score_manager:my_score|score_display:ones|digits" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+    Info (276004): RAM logic "score_manager:my_score|score_display:tens|digits" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+    Info (276004): RAM logic "score_manager:my_score|score_display:hundreds|digits" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+    Info (276004): RAM logic "score_manager:my_score|score_display:high_ones|digits" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+    Info (276004): RAM logic "score_manager:my_score|score_display:high_tens|digits" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+    Info (276004): RAM logic "score_manager:my_score|score_display:high_hundreds|digits" is uninferred due to inappropriate RAM size File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_display.sv Line: 13
+Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (100) in the Memory Initialization File "C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/DE1_SoC.ram0_bird_drawer_336cc79d.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "VGA_framebuffer:fb|framebuffer_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -717,6 +974,13 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
         Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score_manager:my_score|Div0" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score_manager:my_score|Div1" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score_manager:my_score|Mod0" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 48
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score_manager:my_score|Div2" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 52
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score_manager:my_score|Div3" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score_manager:my_score|Mod1" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 60
 Info (12130): Elaborated megafunction instantiation "VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0"
 Info (12133): Instantiated megafunction "VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -736,99 +1000,90 @@ Info (12133): Instantiated megafunction "VGA_framebuffer:fb|altsyncram:framebuff
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_acq1.tdf
-    Info (12023): Found entity 1: altsyncram_acq1 File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_acq1.tdf Line: 32
+    Info (12023): Found entity 1: altsyncram_acq1 File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/altsyncram_acq1.tdf Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3na.tdf
-    Info (12023): Found entity 1: decode_3na File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/decode_3na.tdf Line: 23
+    Info (12023): Found entity 1: decode_3na File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/decode_3na.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
-    Info (12023): Found entity 1: mux_chb File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf Line: 23
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: mux_chb File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/mux_chb.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "score_manager:my_score|lpm_divide:Div0" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 40
+Info (12133): Instantiated megafunction "score_manager:my_score|lpm_divide:Div0" with the following parameter: File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 40
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8am.tdf
+    Info (12023): Found entity 1: lpm_divide_8am File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/lpm_divide_8am.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/sign_div_unsign_ekh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2te.tdf
+    Info (12023): Found entity 1: alt_u_div_2te File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/alt_u_div_2te.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "score_manager:my_score|lpm_divide:Div1" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 44
+Info (12133): Instantiated megafunction "score_manager:my_score|lpm_divide:Div1" with the following parameter: File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 44
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5am.tdf
+    Info (12023): Found entity 1: lpm_divide_5am File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/lpm_divide_5am.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sse.tdf
+    Info (12023): Found entity 1: alt_u_div_sse File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/alt_u_div_sse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "score_manager:my_score|lpm_divide:Mod0" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 48
+Info (12133): Instantiated megafunction "score_manager:my_score|lpm_divide:Mod0" with the following parameter: File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/score_manager.sv Line: 48
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
+    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/lpm_divide_82m.tdf Line: 25
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 24
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/output_files/DE1_SoC.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
-Info (21057): Implemented 1602 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 10
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 11
+Info (21057): Implemented 2376 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 1466 logic cells
+    Info (21061): Implemented 2240 logic cells
     Info (21064): Implemented 38 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Sat Jun 06 20:57:30 2020
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Sun Jun 07 16:03:05 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/output_files/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/output_files/DE1_SoC.map.smsg.
 
 

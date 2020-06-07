@@ -1,5 +1,5 @@
 Flow report for DE1_SoC
-Sat Jun 06 21:00:35 2020
+Sun Jun 07 16:06:06 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Jun 06 21:00:34 2020       ;
+; Flow Status                     ; Successful - Sun Jun 07 16:06:06 2020       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 850 / 32,070 ( 3 % )                        ;
-; Total registers                 ; 387                                         ;
+; Logic utilization (in ALMs)     ; 1,269 / 32,070 ( 4 % )                      ;
+; Total registers                 ; 427                                         ;
 ; Total pins                      ; 98 / 457 ( 21 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 307,200 / 4,065,280 ( 8 % )                 ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2020 20:57:08 ;
+; Start date & time ; 06/07/2020 16:02:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_SoC             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 95161994424757.159150222809652         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 93328254446751.159157096813796         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -100,12 +100,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 4826 MB             ; 00:00:45                           ;
-; Fitter                    ; 00:02:26     ; 1.0                     ; 6263 MB             ; 00:04:24                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 4865 MB             ; 00:00:11                           ;
-; TimeQuest Timing Analyzer ; 00:00:18     ; 1.4                     ; 5169 MB             ; 00:00:22                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4775 MB             ; 00:00:03                           ;
-; Total                     ; 00:03:20     ; --                      ; --                  ; 00:05:45                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 4831 MB             ; 00:00:32                           ;
+; Fitter                    ; 00:02:26     ; 1.1                     ; 6271 MB             ; 00:04:34                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 4871 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:17     ; 1.4                     ; 5177 MB             ; 00:00:23                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4786 MB             ; 00:00:03                           ;
+; Total                     ; 00:03:12     ; --                      ; --                  ; 00:05:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,11 +114,11 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-BTG04J6  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-BTG04J6  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-BTG04J6  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-BTG04J6  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-BTG04J6  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; August-Laptop    ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; August-Laptop    ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; August-Laptop    ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; August-Laptop    ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; August-Laptop    ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

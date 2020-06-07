@@ -5,7 +5,7 @@
 //
 // Output:
 // 7-bit seg7: 7-segment display value.
-module display
+module score_display
             (   input logic [3:0] digit,
                 output logic [6:0] seg7
             );
