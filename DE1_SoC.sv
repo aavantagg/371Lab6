@@ -92,6 +92,13 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
     logic makeBreak;
     logic [7:0] key;
 
+    logic [9:0] random; // 10-bit pseudorandom number
+
+    LFSR rand_height (  .clk(CLOCK_50,
+                        .rst(reset),
+                        .out(random)
+                    );
+
     keyboard_press_driver keyboard (    .CLOCK_50,
                                         .valid,
                                         .makeBreak,
@@ -109,7 +116,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 								 .game_enable);
 	
 	
-	Display_Manager display (.clk			 (CLOCK_50), 
+	display_manager display (.clk			 (CLOCK_50), 
 									 .reset, 
 									 .pipe1_x, 
 									 .pipe1_y, 
