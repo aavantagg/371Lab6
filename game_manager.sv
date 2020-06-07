@@ -27,6 +27,6 @@ module game_manager(clk, reset, flap, collision, restart, game_enable, game_rese
 	end
 
 	assign game_enable = ps == playing;
-	assign game_reset = (ps == done) & (ns == ready);
+	assign game_reset = ps == ready;
 
 endmodule // game manager

@@ -1,6 +1,6 @@
-module bird_physics(clk, reset, enable, game_reset, collision, flap, bird_x, bird_y);
+module bird_physics(clk, reset, enable, restart, collision, flap, bird_x, bird_y);
 	
-	input logic clk, reset, game_reset, enable, collision, flap;
+	input logic clk, reset, restart, enable, collision, flap;
 	output logic [10:0] bird_x, bird_y;
 	
 	enum {idle, falling1, falling2, falling3, falling4, rising1, rising2, rising3} ps, ns;
@@ -69,7 +69,7 @@ module bird_physics(clk, reset, enable, game_reset, collision, flap, bird_x, bir
 	
 	// update state
 	always_ff @(posedge clk) begin
-		if (reset | game_reset)
+		if (reset | restart)
 			ps <= idle;
 		else
 			ps <= ns;
@@ -81,7 +81,7 @@ module bird_physics(clk, reset, enable, game_reset, collision, flap, bird_x, bir
 endmodule // bird_physics
 
 module bird_physics_testbench();
-	logic clk, reset, game_reset, collision, enable, flap;
+	logic clk, reset, restart, collision, enable, flap;
 	logic [10:0] bird_x, bird_y;
 	
 	initial begin
