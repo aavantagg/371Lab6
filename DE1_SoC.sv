@@ -4,14 +4,14 @@
 // This program...
 module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 					VGA_R, VGA_G, VGA_B, VGA_BLANK_N, VGA_CLK, VGA_HS, VGA_SYNC_N, VGA_VS,
-                    PS2_DAT, PS2_CLK);
+               PS2_DAT, PS2_CLK);
 
 	input logic CLOCK_50;
 	input logic [3:0] KEY;
 	input logic [9:0] SW;
 
-    input PS2_DAT;
-    input PS2_CLK;
+   input PS2_DAT;
+   input PS2_CLK;
 		
 	output logic [6:0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
 	output logic [9:0] LEDR;
@@ -40,7 +40,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	
 	// Set pipe coordinates
 	always_ff @(posedge game_clk) begin
-		if (reset | game_reset) begin
+		if (reset | restart) begin
 			pipe1_x <= 319;
 			pipe2_x <= 639;
 		end 
@@ -74,8 +74,8 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
         else restart <= 0;
         if (makeBreak && key == 8'h2B) flap <= 1; // f
         else flap <= 0;
-        if (makeBreak && key == 8'h21) collision <= 1; // c
-        else collision <= 0;
+//        if (makeBreak && key == 8'h21) collision <= 1; // c
+//        else collision <= 0;
     end // always_ff
     
 	assign reset = ~KEY[0];
@@ -114,6 +114,17 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 								 .collision, 
 								 .restart, 
 								 .game_enable);
+								 
+	collision_detector checkForDead (.clk			(CLOCK_50), 
+												.reset, 
+												.bird_x, 
+												.bird_y, 
+												.pipe1_x, 
+												.pipe1_y, 
+												.pipe2_x, 
+												.pipe2_y, 
+												.restart, 
+												.collision);
 	
 	
 	display_manager display (.clk			 (CLOCK_50), 
@@ -149,7 +160,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	bird_physics bird_height (.clk		 (game_clk), 
 									  .reset		 (reset | game_reset), 
 									  .enable	 (game_enable),
-									  .game_reset,
+									  .restart,
 									  .collision, 
 									  .flap, 
 									  .bird_x, 
@@ -162,7 +173,8 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	
 	assign game_clk = divided_clocks[19];
 	
-	assign LEDR[9:0] = 10'b0;
+	assign LEDR[8:0] = 10'b0;
+	assign LEDR[9] = collision;
 	
 endmodule // DE1_SoC
 

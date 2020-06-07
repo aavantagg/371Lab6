@@ -14,7 +14,7 @@ module pipe_drawer_top(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 	
 	always_comb begin
 		case (ps)
-			idle: if (enable & pipe_left <= 1) ns = line4; // pipe left is off edge of screen -> start at top
+			idle: if (enable & ((pipe_left - bevel) > pipe_right)) ns = line4; // pipe left is off edge of screen -> start at top
 					else if (enable) 				  ns = line1;
 					else				  				  ns = idle;
 					
@@ -69,8 +69,13 @@ module pipe_drawer_top(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 			y <= pipe_bottom - bevel + counter;
 		end // line3
 		else if (ps == line4) begin
-			x <= pipe_left - bevel + counter;
-			y <= pipe_bottom;
+			if ((pipe_left - bevel) > pipe_right) begin
+				x <= counter;
+				y <= pipe_bottom;
+			end else begin
+				x <= pipe_left - bevel + counter;
+				y <= pipe_bottom;
+			end
 		end // line4
 		else if (ps == line5) begin
 			x <= pipe_right;
@@ -95,8 +100,8 @@ module pipe_drawer_top(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 	end //always_ff
 	
 	assign done = (ps == line7) & (ns == idle);
-	assign pipe_left = pipe_x - 60;
-	assign pipe_right = pipe_x + bevel;
+	assign pipe_left = pipe_x - 60 - bevel;
+	assign pipe_right = pipe_x;
 	assign pipe_bottom = pipe_y - 100;
 	assign bevel = 10;
 

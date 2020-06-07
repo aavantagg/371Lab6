@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Fri Jun 05 18:57:07 2020
+Sat Jun 06 20:57:30 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,21 +14,25 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Registers Packed Into Inferred Megafunctions
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated
- 14. Parameter Settings for User Entity Instance: VGA_framebuffer:fb
- 15. Parameter Settings for Inferred Entity Instance: VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "bird_physics:bird_height"
- 18. Port Connectivity Checks: "VGA_framebuffer:fb"
- 19. Port Connectivity Checks: "display_manager:display"
- 20. Port Connectivity Checks: "game_manager:control"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  9. State Machine - |DE1_SoC|keyboard_press_driver:keyboard|count
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated
+ 15. Parameter Settings for User Entity Instance: keyboard_press_driver:keyboard
+ 16. Parameter Settings for User Entity Instance: VGA_framebuffer:fb
+ 17. Parameter Settings for Inferred Entity Instance: VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "VGA_framebuffer:fb"
+ 20. Port Connectivity Checks: "display_manager:display"
+ 21. Port Connectivity Checks: "collision_detector:checkForDead"
+ 22. Port Connectivity Checks: "game_manager:control"
+ 23. Port Connectivity Checks: "keyboard_press_driver:keyboard"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,14 +59,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 05 18:57:07 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sat Jun 06 20:57:30 2020       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 292                                         ;
-; Total pins                      ; 96                                          ;
+; Total registers                 ; 350                                         ;
+; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 307,200                                     ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -179,34 +183,37 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv             ;         ;
-; VGA_framebuffer.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv     ;         ;
-; clear_screen.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv        ;         ;
-; pipe_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv         ;         ;
-; bird_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv         ;         ;
-; display_manager.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv     ;         ;
-; bird_physics.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv        ;         ;
-; pipe_drawer_top.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv     ;         ;
-; game_manager.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv        ;         ;
-; bird_template_v3.txt             ; yes             ; Auto-Found File              ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_template_v3.txt   ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                  ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc           ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                     ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                  ;         ;
-; aglobal170.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                  ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                   ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                      ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                      ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                    ;         ;
-; db/altsyncram_acq1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_acq1.tdf ;         ;
-; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/decode_3na.tdf      ;         ;
-; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf         ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; keyboard_inner_driver.v          ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v ;         ;
+; keyboard_press_driver.v          ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v ;         ;
+; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv              ;         ;
+; VGA_framebuffer.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv      ;         ;
+; clear_screen.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv         ;         ;
+; pipe_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv          ;         ;
+; bird_drawer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv          ;         ;
+; display_manager.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv      ;         ;
+; bird_physics.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv         ;         ;
+; pipe_drawer_top.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv      ;         ;
+; game_manager.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv         ;         ;
+; collision_detector.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv   ;         ;
+; bird_template_v3.txt             ; yes             ; Auto-Found File              ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_template_v3.txt    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_acq1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_acq1.tdf  ;         ;
+; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/decode_3na.tdf       ;         ;
+; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -214,51 +221,54 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 728            ;
+; Estimate of Logic utilization (ALMs needed) ; 883            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1186           ;
-;     -- 7 input functions                    ; 17             ;
-;     -- 6 input functions                    ; 253            ;
-;     -- 5 input functions                    ; 181            ;
-;     -- 4 input functions                    ; 90             ;
-;     -- <=3 input functions                  ; 645            ;
+; Combinational ALUT usage for logic          ; 1412           ;
+;     -- 7 input functions                    ; 36             ;
+;     -- 6 input functions                    ; 312            ;
+;     -- 5 input functions                    ; 170            ;
+;     -- 4 input functions                    ; 108            ;
+;     -- <=3 input functions                  ; 786            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 292            ;
+; Dedicated logic registers                   ; 350            ;
 ;                                             ;                ;
-; I/O pins                                    ; 96             ;
+; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 307200         ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 291            ;
-; Total fan-out                               ; 6438           ;
-; Average fan-out                             ; 3.77           ;
+; Maximum fan-out                             ; 316            ;
+; Total fan-out                               ; 7391           ;
+; Average fan-out                             ; 3.70           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |DE1_SoC                                  ; 1186 (72)           ; 292 (44)                  ; 307200            ; 0          ; 96   ; 0            ; |DE1_SoC                                                                                                   ; DE1_SoC         ; work         ;
-;    |VGA_framebuffer:fb|                   ; 116 (65)            ; 28 (22)                   ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb                                                                                ; VGA_framebuffer ; work         ;
-;       |altsyncram:framebuffer_rtl_0|      ; 51 (0)              ; 6 (0)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0                                                   ; altsyncram      ; work         ;
-;          |altsyncram_acq1:auto_generated| ; 51 (0)              ; 6 (6)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated                    ; altsyncram_acq1 ; work         ;
-;             |decode_3na:decode2|          ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|decode_3na:decode2 ; decode_3na      ; work         ;
-;             |mux_chb:mux3|                ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|mux_chb:mux3       ; mux_chb         ; work         ;
-;    |bird_physics:bird_height|             ; 97 (97)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|bird_physics:bird_height                                                                          ; bird_physics    ; work         ;
-;    |display_manager:display|              ; 898 (66)            ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                           ; display_manager ; work         ;
-;       |bird_drawer:bird_coords|           ; 104 (104)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords                                                   ; bird_drawer     ; work         ;
-;       |clear_screen:clr|                  ; 31 (31)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|clear_screen:clr                                                          ; clear_screen    ; work         ;
-;       |pipe_drawer:pipe1_coords|          ; 207 (207)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords                                                  ; pipe_drawer     ; work         ;
-;       |pipe_drawer:pipe2_coords|          ; 141 (141)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords                                                  ; pipe_drawer     ; work         ;
-;       |pipe_drawer_top:p1t_coords|        ; 139 (139)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1t_coords                                                ; pipe_drawer_top ; work         ;
-;       |pipe_drawer_top:p2t_coords|        ; 210 (210)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2t_coords                                                ; pipe_drawer_top ; work         ;
-;    |game_manager:control|                 ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|game_manager:control                                                                              ; game_manager    ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |DE1_SoC                                  ; 1412 (80)           ; 350 (46)                  ; 307200            ; 0          ; 98   ; 0            ; |DE1_SoC                                                                                                   ; DE1_SoC               ; work         ;
+;    |VGA_framebuffer:fb|                   ; 116 (65)            ; 28 (22)                   ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb                                                                                ; VGA_framebuffer       ; work         ;
+;       |altsyncram:framebuffer_rtl_0|      ; 51 (0)              ; 6 (0)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0                                                   ; altsyncram            ; work         ;
+;          |altsyncram_acq1:auto_generated| ; 51 (0)              ; 6 (6)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated                    ; altsyncram_acq1       ; work         ;
+;             |decode_3na:decode2|          ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|decode_3na:decode2 ; decode_3na            ; work         ;
+;             |mux_chb:mux3|                ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|mux_chb:mux3       ; mux_chb               ; work         ;
+;    |bird_physics:bird_height|             ; 101 (101)           ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|bird_physics:bird_height                                                                          ; bird_physics          ; work         ;
+;    |collision_detector:checkForDead|      ; 82 (82)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collision_detector:checkForDead                                                                   ; collision_detector    ; work         ;
+;    |display_manager:display|              ; 1004 (56)           ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                           ; display_manager       ; work         ;
+;       |bird_drawer:bird_coords|           ; 104 (104)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords                                                   ; bird_drawer           ; work         ;
+;       |clear_screen:clr|                  ; 31 (31)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|clear_screen:clr                                                          ; clear_screen          ; work         ;
+;       |pipe_drawer:pipe1_coords|          ; 166 (166)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords                                                  ; pipe_drawer           ; work         ;
+;       |pipe_drawer:pipe2_coords|          ; 176 (176)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords                                                  ; pipe_drawer           ; work         ;
+;       |pipe_drawer_top:p1_top|            ; 238 (238)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top                                                    ; pipe_drawer_top       ; work         ;
+;       |pipe_drawer_top:p2_top|            ; 233 (233)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top                                                    ; pipe_drawer_top       ; work         ;
+;    |game_manager:control|                 ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|game_manager:control                                                                              ; game_manager          ; work         ;
+;    |keyboard_press_driver:keyboard|       ; 26 (12)             ; 55 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard                                                                    ; keyboard_press_driver ; work         ;
+;       |keyboard_inner_driver:kbd|         ; 14 (14)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd                                          ; keyboard_inner_driver ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -271,22 +281,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                    ;
-+--------------------------------------------------------------+----------------------------------------+
-; Register name                                                ; Reason for Removal                     ;
-+--------------------------------------------------------------+----------------------------------------+
-; bird_physics:bird_height|ps[3..31]                           ; Stuck at GND due to stuck port data_in ;
-; display_manager:display|ps[3..31]                            ; Stuck at GND due to stuck port data_in ;
-; display_manager:display|bird_drawer:bird_coords|ps[2..31]    ; Stuck at GND due to stuck port data_in ;
-; display_manager:display|pipe_drawer_top:p2t_coords|ps[3..31] ; Stuck at GND due to stuck port data_in ;
-; display_manager:display|pipe_drawer_top:p1t_coords|ps[3..31] ; Stuck at GND due to stuck port data_in ;
-; display_manager:display|pipe_drawer:pipe2_coords|ps[3..31]   ; Stuck at GND due to stuck port data_in ;
-; display_manager:display|pipe_drawer:pipe1_coords|ps[3..31]   ; Stuck at GND due to stuck port data_in ;
-; game_manager:control|ps[2..31]                               ; Stuck at GND due to stuck port data_in ;
-; divided_clocks[20..25]                                       ; Lost fanout                            ;
-; Total Number of Removed Registers = 240                      ;                                        ;
-+--------------------------------------------------------------+----------------------------------------+
+Encoding Type:  User-Encoded
++---------------------------------------------------------------+
+; State Machine - |DE1_SoC|keyboard_press_driver:keyboard|count ;
++----------+---------+------------------------------------------+
+; Name     ; count~7 ; count~6                                  ;
++----------+---------+------------------------------------------+
+; count.00 ; 0       ; 0                                        ;
+; count.01 ; 0       ; 1                                        ;
+; count.10 ; 1       ; 0                                        ;
+; count.11 ; 1       ; 1                                        ;
++----------+---------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++------------------------------------------------------------+----------------------------------------+
+; Register name                                              ; Reason for Removal                     ;
++------------------------------------------------------------+----------------------------------------+
+; bird_physics:bird_height|ps[3..31]                         ; Stuck at GND due to stuck port data_in ;
+; display_manager:display|ps[3..31]                          ; Stuck at GND due to stuck port data_in ;
+; display_manager:display|bird_drawer:bird_coords|ps[2..31]  ; Stuck at GND due to stuck port data_in ;
+; display_manager:display|pipe_drawer_top:p2_top|ps[3..31]   ; Stuck at GND due to stuck port data_in ;
+; display_manager:display|pipe_drawer_top:p1_top|ps[3..31]   ; Stuck at GND due to stuck port data_in ;
+; display_manager:display|pipe_drawer:pipe2_coords|ps[3..31] ; Stuck at GND due to stuck port data_in ;
+; display_manager:display|pipe_drawer:pipe1_coords|ps[3..31] ; Stuck at GND due to stuck port data_in ;
+; collision_detector:checkForDead|ps[1..31]                  ; Stuck at GND due to stuck port data_in ;
+; game_manager:control|ps[2..31]                             ; Stuck at GND due to stuck port data_in ;
+; divided_clocks[20..25]                                     ; Lost fanout                            ;
+; Total Number of Removed Registers = 271                    ;                                        ;
++------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -294,12 +318,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 292   ;
-; Number of registers using Synchronous Clear  ; 169   ;
-; Number of registers using Synchronous Load   ; 25    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 350   ;
+; Number of registers using Synchronous Clear  ; 140   ;
+; Number of registers using Synchronous Load   ; 26    ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Clock Enable       ; 106   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -313,38 +337,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+--------------------------------------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|x[10]            ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2t_coords|y1[10] ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 27 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2t_coords|x1[2]  ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[1]     ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 27 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|x[3]     ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[1]     ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 27 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|x[3]     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1t_coords|y1[1]  ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1t_coords|y1[5]  ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 27 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1t_coords|x1[6]  ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|y[3]             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[6]                                                ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[8]                                                ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|bird_physics:bird_height|bird_y[7]                        ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[8]                                                ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[0]                                                ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[5]      ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[7]      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[1]      ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[2]      ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2t_coords|Add8   ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|Add9     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|Add9     ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1t_coords|Add8   ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; No         ; |DE1_SoC|display_manager:display|y[0]                              ;
-; 10:1               ; 11 bits   ; 66 LEs        ; 55 LEs               ; 11 LEs                 ; No         ; |DE1_SoC|display_manager:display|x[4]                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|x[4]                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|filter_scan[0]                     ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|y[4]               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[0]               ;
+; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[7]               ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[2]             ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[3]             ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|y[10]                    ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|bird_physics:bird_height|bird_y[5]                                ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[8]                                                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[10]                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|incnt[2] ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|x[4]               ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|x[4]             ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|x[4]               ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|x[4]             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[0]                                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[7]                                                        ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[10]             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[7]              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[1]              ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[2]              ;
+; 8:1                ; 22 bits   ; 110 LEs       ; 88 LEs               ; 22 LEs                 ; No         ; |DE1_SoC|display_manager:display|y[6]                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -354,6 +375,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+-----------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
 +---------------------------------+--------------------+------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keyboard_press_driver:keyboard ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; FIRST          ; 0        ; Unsigned Binary                                 ;
+; SEENF0         ; 1        ; Unsigned Binary                                 ;
+; NULL           ; 00000000 ; Unsigned Binary                                 ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------+
@@ -456,15 +489,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "bird_physics:bird_height" ;
-+------------+-------+----------+----------------------+
-; Port       ; Type  ; Severity ; Details              ;
-+------------+-------+----------+----------------------+
-; game_reset ; Input ; Info     ; Stuck at GND         ;
-+------------+-------+----------+----------------------+
-
-
 +------------------------------------------------+
 ; Port Connectivity Checks: "VGA_framebuffer:fb" ;
 +-------------+-------+----------+---------------+
@@ -493,6 +517,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+-----------------+
 
 
++-------------------------------------------------------------+
+; Port Connectivity Checks: "collision_detector:checkForDead" ;
++----------------+-------+----------+-------------------------+
+; Port           ; Type  ; Severity ; Details                 ;
++----------------+-------+----------+-------------------------+
+; pipe1_y[7..3]  ; Input ; Info     ; Stuck at VCC            ;
+; pipe1_y[10..8] ; Input ; Info     ; Stuck at GND            ;
+; pipe1_y[2]     ; Input ; Info     ; Stuck at GND            ;
+; pipe1_y[1]     ; Input ; Info     ; Stuck at VCC            ;
+; pipe1_y[0]     ; Input ; Info     ; Stuck at GND            ;
+; pipe2_y[7..6]  ; Input ; Info     ; Stuck at VCC            ;
+; pipe2_y[10..8] ; Input ; Info     ; Stuck at GND            ;
+; pipe2_y[5..4]  ; Input ; Info     ; Stuck at GND            ;
+; pipe2_y[2..0]  ; Input ; Info     ; Stuck at GND            ;
+; pipe2_y[3]     ; Input ; Info     ; Stuck at VCC            ;
++----------------+-------+----------+-------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "game_manager:control"                                                                                          ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -502,46 +544,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_press_driver:keyboard"                                                      ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; valid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 292                         ;
-;     ENA               ; 33                          ;
-;     ENA SCLR          ; 21                          ;
+; arriav_ff             ; 350                         ;
+;     CLR               ; 1                           ;
+;     ENA               ; 68                          ;
+;     ENA SCLR          ; 29                          ;
 ;     ENA SLD           ; 9                           ;
-;     SCLR              ; 145                         ;
-;     SCLR SLD          ; 3                           ;
+;     SCLR              ; 107                         ;
+;     SCLR SLD          ; 4                           ;
 ;     SLD               ; 13                          ;
-;     plain             ; 68                          ;
-; arriav_lcell_comb     ; 1190                        ;
-;     arith             ; 574                         ;
-;         0 data inputs ; 6                           ;
-;         1 data inputs ; 490                         ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 22                          ;
-;     extend            ; 17                          ;
-;         7 data inputs ; 17                          ;
-;     normal            ; 587                         ;
+;     plain             ; 119                         ;
+; arriav_lcell_comb     ; 1416                        ;
+;     arith             ; 612                         ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 524                         ;
+;         2 data inputs ; 49                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 11                          ;
+;         5 data inputs ; 2                           ;
+;     extend            ; 36                          ;
+;         7 data inputs ; 36                          ;
+;     normal            ; 668                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 72                          ;
-;         4 data inputs ; 57                          ;
-;         5 data inputs ; 159                         ;
-;         6 data inputs ; 253                         ;
-;     shared            ; 12                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 97                          ;
+;         5 data inputs ; 168                         ;
+;         6 data inputs ; 312                         ;
+;     shared            ; 100                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
+;         2 data inputs ; 97                          ;
 ;         3 data inputs ; 1                           ;
-; boundary_port         ; 96                          ;
+; boundary_port         ; 98                          ;
 ; stratixv_ram_block    ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.80                        ;
-; Average LUT depth     ; 4.62                        ;
+; Average LUT depth     ; 4.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -550,7 +602,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -560,10 +612,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jun 05 18:56:39 2020
+    Info: Processing started: Sat Jun 06 20:57:07 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file keyboard_inner_driver.v
+    Info (12023): Found entity 1: keyboard_inner_driver File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file keyboard_press_driver.v
+    Info (12023): Found entity 1: keyboard_press_driver File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.sv
     Info (12023): Found entity 1: DE1_SoC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file vga_framebuffer.sv
@@ -573,13 +629,13 @@ Info (12021): Found 2 design units, including 2 entities, in source file clear_s
     Info (12023): Found entity 2: clear_screen_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 34
 Info (12021): Found 2 design units, including 2 entities, in source file pipe_drawer.sv
     Info (12023): Found entity 1: pipe_drawer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 1
-    Info (12023): Found entity 2: pipe_drawer_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 104
+    Info (12023): Found entity 2: pipe_drawer_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 109
 Info (12021): Found 2 design units, including 2 entities, in source file bird_drawer.sv
     Info (12023): Found entity 1: bird_drawer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 1
     Info (12023): Found entity 2: bird_drawer_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 85
 Info (12021): Found 2 design units, including 2 entities, in source file display_manager.sv
     Info (12023): Found entity 1: display_manager File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 1
-    Info (12023): Found entity 2: display_manager_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 152
+    Info (12023): Found entity 2: display_manager_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 132
 Info (12021): Found 1 design units, including 1 entities, in source file object_clear.sv
     Info (12023): Found entity 1: object_clear File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/object_clear.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file bird_physics.sv
@@ -587,28 +643,37 @@ Info (12021): Found 2 design units, including 2 entities, in source file bird_ph
     Info (12023): Found entity 2: bird_physics_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 83
 Info (12021): Found 2 design units, including 2 entities, in source file pipe_drawer_top.sv
     Info (12023): Found entity 1: pipe_drawer_top File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 1
-    Info (12023): Found entity 2: pipe_drawer_top_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 120
+    Info (12023): Found entity 2: pipe_drawer_top_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 110
 Info (12021): Found 1 design units, including 1 entities, in source file game_manager.sv
     Info (12023): Found entity 1: game_manager File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv Line: 2
+Info (12021): Found 2 design units, including 2 entities, in source file collision_detector.sv
+    Info (12023): Found entity 1: collision_detector File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 1
+    Info (12023): Found entity 2: collision_detector_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 54
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(48): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(49): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 49
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(130): truncated value with size 32 to match size of target (26) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 130
-Warning (10030): Net "game_reset" at DE1_SoC.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 31
-Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:control" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 86
-Info (12128): Elaborating entity "display_manager" for hierarchy "display_manager:display" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 101
-Info (12128): Elaborating entity "clear_screen" for hierarchy "display_manager:display|clear_screen:clr" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(52): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(164): truncated value with size 32 to match size of target (26) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 164
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(169): truncated value with size 10 to match size of target (9) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 169
+Warning (10030): Net "game_reset" at DE1_SoC.sv(35) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 35
+Info (12128): Elaborating entity "keyboard_press_driver" for hierarchy "keyboard_press_driver:keyboard" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 102
+Info (12128): Elaborating entity "keyboard_inner_driver" for hierarchy "keyboard_press_driver:keyboard|keyboard_inner_driver:kbd" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v Line: 38
+Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:control" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 109
+Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:checkForDead" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at collision_detector.sv(45): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at collision_detector.sv(47): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 47
+Info (12128): Elaborating entity "display_manager" for hierarchy "display_manager:display" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 135
+Info (12128): Elaborating entity "clear_screen" for hierarchy "display_manager:display|clear_screen:clr" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 46
 Warning (10230): Verilog HDL assignment warning at clear_screen.sv(18): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at clear_screen.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 21
-Info (12128): Elaborating entity "pipe_drawer" for hierarchy "display_manager:display|pipe_drawer:pipe1_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 67
+Info (12128): Elaborating entity "pipe_drawer" for hierarchy "display_manager:display|pipe_drawer:pipe1_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 55
 Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(94): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 94
-Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(98): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 98
-Info (12128): Elaborating entity "pipe_drawer_top" for hierarchy "display_manager:display|pipe_drawer_top:p1t_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 85
-Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(95): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 95
-Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(113): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 113
-Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(115): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 115
-Info (12128): Elaborating entity "bird_drawer" for hierarchy "display_manager:display|bird_drawer:bird_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at pipe_drawer.sv(103): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv Line: 103
+Info (12128): Elaborating entity "pipe_drawer_top" for hierarchy "display_manager:display|pipe_drawer_top:p1_top" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(99): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(103): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at pipe_drawer_top.sv(105): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv Line: 105
+Info (12128): Elaborating entity "bird_drawer" for hierarchy "display_manager:display|bird_drawer:bird_coords" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 91
 Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(44): truncated value with size 32 to match size of target (7) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 44
 Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(50): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 50
 Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(60): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 60
@@ -622,8 +687,8 @@ Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(75): truncated
 Warning (10030): Net "template.data_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
 Warning (10030): Net "template.waddr_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
 Warning (10030): Net "template.we_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
-Info (12128): Elaborating entity "VGA_framebuffer" for hierarchy "VGA_framebuffer:fb" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 117
-Info (12128): Elaborating entity "bird_physics" for hierarchy "bird_physics:bird_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 126
+Info (12128): Elaborating entity "VGA_framebuffer" for hierarchy "VGA_framebuffer:fb" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 151
+Info (12128): Elaborating entity "bird_physics" for hierarchy "bird_physics:bird_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 160
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(51): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 51
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 53
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 55
@@ -678,83 +743,92 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_chb File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 13
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 20
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 16
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
-Info (21057): Implemented 1333 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 10
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+Info (21057): Implemented 1602 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 1199 logic cells
+    Info (21061): Implemented 1466 logic cells
     Info (21064): Implemented 38 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Fri Jun 05 18:57:07 2020
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:51
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Sat Jun 06 20:57:30 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:45
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/output_files/DE1_SoC.map.smsg.
 
 
