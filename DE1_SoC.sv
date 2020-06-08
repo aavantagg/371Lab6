@@ -72,10 +72,8 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
     always_ff @(posedge CLOCK_50) begin
         if (makeBreak && key == 8'h2D) restart <= 1; // r
         else restart <= 0;
-        if (makeBreak && key == 8'h2B) flap <= 1; // f
+        if (makeBreak && key == 8'h2B) flap <= 1; 	// f
         else flap <= 0;
-//        if (makeBreak && key == 8'h21) collision <= 1; // c
-//        else collision <= 0;
     end // always_ff
     
 	assign reset = ~KEY[0];
@@ -94,7 +92,7 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 
     logic [9:0] random; // 10-bit pseudorandom number
 
-    LFSR rand_height (  .clk(CLOCK_50,
+    LFSR rand_height (  .clk(CLOCK_50),
                         .rst(reset),
                         .out(random)
                     );

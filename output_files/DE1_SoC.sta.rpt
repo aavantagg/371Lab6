@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for DE1_SoC
-Sat Jun 06 21:00:30 2020
+Sun Jun 07 17:20:17 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -102,12 +102,12 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.37        ;
+; Average used               ; 1.35        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  36.8%      ;
+;     Processor 2            ;  34.8%      ;
 +----------------------------+-------------+
 
 
@@ -129,10 +129,10 @@ agreement for further details.
 +------------+-----------------+--------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                     ; Note ;
 +------------+-----------------+--------------------------------------------------------------------------------+------+
-; 123.26 MHz ; 123.26 MHz      ; CLOCK_50                                                                       ;      ;
-; 214.41 MHz ; 214.41 MHz      ; divided_clocks[19]                                                             ;      ;
-; 286.12 MHz ; 286.12 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ;      ;
-; 354.36 MHz ; 354.36 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ;      ;
+; 123.03 MHz ; 123.03 MHz      ; CLOCK_50                                                                       ;      ;
+; 199.16 MHz ; 199.16 MHz      ; divided_clocks[19]                                                             ;      ;
+; 239.01 MHz ; 239.01 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ;      ;
+; 342.58 MHz ; 342.58 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ;      ;
 +------------+-----------------+--------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -148,10 +148,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -7.177 ; -6637.946     ;
-; divided_clocks[19]                                                             ; -4.971 ; -173.252      ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -2.495 ; -33.376       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -1.822 ; -12.714       ;
+; CLOCK_50                                                                       ; -7.128 ; -6562.922     ;
+; divided_clocks[19]                                                             ; -5.043 ; -169.425      ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -3.184 ; -37.071       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -1.919 ; -14.055       ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -160,10 +160,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                          ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                       ; 0.305 ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.403 ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.445 ; 0.000         ;
-; divided_clocks[19]                                                             ; 0.673 ; 0.000         ;
+; CLOCK_50                                                                       ; 0.311 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.410 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.536 ; 0.000         ;
+; divided_clocks[19]                                                             ; 0.636 ; 0.000         ;
 +--------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -172,7 +172,7 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -2.929 ; -2.929        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -2.647 ; -2.647        ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -181,7 +181,7 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------+-------+---------------+
 ; Clock                                                              ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------+-------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 2.328 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 2.010 ; 0.000         ;
 +--------------------------------------------------------------------+-------+---------------+
 
 
@@ -190,10 +190,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -2.636 ; -6257.981     ;
-; divided_clocks[19]                                                             ; -0.394 ; -22.357       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -0.394 ; -11.994       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.394 ; -6.123        ;
+; CLOCK_50                                                                       ; -2.636 ; -6261.731     ;
+; divided_clocks[19]                                                             ; -0.394 ; -24.896       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -0.394 ; -12.993       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.394 ; -7.140        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; -0.394 ; -0.541        ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
@@ -209,10 +209,10 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                     ; Note ;
 +------------+-----------------+--------------------------------------------------------------------------------+------+
-; 122.67 MHz ; 122.67 MHz      ; CLOCK_50                                                                       ;      ;
-; 215.05 MHz ; 215.05 MHz      ; divided_clocks[19]                                                             ;      ;
-; 292.14 MHz ; 292.14 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ;      ;
-; 351.62 MHz ; 351.62 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ;      ;
+; 122.47 MHz ; 122.47 MHz      ; CLOCK_50                                                                       ;      ;
+; 201.41 MHz ; 201.41 MHz      ; divided_clocks[19]                                                             ;      ;
+; 244.32 MHz ; 244.32 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ;      ;
+; 343.29 MHz ; 343.29 MHz      ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ;      ;
 +------------+-----------------+--------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -222,10 +222,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -7.218 ; -6388.602     ;
-; divided_clocks[19]                                                             ; -5.046 ; -175.428      ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -2.423 ; -31.909       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -1.844 ; -12.536       ;
+; CLOCK_50                                                                       ; -7.165 ; -6300.596     ;
+; divided_clocks[19]                                                             ; -5.137 ; -171.873      ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -3.093 ; -35.850       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -1.913 ; -13.980       ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -234,10 +234,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                          ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                       ; 0.064 ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.358 ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.508 ; 0.000         ;
-; divided_clocks[19]                                                             ; 0.656 ; 0.000         ;
+; CLOCK_50                                                                       ; 0.105 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.465 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.513 ; 0.000         ;
+; divided_clocks[19]                                                             ; 0.618 ; 0.000         ;
 +--------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -246,7 +246,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -3.016 ; -3.016        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -2.753 ; -2.753        ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -255,7 +255,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+-------+---------------+
 ; Clock                                                              ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------+-------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 2.436 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 2.141 ; 0.000         ;
 +--------------------------------------------------------------------+-------+---------------+
 
 
@@ -264,11 +264,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -2.636 ; -6231.055     ;
-; divided_clocks[19]                                                             ; -0.394 ; -21.858       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -0.394 ; -11.901       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.394 ; -6.171        ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; -0.394 ; -0.545        ;
+; CLOCK_50                                                                       ; -2.636 ; -6234.324     ;
+; divided_clocks[19]                                                             ; -0.394 ; -24.060       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -0.394 ; -12.587       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.394 ; -7.190        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; -0.394 ; -0.551        ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -283,10 +283,10 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -4.168 ; -3566.036     ;
-; divided_clocks[19]                                                             ; -2.474 ; -83.298       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -1.280 ; -13.417       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.811 ; -5.467        ;
+; CLOCK_50                                                                       ; -3.801 ; -3524.246     ;
+; divided_clocks[19]                                                             ; -2.505 ; -80.823       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -1.786 ; -16.746       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.936 ; -5.416        ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -295,10 +295,10 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                          ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------------------+-------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.005 ; 0.000         ;
-; CLOCK_50                                                                       ; 0.075 ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.127 ; 0.000         ;
-; divided_clocks[19]                                                             ; 0.331 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.076 ; 0.000         ;
+; CLOCK_50                                                                       ; 0.179 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.232 ; 0.000         ;
+; divided_clocks[19]                                                             ; 0.324 ; 0.000         ;
 +--------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -307,7 +307,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -1.236 ; -1.236        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -1.058 ; -1.058        ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -316,7 +316,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+-------+---------------+
 ; Clock                                                              ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------+-------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 1.023 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 0.826 ; 0.000         ;
 +--------------------------------------------------------------------+-------+---------------+
 
 
@@ -325,11 +325,11 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -2.636 ; -6247.168     ;
-; divided_clocks[19]                                                             ; -0.032 ; -0.064        ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.069  ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; 0.073  ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.150  ; 0.000         ;
+; CLOCK_50                                                                       ; -2.636 ; -6249.013     ;
+; divided_clocks[19]                                                             ; -0.029 ; -0.661        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.017  ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; 0.049  ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.143  ; 0.000         ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -344,23 +344,23 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -3.636 ; -2995.315     ;
-; divided_clocks[19]                                                             ; -2.309 ; -78.615       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -1.109 ; -11.075       ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.761 ; -4.472        ;
+; CLOCK_50                                                                       ; -3.362 ; -2949.766     ;
+; divided_clocks[19]                                                             ; -2.356 ; -76.204       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -1.556 ; -13.951       ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.866 ; -4.444        ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                                                       ;
-+--------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                          ; Slack  ; End Point TNS ;
-+--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -0.057 ; -0.184        ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -0.007 ; -0.007        ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.056  ; 0.000         ;
-; divided_clocks[19]                                                             ; 0.312  ; 0.000         ;
-+--------------------------------------------------------------------------------+--------+---------------+
++--------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                                                      ;
++--------------------------------------------------------------------------------+-------+---------------+
+; Clock                                                                          ; Slack ; End Point TNS ;
++--------------------------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                                       ; 0.058 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.060 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.156 ; 0.000         ;
+; divided_clocks[19]                                                             ; 0.294 ; 0.000         ;
++--------------------------------------------------------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -368,7 +368,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -1.202 ; -1.202        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; -1.052 ; -1.052        ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -377,7 +377,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+-------+---------------+
 ; Clock                                                              ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------+-------+---------------+
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 1.008 ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set ; 0.840 ; 0.000         ;
 +--------------------------------------------------------------------+-------+---------------+
 
 
@@ -386,11 +386,11 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                          ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                       ; -2.636 ; -6365.202     ;
-; divided_clocks[19]                                                             ; 0.009  ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.088  ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; 0.089  ; 0.000         ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.145  ; 0.000         ;
+; CLOCK_50                                                                       ; -2.636 ; -6367.823     ;
+; divided_clocks[19]                                                             ; 0.014  ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 0.053  ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; 0.061  ; 0.000         ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 0.142  ; 0.000         ;
 +--------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -400,24 +400,24 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                             ;
-+---------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Clock                                                                           ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                ; -7.218    ; -0.057 ; -3.016   ; 1.008   ; -2.636              ;
-;  CLOCK_50                                                                       ; -7.218    ; -0.057 ; N/A      ; N/A     ; -2.636              ;
-;  divided_clocks[19]                                                             ; -5.046    ; 0.312  ; N/A      ; N/A     ; -0.394              ;
-;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -1.844    ; -0.007 ; N/A      ; N/A     ; -0.394              ;
-;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -2.495    ; 0.056  ; N/A      ; N/A     ; -0.394              ;
-;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; N/A       ; N/A    ; -3.016   ; 1.008   ; -0.394              ;
-; Design-wide TNS                                                                 ; -6857.288 ; -0.191 ; -3.016   ; 0.0     ; -6365.202           ;
-;  CLOCK_50                                                                       ; -6637.946 ; -0.184 ; N/A      ; N/A     ; -6365.202           ;
-;  divided_clocks[19]                                                             ; -175.428  ; 0.000  ; N/A      ; N/A     ; -22.357             ;
-;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -12.714   ; -0.007 ; N/A      ; N/A     ; -6.171              ;
-;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -33.376   ; 0.000  ; N/A      ; N/A     ; -11.994             ;
-;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; N/A       ; N/A    ; -3.016   ; 0.000   ; -0.545              ;
-+---------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                            ;
++---------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
+; Clock                                                                           ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack                                                                ; -7.165    ; 0.058 ; -2.753   ; 0.826   ; -2.636              ;
+;  CLOCK_50                                                                       ; -7.165    ; 0.058 ; N/A      ; N/A     ; -2.636              ;
+;  divided_clocks[19]                                                             ; -5.137    ; 0.294 ; N/A      ; N/A     ; -0.394              ;
+;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -1.919    ; 0.060 ; N/A      ; N/A     ; -0.394              ;
+;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -3.184    ; 0.156 ; N/A      ; N/A     ; -0.394              ;
+;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; N/A       ; N/A   ; -2.753   ; 0.826   ; -0.394              ;
+; Design-wide TNS                                                                 ; -6783.473 ; 0.0   ; -2.753   ; 0.0     ; -6367.823           ;
+;  CLOCK_50                                                                       ; -6562.922 ; 0.000 ; N/A      ; N/A     ; -6367.823           ;
+;  divided_clocks[19]                                                             ; -171.873  ; 0.000 ; N/A      ; N/A     ; -24.896             ;
+;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; -14.055   ; 0.000 ; N/A      ; N/A     ; -7.190              ;
+;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; -37.071   ; 0.000 ; N/A      ; N/A     ; -12.993             ;
+;  keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; N/A       ; N/A   ; -2.753   ; 0.000   ; -0.551              ;
++---------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -895,14 +895,14 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                     ; To Clock                                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                                       ; CLOCK_50                                                                       ; 198467   ; 0        ; 0        ; 0        ;
-; divided_clocks[19]                                                             ; CLOCK_50                                                                       ; 268174   ; 3        ; 0        ; 0        ;
+; CLOCK_50                                                                       ; CLOCK_50                                                                       ; 204616   ; 0        ; 0        ; 0        ;
+; divided_clocks[19]                                                             ; CLOCK_50                                                                       ; 416704   ; 3        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; CLOCK_50                                                                       ; 1        ; 1        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; CLOCK_50                                                                       ; 159      ; 0        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; CLOCK_50                                                                       ; 2        ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                       ; divided_clocks[19]                                                             ; 103      ; 0        ; 0        ; 0        ;
 ; divided_clocks[19]                                                             ; divided_clocks[19]                                                             ; 1337     ; 0        ; 0        ; 0        ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 23       ; 0        ; 0        ; 0        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 25       ; 0        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 1        ; 1        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 130      ; 0        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 1        ; 1        ; 0        ; 0        ;
@@ -915,14 +915,14 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                     ; To Clock                                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                                       ; CLOCK_50                                                                       ; 198467   ; 0        ; 0        ; 0        ;
-; divided_clocks[19]                                                             ; CLOCK_50                                                                       ; 268174   ; 3        ; 0        ; 0        ;
+; CLOCK_50                                                                       ; CLOCK_50                                                                       ; 204616   ; 0        ; 0        ; 0        ;
+; divided_clocks[19]                                                             ; CLOCK_50                                                                       ; 416704   ; 3        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; CLOCK_50                                                                       ; 1        ; 1        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; CLOCK_50                                                                       ; 159      ; 0        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; CLOCK_50                                                                       ; 2        ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                       ; divided_clocks[19]                                                             ; 103      ; 0        ; 0        ; 0        ;
 ; divided_clocks[19]                                                             ; divided_clocks[19]                                                             ; 1337     ; 0        ; 0        ; 0        ;
-; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 23       ; 0        ; 0        ; 0        ;
+; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 25       ; 0        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock                 ; 1        ; 1        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 130      ; 0        ; 0        ; 0        ;
 ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set             ; keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered ; 1        ; 1        ; 0        ; 0        ;
@@ -972,7 +972,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 3     ; 3    ;
 ; Unconstrained Input Port Paths  ; 79    ; 79   ;
 ; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 1098  ; 1098 ;
+; Unconstrained Output Port Paths ; 1122  ; 1122 ;
 +---------------------------------+-------+------+
 
 
@@ -1091,7 +1091,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Jun 06 21:00:12 2020
+    Info: Processing started: Sun Jun 07 17:19:59 2020
 Info: Command: quartus_sta DE1_SoC -c DE1_SoC
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1112,35 +1112,35 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.177
+Info (332146): Worst-case setup slack is -7.128
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.177           -6637.946 CLOCK_50 
-    Info (332119):    -4.971            -173.252 divided_clocks[19] 
-    Info (332119):    -2.495             -33.376 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):    -1.822             -12.714 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-Info (332146): Worst-case hold slack is 0.305
+    Info (332119):    -7.128           -6562.922 CLOCK_50 
+    Info (332119):    -5.043            -169.425 divided_clocks[19] 
+    Info (332119):    -3.184             -37.071 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):    -1.919             -14.055 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+Info (332146): Worst-case hold slack is 0.311
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.305               0.000 CLOCK_50 
-    Info (332119):     0.403               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):     0.445               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-    Info (332119):     0.673               0.000 divided_clocks[19] 
-Info (332146): Worst-case recovery slack is -2.929
+    Info (332119):     0.311               0.000 CLOCK_50 
+    Info (332119):     0.410               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):     0.536               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):     0.636               0.000 divided_clocks[19] 
+Info (332146): Worst-case recovery slack is -2.647
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.929              -2.929 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
-Info (332146): Worst-case removal slack is 2.328
+    Info (332119):    -2.647              -2.647 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+Info (332146): Worst-case removal slack is 2.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.328               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):     2.010               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636           -6257.981 CLOCK_50 
-    Info (332119):    -0.394             -22.357 divided_clocks[19] 
-    Info (332119):    -0.394             -11.994 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):    -0.394              -6.123 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):    -2.636           -6261.731 CLOCK_50 
+    Info (332119):    -0.394             -24.896 divided_clocks[19] 
+    Info (332119):    -0.394             -12.993 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):    -0.394              -7.140 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
     Info (332119):    -0.394              -0.541 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -1148,111 +1148,111 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.218
+Info (332146): Worst-case setup slack is -7.165
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.218           -6388.602 CLOCK_50 
-    Info (332119):    -5.046            -175.428 divided_clocks[19] 
-    Info (332119):    -2.423             -31.909 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):    -1.844             -12.536 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-Info (332146): Worst-case hold slack is 0.064
+    Info (332119):    -7.165           -6300.596 CLOCK_50 
+    Info (332119):    -5.137            -171.873 divided_clocks[19] 
+    Info (332119):    -3.093             -35.850 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):    -1.913             -13.980 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+Info (332146): Worst-case hold slack is 0.105
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.064               0.000 CLOCK_50 
-    Info (332119):     0.358               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):     0.508               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-    Info (332119):     0.656               0.000 divided_clocks[19] 
-Info (332146): Worst-case recovery slack is -3.016
+    Info (332119):     0.105               0.000 CLOCK_50 
+    Info (332119):     0.465               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):     0.513               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):     0.618               0.000 divided_clocks[19] 
+Info (332146): Worst-case recovery slack is -2.753
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.016              -3.016 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
-Info (332146): Worst-case removal slack is 2.436
+    Info (332119):    -2.753              -2.753 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+Info (332146): Worst-case removal slack is 2.141
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.436               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):     2.141               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636           -6231.055 CLOCK_50 
-    Info (332119):    -0.394             -21.858 divided_clocks[19] 
-    Info (332119):    -0.394             -11.901 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):    -0.394              -6.171 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-    Info (332119):    -0.394              -0.545 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):    -2.636           -6234.324 CLOCK_50 
+    Info (332119):    -0.394             -24.060 divided_clocks[19] 
+    Info (332119):    -0.394             -12.587 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):    -0.394              -7.190 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):    -0.394              -0.551 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.168
+Info (332146): Worst-case setup slack is -3.801
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.168           -3566.036 CLOCK_50 
-    Info (332119):    -2.474             -83.298 divided_clocks[19] 
-    Info (332119):    -1.280             -13.417 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):    -0.811              -5.467 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-Info (332146): Worst-case hold slack is 0.005
+    Info (332119):    -3.801           -3524.246 CLOCK_50 
+    Info (332119):    -2.505             -80.823 divided_clocks[19] 
+    Info (332119):    -1.786             -16.746 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):    -0.936              -5.416 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+Info (332146): Worst-case hold slack is 0.076
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.005               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-    Info (332119):     0.075               0.000 CLOCK_50 
-    Info (332119):     0.127               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):     0.331               0.000 divided_clocks[19] 
-Info (332146): Worst-case recovery slack is -1.236
+    Info (332119):     0.076               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):     0.179               0.000 CLOCK_50 
+    Info (332119):     0.232               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):     0.324               0.000 divided_clocks[19] 
+Info (332146): Worst-case recovery slack is -1.058
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.236              -1.236 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
-Info (332146): Worst-case removal slack is 1.023
+    Info (332119):    -1.058              -1.058 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+Info (332146): Worst-case removal slack is 0.826
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.023               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):     0.826               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636           -6247.168 CLOCK_50 
-    Info (332119):    -0.032              -0.064 divided_clocks[19] 
-    Info (332119):     0.069               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):     0.073               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
-    Info (332119):     0.150               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):    -2.636           -6249.013 CLOCK_50 
+    Info (332119):    -0.029              -0.661 divided_clocks[19] 
+    Info (332119):     0.017               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):     0.049               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):     0.143               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.636
+Info (332146): Worst-case setup slack is -3.362
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.636           -2995.315 CLOCK_50 
-    Info (332119):    -2.309             -78.615 divided_clocks[19] 
-    Info (332119):    -1.109             -11.075 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):    -0.761              -4.472 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-Info (332146): Worst-case hold slack is -0.057
+    Info (332119):    -3.362           -2949.766 CLOCK_50 
+    Info (332119):    -2.356             -76.204 divided_clocks[19] 
+    Info (332119):    -1.556             -13.951 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):    -0.866              -4.444 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+Info (332146): Worst-case hold slack is 0.058
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.057              -0.184 CLOCK_50 
-    Info (332119):    -0.007              -0.007 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
-    Info (332119):     0.056               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):     0.312               0.000 divided_clocks[19] 
-Info (332146): Worst-case recovery slack is -1.202
+    Info (332119):     0.058               0.000 CLOCK_50 
+    Info (332119):     0.060               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):     0.156               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):     0.294               0.000 divided_clocks[19] 
+Info (332146): Worst-case recovery slack is -1.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.202              -1.202 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
-Info (332146): Worst-case removal slack is 1.008
+    Info (332119):    -1.052              -1.052 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+Info (332146): Worst-case removal slack is 0.840
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.008               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):     0.840               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636           -6365.202 CLOCK_50 
-    Info (332119):     0.009               0.000 divided_clocks[19] 
-    Info (332119):     0.088               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
-    Info (332119):     0.089               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
-    Info (332119):     0.145               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
+    Info (332119):    -2.636           -6367.823 CLOCK_50 
+    Info (332119):     0.014               0.000 divided_clocks[19] 
+    Info (332119):     0.053               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|keyboard_clk_filtered 
+    Info (332119):     0.061               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|ready_set 
+    Info (332119):     0.142               0.000 keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|clock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5169 megabytes
-    Info: Processing ended: Sat Jun 06 21:00:30 2020
+    Info: Peak virtual memory: 5170 megabytes
+    Info: Processing ended: Sun Jun 07 17:20:17 2020
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:22
 

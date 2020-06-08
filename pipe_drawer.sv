@@ -14,28 +14,29 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 	
 	always_comb begin
 		case (ps)
-			idle: if (enable & (pipe_left - bevel) > pipe_right) ns = line4; // pipe left is off edge of screen -> start at top
+			idle: if (enable & ((pipe_left - 1 > pipe_right) | (pipe_right <= 10))) ns = line4; // only draw part of pipe if off edge
 					else if (enable) 				  ns = line1;
 					else				  				  ns = idle;
 					
 			line1: if (y == pipe_y + 1)      ns = line2;
 					 else								ns = line1;
 					 
-			line2: if (x == pipe_left - bevel + 1) ns = line3;
-					 else if (x == 1) 					ns = line4;
-					 else								      ns = line2;
+			line2: if (x == pipe_left - bevel + 1) 							ns = line3;
+					 else if ((pipe_left - bevel > pipe_right) & x == 1)	ns = line4;
+					 else								      							ns = line2;
 					 
 			line3: if (y == pipe_y - bevel + 1) ns = line4;
 					 else							      ns = line3;
 					 
-			line4: if (x == pipe_right - 1) 	ns = line5;
+			line4: if (x == pipe_right - 1 | x == pipe_right) 	ns = line5;
 					 else								ns = line4;
 					
 			line5: if (y == pipe_y - 1) ns = line6;
 					 else					    ns = line5;
 					
-			line6: if ((x == pipe_left - 1) | (x == 1)) ns = line7;
-					 else						    				  ns = line6;
+			line6: if ((x == pipe_left + 1) | ((pipe_left > (pipe_right - bevel)) & x == 1))  ns = line7;
+					 else if (pipe_right <= 10 & (x == 1 | x == 0))  									ns = idle;
+					 else						    	  												ns = line6;
 					 
 			line7: if (y == 479) ns = idle;
 					 else				ns = line7;
@@ -69,7 +70,7 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 			y <= pipe_y - counter;
 		end // line3
 		else if (ps == line4) begin			
-			if ((pipe_left - bevel) > pipe_right) begin
+			if ((pipe_left - bevel) > pipe_right | pipe_left > pipe_right) begin
 				x <= counter;
 				y <= pipe_y - bevel;
 			end else begin
@@ -99,7 +100,7 @@ module pipe_drawer(clk, reset, enable, done, pipe_x, pipe_y, x, y);
 			counter <= counter + 1;
 	end //always_ff
 	
-	assign done = (ps == line7) & (ns == idle);
+	assign done = (ps == line7 | ps == line6) & (ns == idle);
 	assign pipe_left = pipe_x - 60 - bevel;
 	assign pipe_right = pipe_x;
 	assign bevel = 10;
@@ -129,10 +130,18 @@ module pipe_drawer_testbench();
 		@(posedge clk);
 		@(posedge clk);
 		@(posedge clk);
+//		enable = 1; @(posedge clk);
+//		@(posedge done);
+//		enable = 0; @(posedge clk);
 		
-		enable = 1; @(posedge clk);
+		pipe_x = 0; enable = 1; @(posedge clk);
 		@(posedge done);
-		enable = 0;
+		enable = 0; @(posedge clk);
+//		for (int i = 0; i < 11; i++) begin
+//			pipe_x = pipe_x - 1; enable = 1; @(posedge clk);
+//			@(posedge done);
+//			enable = 0; @(posedge clk);
+//		end
 		@(posedge clk);
 		@(posedge clk);
 		@(posedge clk);
