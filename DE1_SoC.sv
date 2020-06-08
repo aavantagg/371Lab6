@@ -4,7 +4,8 @@
 // This program...
 module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 					VGA_R, VGA_G, VGA_B, VGA_BLANK_N, VGA_CLK, VGA_HS, VGA_SYNC_N, VGA_VS,
-               PS2_DAT, PS2_CLK);
+               PS2_DAT, PS2_CLK, CLOCK2_50, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_ADCDAT,
+               AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK, AUD_XCK);
 
 	input logic CLOCK_50;
 	input logic [3:0] KEY;
@@ -33,22 +34,22 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	logic [25:0] divided_clocks;
 	logic color, game_clk;
 	logic flap, collision, game_enable, restart, game_reset;
-		
-	// temporary
-	assign pipe1_y = 250;
-	assign pipe2_y = 200;
 	
 	// Set pipe coordinates
 	always_ff @(posedge game_clk) begin
 		if (reset | restart) begin
 			pipe1_x <= 319;
 			pipe2_x <= 639;
+            pipe1_y <= 250 + random[7:0];
+            pipe2_y <= 200 + random[7:0];
 		end 
-		else if (pipe1_x == 0)
+		else if (pipe1_x == 0) begin
 			pipe1_x <= 639;
-		else if (pipe2_x == 0)
+            pipe1_y <= 250 + random[7:0];
+        end else if (pipe2_x == 0) begin
 			pipe2_x <= 639;
-		else if (game_enable) begin
+            pipe2_y <= 200 + random[7:0];
+        end else if (game_enable) begin
 			pipe1_x <= pipe1_x - 1;
 			pipe2_x <= pipe2_x - 1;
 		end
@@ -77,25 +78,26 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
     end // always_ff
     
 	assign reset = ~KEY[0];
-	
-	// will be set by scoreboard
-	assign HEX5 = 7'b1111111;
-	assign HEX4 = 7'b1111111;
-	assign HEX3 = 7'b1111111;
-	assign HEX2 = 7'b1111111;
-	assign HEX1 = 7'b1111111;
-	assign HEX0 = 7'b1111111;
 
-    logic valid;
-    logic makeBreak;
-    logic [7:0] key;
+   logic valid;
+   logic makeBreak;
+   logic [7:0] key;
 
-    logic [9:0] random; // 10-bit pseudorandom number
+   logic [9:0] random; // 10-bit pseudorandom number
 
-    LFSR rand_height (  .clk(CLOCK_50),
-                        .rst(reset),
-                        .out(random)
-                    );
+   LFSR rand_height (.clk(CLOCK_50),
+                     .rst(reset),
+                     .out(random));
+						  
+   score_manager my_score (.reset,
+                            .clock(game_clk),
+                            .restart,
+                            .collision,
+                            .bird_x,
+                            .pipe1_x,
+                            .pipe2_x,
+                            .score_digits({HEX5,HEX4,HEX3,HEX2,HEX1,HEX0}),
+                            );
 
     keyboard_press_driver keyboard (    .CLOCK_50,
                                         .valid,
@@ -171,8 +173,65 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	
 	assign game_clk = divided_clocks[19];
 	
-	assign LEDR[8:0] = 10'b0;
+	assign LEDR[7:0] = 10'b0;
+   assign LEDR[8] = bird_x == pipe1_x || bird_x == pipe2_x;
 	assign LEDR[9] = collision;
+
+   // Audio
+
+   input CLOCK2_50;
+   output FPGA_I2C_SCLK;
+	inout FPGA_I2C_SDAT;
+	output AUD_XCK;
+	input AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK;
+	input AUD_ADCDAT;
+	output AUD_DACDAT;
+	
+	wire read_ready, write_ready, read, write;
+	wire [23:0] readdata_left, readdata_right;
+	wire [23:0] writedata_left, writedata_right;
+
+    always_comb begin
+        if (collision) begin
+            writedata_left = 24'b0;
+            writedata_right = 24'b0;
+        end else begin 
+            writedata_left = readdata_left;
+	        writedata_right = readdata_right;
+        end
+    end // always_comb
+
+	assign read = read_ready;
+	assign write = write_ready; 
+	
+	clock_generator my_clock_gen(
+		CLOCK2_50,
+		reset,
+		AUD_XCK
+	);
+
+	audio_and_video_config cfg(
+		CLOCK_50,
+		reset,
+		FPGA_I2C_SDAT,
+		FPGA_I2C_SCLK
+	);
+
+	audio_codec codec(
+		CLOCK_50,
+		reset,
+		read,	
+		write,
+		writedata_left, 
+		writedata_right,
+		AUD_ADCDAT,
+		AUD_BCLK,
+		AUD_ADCLRCK,
+		AUD_DACLRCK,
+		read_ready, write_ready,
+		readdata_left, readdata_right,
+		AUD_DACDAT
+	);
 	
 endmodule // DE1_SoC
 

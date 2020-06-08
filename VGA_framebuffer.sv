@@ -29,7 +29,7 @@
  *   VGA_BLANK_n    - Blanking interval of the VGA connection
  *   VGA_SYNC_n     - Enable signal for the sync of the VGA connection
  */
-module VGA_framebuffer(clk50, reset, x, y, pixel_color, pixel_write, 
+module VGA_framebuffer (clk50, reset, x, y, pixel_color, pixel_write, 
     VGA_R, VGA_G, VGA_B, VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_n, VGA_SYNC_n);
     
     parameter   HACTIVE      = 11'd 1280,

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Fitter Status : Successful - Sun Jun 07 17:19:44 2020
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DE1_SoC
@@ -18,3 +19,25 @@ Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
 Total PLLs : 0 / 6 ( 0 % )
 Total DLLs : 0 / 4 ( 0 % )
+=======
+Fitter Status : Successful - Sun Jun 07 16:53:58 2020
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : DE1_SoC
+Top-level Entity Name : DE1_SoC
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,495 / 32,070 ( 5 % )
+Total registers : 709
+Total pins : 107 / 457 ( 23 % )
+Total virtual pins : 0
+Total block memory bits : 319,488 / 4,065,280 ( 8 % )
+Total RAM Blocks : 42 / 397 ( 11 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )
+>>>>>>> ca4a706591402da5ca855d4cad8d43f12dcb5305
