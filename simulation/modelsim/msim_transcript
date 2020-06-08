@@ -13,510 +13,361 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:12 on Jun 07,2020
+# Start time: 17:12:47 on Jun 06,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v 
 # -- Compiling module keyboard_inner_driver
 # 
 # Top level modules:
 # 	keyboard_inner_driver
-# End time: 15:22:12 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:48 on Jun 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:12 on Jun 07,2020
+# Start time: 17:12:48 on Jun 06,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v 
 # -- Compiling module keyboard_press_driver
 # 
 # Top level modules:
 # 	keyboard_press_driver
-# End time: 15:22:12 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:48 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:12 on Jun 07,2020
+# Start time: 17:12:48 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv 
 # -- Compiling module VGA_framebuffer
 # 
 # Top level modules:
 # 	VGA_framebuffer
-# End time: 15:22:12 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:49 on Jun 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:12 on Jun 07,2020
+# Start time: 17:12:49 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv 
 # -- Compiling module clear_screen
 # -- Compiling module clear_screen_testbench
 # 
 # Top level modules:
 # 	clear_screen_testbench
-# End time: 15:22:13 on Jun 07,2020, Elapsed time: 0:00:01
+# End time: 17:12:49 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:13 on Jun 07,2020
+# Start time: 17:12:49 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
 # -- Compiling module pipe_drawer
 # -- Compiling module pipe_drawer_testbench
 # 
 # Top level modules:
 # 	pipe_drawer_testbench
-# End time: 15:22:13 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:49 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:13 on Jun 07,2020
+# Start time: 17:12:50 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv 
 # -- Compiling module bird_physics
 # -- Compiling module bird_physics_testbench
 # 
 # Top level modules:
 # 	bird_physics_testbench
-# End time: 15:22:13 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:50 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:13 on Jun 07,2020
+# Start time: 17:12:50 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv 
 # -- Compiling module game_manager
 # 
 # Top level modules:
 # 	game_manager
-# End time: 15:22:14 on Jun 07,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:14 on Jun 07,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv 
-# -- Compiling module collision_detector
-# -- Compiling module collision_detector_testbench
-# 
-# Top level modules:
-# 	collision_detector_testbench
-# End time: 15:22:14 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/lfsr.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:14 on Jun 07,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/lfsr.sv 
-# -- Compiling module LFSR
-# -- Compiling module LFSR_testbench
-# 
-# Top level modules:
-# 	LFSR_testbench
-# End time: 15:22:14 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:50 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:14 on Jun 07,2020
+# Start time: 17:12:50 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv 
 # -- Compiling module bird_drawer
 # -- Compiling module bird_drawer_testbench
 # 
 # Top level modules:
 # 	bird_drawer_testbench
-# End time: 15:22:14 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:14 on Jun 07,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 15:22:14 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:50 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:14 on Jun 07,2020
+# Start time: 17:12:50 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv 
 # -- Compiling module display_manager
 # -- Compiling module display_manager_testbench
 # 
 # Top level modules:
 # 	display_manager_testbench
-# End time: 15:22:15 on Jun 07,2020, Elapsed time: 0:00:01
+# End time: 17:12:50 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:22:15 on Jun 07,2020
+# Start time: 17:12:50 on Jun 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6" C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv 
 # -- Compiling module DE1_SoC
 # ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(73): (vlog-2730) Undefined variable: 'makeBreak'.
 # ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv(73): (vlog-2730) Undefined variable: 'key'.
-# End time: 15:22:15 on Jun 07,2020, Elapsed time: 0:00:00
+# End time: 17:12:50 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 2, Warnings: 0
 # ** Error: C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 20
+# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 17
 # C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
 #     while executing
 # "vlog -sv -work work +incdir+C:/Users/casey/OneDrive/Documents/Spring\ 20/EE\ 371/Lab6/371Lab6 {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6..."
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:23:30 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
+# Start time: 18:23:28 on Jun 06,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv 
+# -- Compiling module display_manager
+# -- Compiling module display_manager_testbench
 # 
 # Top level modules:
-# 	pipe_drawer_testbench
-# End time: 15:23:30 on Jun 07,2020, Elapsed time: 0:00:00
+# 	display_manager_testbench
+# End time: 18:23:28 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_testbench
-# vsim work.pipe_drawer_testbench 
-# Start time: 15:23:51 on Jun 07,2020
+vsim work.display_manager_testbench
+# vsim work.display_manager_testbench 
+# Start time: 18:23:34 on Jun 06,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_testbench
+# Loading work.display_manager_testbench
+# Loading work.display_manager
+# Loading work.clear_screen
 # Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_testbench/clk
-add wave -position end  sim:/pipe_drawer_testbench/reset
-add wave -position end  sim:/pipe_drawer_testbench/enable
-add wave -position end  sim:/pipe_drawer_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_testbench/done
-add wave -position end  sim:/pipe_drawer_testbench/x
-add wave -position end  sim:/pipe_drawer_testbench/y
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_right
-add wave -position end  sim:/pipe_drawer_testbench/dut/ps
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv(148)
-#    Time: 40350 ps  Iteration: 1  Instance: /pipe_drawer_testbench
-# Break in Module pipe_drawer_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv line 148
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:25:48 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 15:25:49 on Jun 07,2020, Elapsed time: 0:00:01
+# Loading work.bird_drawer
+vsim work.display_manager_testbench
+# End time: 18:23:40 on Jun 06,2020, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_top_testbench
-# End time: 15:25:55 on Jun 07,2020, Elapsed time: 0:02:04
-# Errors: 0, Warnings: 0
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 15:25:55 on Jun 07,2020
+# vsim work.display_manager_testbench 
+# Start time: 18:23:40 on Jun 06,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
+# Loading work.display_manager_testbench
+# Loading work.display_manager
+# Loading work.clear_screen
 # Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_top_testbench/clk
-add wave -position end  sim:/pipe_drawer_top_testbench/reset
-add wave -position end  sim:/pipe_drawer_top_testbench/enable
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_top_testbench/done
-add wave -position end  sim:/pipe_drawer_top_testbench/x
-add wave -position end  sim:/pipe_drawer_top_testbench/y
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_right
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/ps
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(150)
-#    Time: 35750 ps  Iteration: 1  Instance: /pipe_drawer_top_testbench
-# Break in Module pipe_drawer_top_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv line 150
-quit -sim
-# End time: 15:52:21 on Jun 07,2020, Elapsed time: 0:26:26
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:52:32 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 15:52:32 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.pipe_drawer_top_testbench
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 15:52:38 on Jun 07,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_top_testbench/clk
-add wave -position end  sim:/pipe_drawer_top_testbench/reset
-add wave -position end  sim:/pipe_drawer_top_testbench/enable
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_top_testbench/done
-add wave -position end  sim:/pipe_drawer_top_testbench/x
-add wave -position end  sim:/pipe_drawer_top_testbench/y
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/ps
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_right
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(151)
-#    Time: 35750 ps  Iteration: 1  Instance: /pipe_drawer_top_testbench
-# Break in Module pipe_drawer_top_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv line 151
-quit -sim
-# End time: 15:54:58 on Jun 07,2020, Elapsed time: 0:02:20
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:55:12 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_testbench
-# End time: 15:55:12 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:55:13 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 15:55:13 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.pipe_drawer_top_testbench
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 15:55:15 on Jun 07,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_top_testbench/clk
-add wave -position end  sim:/pipe_drawer_top_testbench/reset
-add wave -position end  sim:/pipe_drawer_top_testbench/enable
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_top_testbench/done
-add wave -position end  sim:/pipe_drawer_top_testbench/x
-add wave -position end  sim:/pipe_drawer_top_testbench/y
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/ps
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(151)
-#    Time: 27150 ps  Iteration: 1  Instance: /pipe_drawer_top_testbench
-# Break in Module pipe_drawer_top_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv line 151
-quit -sim
-# End time: 15:58:35 on Jun 07,2020, Elapsed time: 0:03:20
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:58:37 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv 
-# -- Compiling module pipe_drawer_top
-# -- Compiling module pipe_drawer_top_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_top
-# 	pipe_drawer_top_testbench
-# End time: 15:58:37 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.pipe_drawer_top_testbench
-# vsim work.pipe_drawer_top_testbench 
-# Start time: 15:58:39 on Jun 07,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_top_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_top_testbench/clk
-add wave -position end  sim:/pipe_drawer_top_testbench/reset
-add wave -position end  sim:/pipe_drawer_top_testbench/enable
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_top_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_top_testbench/done
-add wave -position end  sim:/pipe_drawer_top_testbench/x
-add wave -position end  sim:/pipe_drawer_top_testbench/y
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/ps
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_top_testbench/dut/pipe_right
-run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv(151)
-#    Time: 27150 ps  Iteration: 1  Instance: /pipe_drawer_top_testbench
-# Break in Module pipe_drawer_top_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv line 151
+# Loading work.bird_drawer
 # WARNING: No extended dataflow license exists
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:54:23 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
-# 
-# Top level modules:
-# 	pipe_drawer_testbench
-# End time: 16:54:23 on Jun 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.pipe_drawer_testbench
-# End time: 16:54:31 on Jun 07,2020, Elapsed time: 0:55:52
-# Errors: 0, Warnings: 1
-# vsim work.pipe_drawer_testbench 
-# Start time: 16:54:31 on Jun 07,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_testbench/clk
-add wave -position end  sim:/pipe_drawer_testbench/reset
-add wave -position end  sim:/pipe_drawer_testbench/enable
-add wave -position end  sim:/pipe_drawer_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_testbench/done
-add wave -position end  sim:/pipe_drawer_testbench/x
-add wave -position end  sim:/pipe_drawer_testbench/y
-add wave -position end  sim:/pipe_drawer_testbench/dut/ps
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_right
+add wave -position end  sim:/display_manager_testbench/dut/ps
 run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv(154)
-#    Time: 571350 ps  Iteration: 1  Instance: /pipe_drawer_testbench
-# Break in Module pipe_drawer_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv line 154
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv(132)
+#    Time: 100000150 ps  Iteration: 1  Instance: /display_manager_testbench
+# Break in Module display_manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv line 132
+add wave -position end  sim:/display_manager_testbench/dut/bird_done
+add wave -position end  sim:/display_manager_testbench/dut/bx
+add wave -position end  sim:/display_manager_testbench/dut/by
+run -all
+# Break key hit
+# Break in Module clear_screen at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv line 9
 quit -sim
-# End time: 17:04:35 on Jun 07,2020, Elapsed time: 0:10:04
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
+# End time: 18:24:51 on Jun 06,2020, Elapsed time: 0:01:11
+# Errors: 0, Warnings: 1
+vsim work.display_manager_testbench
+# vsim work.display_manager_testbench 
+# Start time: 18:24:54 on Jun 06,2020
+# Loading sv_std.std
+# Loading work.display_manager_testbench
+# Loading work.display_manager
+# Loading work.clear_screen
+# Loading work.pipe_drawer
+# Loading work.bird_drawer
+add wave -position end  sim:/display_manager_testbench/clk
+add wave -position end  sim:/display_manager_testbench/reset
+add wave -position end  sim:/display_manager_testbench/x
+add wave -position end  sim:/display_manager_testbench/y
+add wave -position end  sim:/display_manager_testbench/dut/bird_done
+add wave -position end  sim:/display_manager_testbench/dut/bx
+add wave -position end  sim:/display_manager_testbench/dut/by
+add wave -position end  sim:/display_manager_testbench/dut/ps
+run -all
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv(132)
+#    Time: 100000150 ps  Iteration: 1  Instance: /display_manager_testbench
+# Break in Module display_manager_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv line 132
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:04:40 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
+# Start time: 20:07:26 on Jun 06,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv 
+# -- Compiling module collision_detector
+# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(30): (vlog-2730) Undefined variable: 'pipe1_left'.
+# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(30): (vlog-2730) Undefined variable: 'pipe1_right'.
+# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(31): (vlog-2730) Undefined variable: 'pipe2_left'.
+# ** Error: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(31): (vlog-2730) Undefined variable: 'pipe2_right'.
+# -- Compiling module collision_detector_testbench
+# End time: 20:07:26 on Jun 06,2020, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:59 on Jun 06,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv 
+# -- Compiling module collision_detector
+# -- Compiling module collision_detector_testbench
 # 
 # Top level modules:
-# 	pipe_drawer_testbench
-# End time: 17:04:40 on Jun 07,2020, Elapsed time: 0:00:00
+# 	collision_detector_testbench
+# End time: 20:07:59 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_testbench
-# vsim work.pipe_drawer_testbench 
-# Start time: 17:04:44 on Jun 07,2020
+vsim work.collision_detector_testbench
+# End time: 20:08:05 on Jun 06,2020, Elapsed time: 1:43:11
+# Errors: 4, Warnings: 0
+# vsim work.collision_detector_testbench 
+# Start time: 20:08:05 on Jun 06,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_testbench/clk
-add wave -position end  sim:/pipe_drawer_testbench/reset
-add wave -position end  sim:/pipe_drawer_testbench/enable
-add wave -position end  sim:/pipe_drawer_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_testbench/done
-add wave -position end  sim:/pipe_drawer_testbench/x
-add wave -position end  sim:/pipe_drawer_testbench/y
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_right
-add wave -position end  sim:/pipe_drawer_testbench/dut/ps
+# Loading work.collision_detector_testbench
+# Loading work.collision_detector
+add wave -position end  sim:/collision_detector_testbench/clk
+add wave -position end  sim:/collision_detector_testbench/reset
+add wave -position end  sim:/collision_detector_testbench/restart
+add wave -position end  sim:/collision_detector_testbench/bird_x
+add wave -position end  sim:/collision_detector_testbench/bird_y
+add wave -position end  sim:/collision_detector_testbench/pipe1_x
+add wave -position end  sim:/collision_detector_testbench/pipe1_y
+add wave -position end  sim:/collision_detector_testbench/collision
 run -all
 # Break key hit
 # Simulation stop requested.
 quit -sim
-# End time: 17:11:10 on Jun 07,2020, Elapsed time: 0:06:26
+# End time: 20:09:26 on Jun 06,2020, Elapsed time: 0:01:21
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:11:14 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
+# Start time: 20:09:31 on Jun 06,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv 
+# -- Compiling module collision_detector
+# -- Compiling module collision_detector_testbench
 # 
 # Top level modules:
-# 	pipe_drawer_testbench
-# End time: 17:11:14 on Jun 07,2020, Elapsed time: 0:00:00
+# 	collision_detector_testbench
+# End time: 20:09:31 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_testbench
-# vsim work.pipe_drawer_testbench 
-# Start time: 17:11:17 on Jun 07,2020
+vsim work.collision_detector_testbench
+# vsim work.collision_detector_testbench 
+# Start time: 20:09:35 on Jun 06,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_testbench/clk
-add wave -position end  sim:/pipe_drawer_testbench/reset
-add wave -position end  sim:/pipe_drawer_testbench/enable
-add wave -position end  sim:/pipe_drawer_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_testbench/done
-add wave -position end  sim:/pipe_drawer_testbench/x
-add wave -position end  sim:/pipe_drawer_testbench/y
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_right
-add wave -position end  sim:/pipe_drawer_testbench/dut/ps
+# Loading work.collision_detector_testbench
+# Loading work.collision_detector
+add wave -position end  sim:/collision_detector_testbench/clk
+add wave -position end  sim:/collision_detector_testbench/reset
+add wave -position end  sim:/collision_detector_testbench/restart
+add wave -position end  sim:/collision_detector_testbench/bird_x
+add wave -position end  sim:/collision_detector_testbench/bird_y
+add wave -position end  sim:/collision_detector_testbench/pipe1_x
+add wave -position end  sim:/collision_detector_testbench/pipe1_y
+add wave -position end  sim:/collision_detector_testbench/collision
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_left
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_right
+add wave -position end  sim:/collision_detector_testbench/dut/ps
 run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv(156)
-#    Time: 20050 ps  Iteration: 1  Instance: /pipe_drawer_testbench
-# Break in Module pipe_drawer_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv line 156
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(68)
+#    Time: 5650 ps  Iteration: 1  Instance: /collision_detector_testbench
+# Break in Module collision_detector_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv line 68
+# Break key hit
 quit -sim
-# End time: 17:14:02 on Jun 07,2020, Elapsed time: 0:02:45
+# End time: 20:11:30 on Jun 06,2020, Elapsed time: 0:01:55
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:14:07 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
+# Start time: 20:11:32 on Jun 06,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv 
+# -- Compiling module collision_detector
+# -- Compiling module collision_detector_testbench
 # 
 # Top level modules:
-# 	pipe_drawer_testbench
-# End time: 17:14:07 on Jun 07,2020, Elapsed time: 0:00:00
+# 	collision_detector_testbench
+# End time: 20:11:32 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_testbench
-# vsim work.pipe_drawer_testbench 
-# Start time: 17:14:10 on Jun 07,2020
+vsim work.collision_detector_testbench
+# vsim work.collision_detector_testbench 
+# Start time: 20:11:35 on Jun 06,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_testbench
-# Loading work.pipe_drawer
-vsim work.pipe_drawer_testbench
-# End time: 17:14:15 on Jun 07,2020, Elapsed time: 0:00:05
-# Errors: 0, Warnings: 0
-# vsim work.pipe_drawer_testbench 
-# Start time: 17:14:15 on Jun 07,2020
-# Loading sv_std.std
-# Loading work.pipe_drawer_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_testbench/clk
-add wave -position end  sim:/pipe_drawer_testbench/reset
-add wave -position end  sim:/pipe_drawer_testbench/enable
-add wave -position end  sim:/pipe_drawer_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_testbench/done
-add wave -position end  sim:/pipe_drawer_testbench/x
-add wave -position end  sim:/pipe_drawer_testbench/y
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_right
-add wave -position end  sim:/pipe_drawer_testbench/dut/ps
+# Loading work.collision_detector_testbench
+# Loading work.collision_detector
+add wave -position end  sim:/collision_detector_testbench/clk
+add wave -position end  sim:/collision_detector_testbench/reset
+add wave -position end  sim:/collision_detector_testbench/restart
+add wave -position end  sim:/collision_detector_testbench/bird_x
+add wave -position end  sim:/collision_detector_testbench/bird_y
+add wave -position end  sim:/collision_detector_testbench/pipe1_x
+add wave -position end  sim:/collision_detector_testbench/pipe1_y
+add wave -position end  sim:/collision_detector_testbench/collision
+add wave -position end  sim:/collision_detector_testbench/dut/ps
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_left
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_right
 run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv(156)
-#    Time: 20050 ps  Iteration: 1  Instance: /pipe_drawer_testbench
-# Break in Module pipe_drawer_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv line 156
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(69)
+#    Time: 5650 ps  Iteration: 1  Instance: /collision_detector_testbench
+# Break in Module collision_detector_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv line 69
 quit -sim
-# End time: 17:16:15 on Jun 07,2020, Elapsed time: 0:02:00
+# End time: 20:12:32 on Jun 06,2020, Elapsed time: 0:00:57
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv}
+vsim work.collision_detector_testbench
+# vsim work.collision_detector_testbench 
+# Start time: 20:12:32 on Jun 06,2020
+# Loading sv_std.std
+# Loading work.collision_detector_testbench
+# Loading work.collision_detector
+add wave -position end  sim:/collision_detector_testbench/clk
+add wave -position end  sim:/collision_detector_testbench/reset
+add wave -position end  sim:/collision_detector_testbench/bird_x
+add wave -position end  sim:/collision_detector_testbench/pipe1_x
+add wave -position end  sim:/collision_detector_testbench/collision
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_left
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_right
+add wave -position end  sim:/collision_detector_testbench/dut/hit_p1
+run -all
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(69)
+#    Time: 5650 ps  Iteration: 1  Instance: /collision_detector_testbench
+# Break in Module collision_detector_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv line 69
+quit -sim
+# End time: 20:13:42 on Jun 06,2020, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:16:19 on Jun 07,2020
-# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv 
-# -- Compiling module pipe_drawer
-# -- Compiling module pipe_drawer_testbench
+# Start time: 20:13:43 on Jun 06,2020
+# vlog -reportprogress 300 -work work C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv 
+# -- Compiling module collision_detector
+# -- Compiling module collision_detector_testbench
 # 
 # Top level modules:
-# 	pipe_drawer_testbench
-# End time: 17:16:19 on Jun 07,2020, Elapsed time: 0:00:00
+# 	collision_detector_testbench
+# End time: 20:13:43 on Jun 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pipe_drawer_testbench
-# vsim work.pipe_drawer_testbench 
-# Start time: 17:16:21 on Jun 07,2020
+vsim work.collision_detector_testbench
+# vsim work.collision_detector_testbench 
+# Start time: 20:13:46 on Jun 06,2020
 # Loading sv_std.std
-# Loading work.pipe_drawer_testbench
-# Loading work.pipe_drawer
-add wave -position end  sim:/pipe_drawer_testbench/clk
-add wave -position end  sim:/pipe_drawer_testbench/reset
-add wave -position end  sim:/pipe_drawer_testbench/enable
-add wave -position end  sim:/pipe_drawer_testbench/pipe_x
-add wave -position end  sim:/pipe_drawer_testbench/pipe_y
-add wave -position end  sim:/pipe_drawer_testbench/done
-add wave -position end  sim:/pipe_drawer_testbench/x
-add wave -position end  sim:/pipe_drawer_testbench/y
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_left
-add wave -position end  sim:/pipe_drawer_testbench/dut/pipe_right
-add wave -position end  sim:/pipe_drawer_testbench/dut/ps
+# Loading work.collision_detector_testbench
+# Loading work.collision_detector
+add wave -position end  sim:/collision_detector_testbench/collision
 run -all
-# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv(156)
-#    Time: 2950 ps  Iteration: 1  Instance: /pipe_drawer_testbench
-# Break in Module pipe_drawer_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv line 156
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(69)
+#    Time: 5650 ps  Iteration: 1  Instance: /collision_detector_testbench
+# Break in Module collision_detector_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv line 69
+vsim work.collision_detector_testbench
+# End time: 20:14:08 on Jun 06,2020, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0
+# vsim work.collision_detector_testbench 
+# Start time: 20:14:09 on Jun 06,2020
+# Loading sv_std.std
+# Loading work.collision_detector_testbench
+# Loading work.collision_detector
+add wave -position end  sim:/collision_detector_testbench/clk
+add wave -position end  sim:/collision_detector_testbench/reset
+add wave -position end  sim:/collision_detector_testbench/restart
+add wave -position end  sim:/collision_detector_testbench/bird_x
+add wave -position end  sim:/collision_detector_testbench/bird_y
+add wave -position end  sim:/collision_detector_testbench/pipe1_x
+add wave -position end  sim:/collision_detector_testbench/pipe1_y
+add wave -position end  sim:/collision_detector_testbench/collision
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_left
+add wave -position end  sim:/collision_detector_testbench/dut/pipe1_right
+add wave -position end  sim:/collision_detector_testbench/dut/hit_p1
+run -all
+# ** Note: $stop    : C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv(69)
+#    Time: 5650 ps  Iteration: 1  Instance: /collision_detector_testbench
+# Break in Module collision_detector_testbench at C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv line 69
+# End time: 21:02:01 on Jun 06,2020, Elapsed time: 0:47:52
+# Errors: 0, Warnings: 0

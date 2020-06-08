@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/simulation/modelsim
 vbird_drawer
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1591568534
+Z2 !s110 1591488770
 !i10b 1
 !s100 `k0T_K8l9H7APm^:ND^oL1
 I`VT]=R0_o4TJecim2jP9b1
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1591568534.000000
+Z9 !s108 1591488770.000000
 Z10 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv|
 !i113 1
@@ -60,115 +60,115 @@ R13
 R14
 vbird_physics
 R1
-Z15 !s110 1591568533
+R2
 !i10b 1
-!s100 Dj5E`aKhA5]VmboK?>^GT1
-I99RHH=j@0:i5n5G`8[b<a0
+!s100 dQ:O^n?mYgMU?8:nR[Jz;3
+Ih<<426>J1@PM_SbZ2c4WI2
 R3
-Z16 !s105 bird_physics_sv_unit
+Z15 !s105 bird_physics_sv_unit
 S1
 R0
-Z17 w1591498887
-Z18 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv
-Z19 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv
+Z16 w1591481690
+Z17 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv
+Z18 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv
 L0 1
 R8
 r1
 !s85 0
 31
-Z20 !s108 1591568533.000000
-Z21 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv|
-Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv|
+R9
+Z19 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv|
+Z20 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv|
 !i113 1
 R12
 R13
 R14
 vbird_physics_testbench
 R1
-R15
+R2
 !i10b 1
-!s100 Xf`3W2fX?iF@a7J2`n;^M2
-I`Wd<J9TaMjXczWRb;m6Tk2
+!s100 XWgcGTW?fGVGFS?EOdA9g1
+Im:`1L@==Zc`f^nQ0b^MlI3
 R3
-R16
+R15
 S1
 R0
+R16
 R17
 R18
-R19
 L0 83
 R8
 r1
 !s85 0
 31
+R9
+R19
 R20
-R21
-R22
 !i113 1
 R12
 R13
 R14
 vclear_screen
 R1
-R15
+Z21 !s110 1591488769
 !i10b 1
 !s100 S`dTX_S_0ledQ`9D=X3g12
 Ifg_0V79<2HYd=^n3GaA[b1
 R3
-Z23 !s105 clear_screen_sv_unit
+Z22 !s105 clear_screen_sv_unit
 S1
 R0
-Z24 w1591120468
-Z25 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv
-Z26 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv
+Z23 w1591120468
+Z24 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv
+Z25 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv
 L0 4
 R8
 r1
 !s85 0
 31
-Z27 !s108 1591568532.000000
-Z28 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv|
-Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv|
+Z26 !s108 1591488769.000000
+Z27 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv|
+Z28 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv|
 !i113 1
 R12
 R13
 R14
 vclear_screen_testbench
 R1
-R15
+R21
 !i10b 1
 !s100 E;BQgM_imSRBKe>U4^ZmK0
 IZIQ8CHHmYTVggA:G91KVB0
 R3
-R23
+R22
 S1
 R0
+R23
 R24
 R25
-R26
 L0 34
 R8
 r1
 !s85 0
 31
+R26
 R27
 R28
-R29
 !i113 1
 R12
 R13
 R14
 vcollision_detector
 R1
-R2
+Z29 !s110 1591499623
 !i10b 1
-!s100 E833TiYzBhQEVc`jU2hzY1
-Iz:>B3Fz4nAIiZJbaM7<`k1
+!s100 0ioejPZ]8fEG6:S=:n56z0
+Ing0=`Qcm^aFhX^`l;<ml40
 R3
 Z30 !s105 collision_detector_sv_unit
 S1
 R0
-Z31 w1591567922
+Z31 w1591499611
 Z32 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv
 Z33 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv
 L0 1
@@ -176,19 +176,18 @@ R8
 r1
 !s85 0
 31
-R9
-Z34 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv|
-Z35 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv|
+Z34 !s108 1591499623.000000
+Z35 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv|
+Z36 !s90 -reportprogress|300|-work|work|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv|
 !i113 1
-R12
-R13
+Z37 o-work work
 R14
 vcollision_detector_testbench
 R1
-R2
+R29
 !i10b 1
-!s100 Gk^[@T?7Lk0`G@m4=QOYh1
-IVHDLNXHm_@i7:Z0d33[mL2
+!s100 cD<HhCMNeIl_TF5j:M6m[1
+I^FoghAeaAS?eICWOICHH@1
 R3
 R30
 S1
@@ -196,79 +195,76 @@ R0
 R31
 R32
 R33
-L0 57
+L0 44
 R8
 r1
 !s85 0
 31
-R9
 R34
 R35
+R36
 !i113 1
-R12
-R13
+R37
 R14
 vdisplay_manager
 R1
-R2
+Z38 !s110 1591493008
 !i10b 1
-!s100 6zzX`l@;:L0dVn_^iN[i]0
-I8OdF[FXh51NgF0BHDeUz31
+!s100 9a3gLEIA;f1JAbWB2N9KS0
+IF6NX75?XJEFEi@GD`eUGL3
 R3
-Z36 !s105 display_manager_sv_unit
+Z39 !s105 Display_Manager_sv_unit
 S1
 R0
-Z37 w1591494264
-Z38 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv
-Z39 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv
+Z40 w1591487937
+Z41 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv
+Z42 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv
 L0 1
 R8
 r1
 !s85 0
 31
-R9
-Z40 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv|
-Z41 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv|
+Z43 !s108 1591493008.000000
+Z44 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv|
+Z45 !s90 -reportprogress|300|-work|work|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Display_Manager.sv|
 !i113 1
-R12
-R13
+R37
 R14
 vdisplay_manager_testbench
 R1
-R2
+R38
 !i10b 1
-!s100 c;f;VZ>nJIze=z]IY9mo93
-ImK<JLkgnN6:8;137OEgO^1
+!s100 mi1?M4DflzK7ZnaRXl<KX1
+IiMaAO``1XWHf18YJbPUz;3
 R3
-R36
+R39
 S1
 R0
-R37
-R38
-R39
-L0 132
+R40
+R41
+R42
+L0 107
 R8
 r1
 !s85 0
 31
-R9
-R40
-R41
+R43
+R44
+R45
 !i113 1
-R12
-R13
+R37
 R14
 vgame_manager
 R1
 R2
 !i10b 1
-!s100 z14f[:2079Wh]d6d^_VI63
-I_iGUjM:XeP4bi2T3_M7WN0
+!s100 Ho@HaIBH:94^In@HgdUZT3
+Iz6>mej0L?m3CV9e?_7flE1
 R3
 !s105 game_manager_sv_unit
 S1
 R0
-w1591498773
+w1591486066
 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv
 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv
 L0 2
@@ -276,7 +272,7 @@ R8
 r1
 !s85 0
 31
-R20
+R9
 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv|
 !i113 1
@@ -284,13 +280,13 @@ R12
 R13
 R14
 vkeyboard_inner_driver
-Z42 !s110 1591568532
+Z46 !s110 1591488768
 !i10b 1
 !s100 Yhi9m@2=2C<KEkaNb0Z[S3
 IKgKBf5i223nci4oe<>Koz1
 R3
 R0
-Z43 w1454441944
+Z47 w1454441944
 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v
 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v
 L0 1
@@ -298,21 +294,21 @@ R8
 r1
 !s85 0
 31
-R27
+!s108 1591488767.000000
 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v|
 !i113 1
-Z44 o-vlog01compat -work work
-Z45 !s92 -vlog01compat -work work {+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6}
+Z48 o-vlog01compat -work work
+Z49 !s92 -vlog01compat -work work {+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6}
 R14
 vkeyboard_press_driver
-R42
+R46
 !i10b 1
 !s100 UJh9eN5fYQJc99Edh5HR<3
 IlC@AoGj:7aT=LR2bS=^gC3
 R3
 R0
-R43
+R47
 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v
 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v
 L0 1
@@ -320,164 +316,66 @@ R8
 r1
 !s85 0
 31
-R27
+Z50 !s108 1591488768.000000
 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v|
 !i113 1
-R44
-R45
-R14
-vLFSR
-R1
-R2
-!i10b 1
-!s100 hDDVfSSY[<zFQYj9L0ZCX3
-I=;FfahDZ7Pd2hG6zg2@6@3
-R3
-Z46 !s105 lfsr_sv_unit
-S1
-R0
-Z47 w1591566659
-Z48 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/lfsr.sv
-Z49 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/lfsr.sv
-L0 1
-R8
-r1
-!s85 0
-31
-R9
-Z50 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/lfsr.sv|
-Z51 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/lfsr.sv|
-!i113 1
-R12
-R13
-R14
-n@l@f@s@r
-vLFSR_testbench
-R1
-R2
-!i10b 1
-!s100 TPn?P2Tz7flKL3_JjMobd0
-I?SjJ:QWT@JglWgB=Dh][Z3
-R3
-R46
-S1
-R0
-R47
 R48
 R49
-L0 27
-R8
-r1
-!s85 0
-31
-R9
-R50
-R51
-!i113 1
-R12
-R13
 R14
-n@l@f@s@r_testbench
 vpipe_drawer
 R1
-Z52 !s110 1591575379
+R21
 !i10b 1
-!s100 kKFf65HMiel=68I`=0hZK0
-Ii?=hAGBUEFO>7VaT@bIhX0
+!s100 nCCjQMdLbV?h17QQ46lG91
+I]IZn2FO6^3h^ONNd>L[J@3
 R3
-Z53 !s105 pipe_drawer_sv_unit
+Z51 !s105 pipe_drawer_sv_unit
 S1
 R0
-Z54 w1591575364
-Z55 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv
-Z56 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv
+Z52 w1591313114
+Z53 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv
+Z54 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv
 L0 1
 R8
 r1
 !s85 0
 31
-Z57 !s108 1591575379.000000
-Z58 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv|
-Z59 !s90 -reportprogress|300|-work|work|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv|
+R26
+Z55 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv|
+Z56 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv|
 !i113 1
-Z60 o-work work
+R12
+R13
 R14
 vpipe_drawer_testbench
 R1
-R52
+R21
 !i10b 1
-!s100 BCfN30enWEKe1HEoKXamQ3
-Ifk00BWSAUZR8DMWcho^Ud3
+!s100 SA0>g58UkLNjGgLo?i2`f1
+IHl`e>KA@30PTWjA:Ff;kT0
 R3
-R53
+R51
 S1
 R0
+R52
+R53
 R54
+L0 104
+R8
+r1
+!s85 0
+31
+R26
 R55
 R56
-L0 110
-R8
-r1
-!s85 0
-31
-R57
-R58
-R59
 !i113 1
-R60
-R14
-vpipe_drawer_top
-R1
-Z61 !s110 1591570717
-!i10b 1
-!s100 OXGASLeI5M?@Dj3^eeNTW2
-IR878?6XLaOZZ<oCgOI^hz2
-R3
-Z62 !s105 pipe_drawer_top_sv_unit
-S1
-R0
-Z63 w1591570707
-Z64 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv
-Z65 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv
-L0 1
-R8
-r1
-!s85 0
-31
-Z66 !s108 1591570717.000000
-Z67 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv|
-Z68 !s90 -reportprogress|300|-work|work|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv|
-!i113 1
-R60
-R14
-vpipe_drawer_top_testbench
-R1
-R61
-!i10b 1
-!s100 85n6e=7J];VFkQ;GEc>Ub2
-I=6@o3R<b@ZkaF_zz?DaFo3
-R3
-R62
-S1
-R0
-R63
-R64
-R65
-L0 112
-R8
-r1
-!s85 0
-31
-R66
-R67
-R68
-!i113 1
-R60
+R12
+R13
 R14
 vVGA_framebuffer
 R1
-R42
+R46
 !i10b 1
 !s100 VKBCLjea13m`CGG:9Fa?S0
 I^Bz8zHIYRC>>Q40D9<GUB2
@@ -485,7 +383,7 @@ R3
 !s105 VGA_framebuffer_sv_unit
 S1
 R0
-R24
+R23
 8C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv
 FC:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv
 L0 32
@@ -493,7 +391,7 @@ R8
 r1
 !s85 0
 31
-R27
+R50
 !s107 C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6|C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv|
 !i113 1

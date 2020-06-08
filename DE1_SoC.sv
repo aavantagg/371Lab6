@@ -35,6 +35,14 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	logic color, game_clk;
 	logic flap, collision, game_enable, restart, game_reset;
 	
+
+    logic [9:0] random; // 10-bit pseudorandom number
+
+    LFSR rand_height (  .clk(CLOCK_50),
+                        .rst(reset),
+                        .out(random)
+                    );
+	
 	// Set pipe coordinates
 	always_ff @(posedge game_clk) begin
 		if (reset | restart) begin
@@ -73,23 +81,19 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
     always_ff @(posedge CLOCK_50) begin
         if (makeBreak && key == 8'h2D) restart <= 1; // r
         else restart <= 0;
-        if (makeBreak && key == 8'h2B) flap <= 1; 	// f
+        if (makeBreak && key == 8'h2B) flap <= 1; // f
         else flap <= 0;
+//        if (makeBreak && key == 8'h21) collision <= 1; // c
+//        else collision <= 0;
     end // always_ff
     
 	assign reset = ~KEY[0];
 
-   logic valid;
-   logic makeBreak;
-   logic [7:0] key;
+    logic valid;
+    logic makeBreak;
+    logic [7:0] key;
 
-   logic [9:0] random; // 10-bit pseudorandom number
-
-   LFSR rand_height (.clk(CLOCK_50),
-                     .rst(reset),
-                     .out(random));
-						  
-   score_manager my_score (.reset,
+    score_manager my_score (.reset,
                             .clock(game_clk),
                             .restart,
                             .collision,
@@ -174,13 +178,13 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	assign game_clk = divided_clocks[19];
 	
 	assign LEDR[7:0] = 10'b0;
-   assign LEDR[8] = bird_x == pipe1_x || bird_x == pipe2_x;
+    assign LEDR[8] = bird_x == pipe1_x || bird_x == pipe2_x;
 	assign LEDR[9] = collision;
 
-   // Audio
+    // Audio
 
-   input CLOCK2_50;
-   output FPGA_I2C_SCLK;
+    input CLOCK2_50;
+    output FPGA_I2C_SCLK;
 	inout FPGA_I2C_SDAT;
 	output AUD_XCK;
 	input AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK;

@@ -8,7 +8,7 @@ module collision_detector(clk, reset, bird_x, bird_y, pipe1_x, pipe1_y, pipe2_x,
 	enum {clear, dead} ps, ns;
 	logic [10:0] pipe1_left, pipe1_right, pipe2_left, pipe2_right;
 	logic hit_wall, hit_p1, hit_p2, hit_cap1, hit_cap2;
-	logic [6:0] gap_size;
+	logic [10:0] gap;
 	
 	always_comb begin
 		case (ps)
@@ -29,28 +29,27 @@ module collision_detector(clk, reset, bird_x, bird_y, pipe1_x, pipe1_y, pipe2_x,
 	end
 	
 	assign hit_wall = (bird_y > 474) | (bird_y < 11);
-	
 	assign hit_p1 = (bird_x >= pipe1_left) & (bird_x <= pipe1_right) &
-						 ((bird_y >= pipe1_y - 5) | (bird_y <= pipe1_y - gap_size + 7));
+						 ((bird_y >= pipe1_y - 5) | (bird_y <= pipe1_y - gap + 7));
 						 
 	assign hit_p2 = (bird_x >= pipe2_left) & (bird_x <= pipe2_right) &
-						 ((bird_y >= pipe2_y - 5) | (bird_y <= pipe2_y - gap_size + 7));
+						 ((bird_y >= pipe2_y - 5) | (bird_y <= pipe2_y - gap + 7));
 						 
 	assign hit_cap1 = (bird_x >= pipe1_left - 10) & (bird_x <= pipe1_right) &
 							((bird_y >= pipe1_y - 10 - 5) & (bird_y <= pipe1_y + 7) |
-							(bird_y <= pipe1_y - gap_size + 7) & (bird_y >= pipe1_y - gap_size - 10 + 5));
+							(bird_y <= pipe1_y - gap + 7) & (bird_y >= pipe1_y - gap - 10 + 5));
 	
 	assign hit_cap2 = (bird_x >= pipe2_left - 10) & (bird_x <= pipe2_right) &
 							((bird_y >= pipe2_y - 10 - 5) & (bird_y <= pipe2_y + 7) |
-							(bird_y <= pipe2_y - gap_size + 7) & (bird_y >= pipe2_y - gap_size - 10 + 5));
+							(bird_y <= pipe2_y - gap + 7) & (bird_y >= pipe2_y - gap - 10 + 5));
 							
 	assign pipe1_left = pipe1_x - 60 - 10; // pipe x - width of pipe - right bevel
 	assign pipe1_right = pipe1_x;
 	assign pipe2_left = pipe2_x - 60 - 10;
 	assign pipe2_right = pipe2_x;
+	assign gap = 80;
 	
 	assign collision = ps == dead;
-	assign gap_size = 80;
 
 endmodule // collision_detector
 

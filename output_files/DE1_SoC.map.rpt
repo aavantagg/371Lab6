@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Sun Jun 07 17:51:47 2020
+Sun Jun 07 18:55:43 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,61 +10,69 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. State Machine - |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|s_i2c_transceiver
-  6. State Machine - |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|s_i2c_auto_init
-  7. State Machine - |DE1_SoC|keyboard_press_driver:keyboard|count
-  8. Registers Packed Into Inferred Megafunctions
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 11. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 12. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 13. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 14. Parameter Settings for User Entity Instance: keyboard_press_driver:keyboard
- 15. Parameter Settings for User Entity Instance: VGA_framebuffer:fb
- 16. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen
- 17. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio
- 18. Parameter Settings for User Entity Instance: audio_and_video_config:cfg
- 19. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz
- 20. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize
- 21. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller
- 22. Parameter Settings for User Entity Instance: audio_codec:codec
- 23. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
- 24. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
- 25. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
- 26. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
- 27. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
- 28. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
- 29. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
- 30. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
- 31. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
- 32. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
- 33. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
- 34. Parameter Settings for Inferred Entity Instance: VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0
- 35. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div0
- 36. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div1
- 37. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod0
- 38. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div2
- 39. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div3
- 40. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod1
- 41. altpll Parameter Settings by Entity Instance
- 42. scfifo Parameter Settings by Entity Instance
- 43. altsyncram Parameter Settings by Entity Instance
- 44. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller"
- 45. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize"
- 46. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz"
- 47. Port Connectivity Checks: "VGA_framebuffer:fb"
- 48. Port Connectivity Checks: "game_manager:control"
- 49. Port Connectivity Checks: "keyboard_press_driver:keyboard"
- 50. Port Connectivity Checks: "score_manager:my_score|score_display:ones"
- 51. Port Connectivity Checks: "score_manager:my_score|score_display:tens"
- 52. Port Connectivity Checks: "score_manager:my_score|score_display:hundreds"
- 53. Port Connectivity Checks: "score_manager:my_score|score_display:high_ones"
- 54. Port Connectivity Checks: "score_manager:my_score|score_display:high_tens"
- 55. Port Connectivity Checks: "score_manager:my_score|score_display:high_hundreds"
- 56. Port Connectivity Checks: "LFSR:rand_height"
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
- 59. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|s_i2c_transceiver
+ 10. State Machine - |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|s_i2c_auto_init
+ 11. State Machine - |DE1_SoC|keyboard_press_driver:keyboard|count
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 17. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 18. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 19. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 20. Source assignments for VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated
+ 21. Parameter Settings for User Entity Instance: keyboard_press_driver:keyboard
+ 22. Parameter Settings for User Entity Instance: VGA_framebuffer:fb
+ 23. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen
+ 24. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio
+ 25. Parameter Settings for User Entity Instance: audio_and_video_config:cfg
+ 26. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz
+ 27. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize
+ 28. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller
+ 29. Parameter Settings for User Entity Instance: audio_codec:codec
+ 30. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+ 31. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+ 32. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+ 33. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 34. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+ 35. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 36. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+ 37. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+ 38. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 39. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+ 40. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 41. Parameter Settings for Inferred Entity Instance: VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0
+ 42. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div0
+ 43. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div1
+ 44. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod0
+ 45. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div2
+ 46. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Div3
+ 47. Parameter Settings for Inferred Entity Instance: score_manager:my_score|lpm_divide:Mod1
+ 48. altpll Parameter Settings by Entity Instance
+ 49. scfifo Parameter Settings by Entity Instance
+ 50. altsyncram Parameter Settings by Entity Instance
+ 51. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller"
+ 52. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize"
+ 53. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz"
+ 54. Port Connectivity Checks: "VGA_framebuffer:fb"
+ 55. Port Connectivity Checks: "game_manager:control"
+ 56. Port Connectivity Checks: "keyboard_press_driver:keyboard"
+ 57. Port Connectivity Checks: "score_manager:my_score|score_display:ones"
+ 58. Port Connectivity Checks: "score_manager:my_score|score_display:tens"
+ 59. Port Connectivity Checks: "score_manager:my_score|score_display:hundreds"
+ 60. Port Connectivity Checks: "score_manager:my_score|score_display:high_ones"
+ 61. Port Connectivity Checks: "score_manager:my_score|score_display:high_tens"
+ 62. Port Connectivity Checks: "score_manager:my_score|score_display:high_hundreds"
+ 63. Port Connectivity Checks: "LFSR:rand_height"
+ 64. Post-Synthesis Netlist Statistics for Top Partition
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
+ 67. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -88,22 +96,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Jun 07 17:51:47 2020           ;
-; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name               ; DE1_SoC                                     ;
-; Top-level Entity Name       ; DE1_SoC                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Jun 07 18:55:42 2020       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; DE1_SoC                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 679                                         ;
+; Total pins                      ; 107                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 319,488                                     ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -202,11 +215,237 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                       ; Library ;
++------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; audio_codec.v                      ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_codec.v                      ;         ;
+; audio_and_video_config.v           ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_and_video_config.v           ;         ;
+; Altera_UP_SYNC_FIFO.v              ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_SYNC_FIFO.v              ;         ;
+; Altera_UP_Slow_Clock_Generator.v   ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_Slow_Clock_Generator.v   ;         ;
+; Altera_UP_I2C_AV_Auto_Initialize.v ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_I2C_AV_Auto_Initialize.v ;         ;
+; Altera_UP_I2C.v                    ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_I2C.v                    ;         ;
+; Altera_UP_Clock_Edge.v             ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_Clock_Edge.v             ;         ;
+; Altera_UP_Audio_Out_Serializer.v   ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_Audio_Out_Serializer.v   ;         ;
+; Altera_UP_Audio_In_Deserializer.v  ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_Audio_In_Deserializer.v  ;         ;
+; Altera_UP_Audio_Bit_Counter.v      ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_Audio_Bit_Counter.v      ;         ;
+; score_manager.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_manager.sv                   ;         ;
+; score_display.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_display.sv                   ;         ;
+; LFSR.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/LFSR.sv                            ;         ;
+; keyboard_inner_driver.v            ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v            ;         ;
+; keyboard_press_driver.v            ; yes             ; User Verilog HDL File        ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v            ;         ;
+; DE1_SoC.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv                         ;         ;
+; VGA_framebuffer.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv                 ;         ;
+; clear_screen.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv                    ;         ;
+; pipe_drawer.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer.sv                     ;         ;
+; bird_drawer.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv                     ;         ;
+; display_manager.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv                 ;         ;
+; bird_physics.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv                    ;         ;
+; pipe_drawer_top.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/pipe_drawer_top.sv                 ;         ;
+; game_manager.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv                    ;         ;
+; collision_detector.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv              ;         ;
+; bird_template_v3.txt               ; yes             ; Auto-Found File              ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_template_v3.txt               ;         ;
+; clock_generator.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clock_generator.v                  ;         ;
+; altpll.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altpll.tdf                                  ;         ;
+; aglobal170.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                              ;         ;
+; stratix_pll.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_pll.inc                             ;         ;
+; stratixii_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratixii_pll.inc                           ;         ;
+; cycloneii_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/cycloneii_pll.inc                           ;         ;
+; db/altpll_1uu1.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altpll_1uu1.tdf                 ;         ;
+; scfifo.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/scfifo.tdf                                  ;         ;
+; a_regfifo.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_regfifo.inc                               ;         ;
+; a_dpfifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_dpfifo.inc                                ;         ;
+; a_i2fifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_i2fifo.inc                                ;         ;
+; a_fffifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_fffifo.inc                                ;         ;
+; a_f2fifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_f2fifo.inc                                ;         ;
+; db/scfifo_8ba1.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/scfifo_8ba1.tdf                 ;         ;
+; db/a_dpfifo_r2a1.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/a_dpfifo_r2a1.tdf               ;         ;
+; db/altsyncram_p3i1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_p3i1.tdf             ;         ;
+; db/cmpr_6l8.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/cmpr_6l8.tdf                    ;         ;
+; db/cntr_h2b.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/cntr_h2b.tdf                    ;         ;
+; db/cntr_u27.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/cntr_u27.tdf                    ;         ;
+; db/cntr_i2b.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/cntr_i2b.tdf                    ;         ;
+; altsyncram.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
+; stratix_ram_block.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
+; lpm_mux.inc                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
+; lpm_decode.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                              ;         ;
+; a_rdenreg.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                               ;         ;
+; altrom.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                  ;         ;
+; altram.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                  ;         ;
+; altdpram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
+; db/altsyncram_acq1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_acq1.tdf             ;         ;
+; db/decode_3na.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/decode_3na.tdf                  ;         ;
+; db/mux_chb.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf                     ;         ;
+; lpm_divide.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf                              ;         ;
+; abs_divider.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc                             ;         ;
+; sign_div_unsign.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc                         ;         ;
+; db/lpm_divide_8am.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/lpm_divide_8am.tdf              ;         ;
+; db/sign_div_unsign_ekh.tdf         ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/sign_div_unsign_ekh.tdf         ;         ;
+; db/alt_u_div_2te.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/alt_u_div_2te.tdf               ;         ;
+; db/lpm_divide_5am.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/lpm_divide_5am.tdf              ;         ;
+; db/sign_div_unsign_bkh.tdf         ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/sign_div_unsign_bkh.tdf         ;         ;
+; db/alt_u_div_sse.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/alt_u_div_sse.tdf               ;         ;
+; db/lpm_divide_82m.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/lpm_divide_82m.tdf              ;         ;
++------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 1582           ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 2612           ;
+;     -- 7 input functions                    ; 15             ;
+;     -- 6 input functions                    ; 522            ;
+;     -- 5 input functions                    ; 378            ;
+;     -- 4 input functions                    ; 249            ;
+;     -- <=3 input functions                  ; 1448           ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 679            ;
+;                                             ;                ;
+; I/O pins                                    ; 107            ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 319488         ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Total PLLs                                  ; 1              ;
+;     -- PLLs                                 ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 706            ;
+; Total fan-out                               ; 14382          ;
+; Average fan-out                             ; 3.95           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                  ;
++---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                       ; Entity Name                      ; Library Name ;
++---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+; |DE1_SoC                                                      ; 2612 (149)          ; 679 (64)                  ; 319488            ; 0          ; 107  ; 0            ; |DE1_SoC                                                                                                                                                                                                                  ; DE1_SoC                          ; work         ;
+;    |LFSR:rand_height|                                         ; 1 (1)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|LFSR:rand_height                                                                                                                                                                                                 ; LFSR                             ; work         ;
+;    |VGA_framebuffer:fb|                                       ; 116 (65)            ; 28 (22)                   ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb                                                                                                                                                                                               ; VGA_framebuffer                  ; work         ;
+;       |altsyncram:framebuffer_rtl_0|                          ; 51 (0)              ; 6 (0)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0                                                                                                                                                                  ; altsyncram                       ; work         ;
+;          |altsyncram_acq1:auto_generated|                     ; 51 (0)              ; 6 (6)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated                                                                                                                                   ; altsyncram_acq1                  ; work         ;
+;             |decode_3na:decode2|                              ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|decode_3na:decode2                                                                                                                ; decode_3na                       ; work         ;
+;             |mux_chb:mux3|                                    ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|mux_chb:mux3                                                                                                                      ; mux_chb                          ; work         ;
+;    |audio_and_video_config:cfg|                               ; 94 (2)              ; 56 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_and_video_config:cfg                                                                                                                                                                                       ; audio_and_video_config           ; work         ;
+;       |Altera_UP_I2C:I2C_Controller|                          ; 21 (21)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller                                                                                                                                                          ; Altera_UP_I2C                    ; work         ;
+;       |Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|      ; 56 (56)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize                                                                                                                                      ; Altera_UP_I2C_AV_Auto_Initialize ; work         ;
+;       |Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz| ; 15 (15)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz                                                                                                                                 ; Altera_UP_Slow_Clock_Generator   ; work         ;
+;    |audio_codec:codec|                                        ; 270 (11)            ; 228 (2)                   ; 12288             ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec                                                                                                                                                                                                ; audio_codec                      ; work         ;
+;       |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer| ; 110 (5)             ; 112 (40)                  ; 6144              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                          ; Altera_UP_Audio_In_Deserializer  ; work         ;
+;          |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|  ; 10 (10)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                        ; Altera_UP_Audio_Bit_Counter      ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|     ; 47 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 47 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 47 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                               ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 47 (24)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                          ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram  ; altsyncram_p3i1                  ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb      ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr          ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter   ; cntr_u27                         ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|    ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO                                                                                          ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                         ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                              ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (25)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                         ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram ; altsyncram_p3i1                  ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb     ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr         ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter  ; cntr_u27                         ; work         ;
+;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 146 (50)            ; 108 (42)                  ; 6144              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                            ; Altera_UP_Audio_Out_Serializer   ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|    ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                            ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                           ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (25)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                           ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram   ; altsyncram_p3i1                  ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb       ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr           ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter    ; cntr_u27                         ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                               ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (25)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                          ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram  ; altsyncram_p3i1                  ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb      ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr          ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter   ; cntr_u27                         ; work         ;
+;       |Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges                                                                                                                                                ; Altera_UP_Clock_Edge             ; work         ;
+;       |Altera_UP_Clock_Edge:Bit_Clock_Edges|                  ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Clock_Edge:Bit_Clock_Edges                                                                                                                                                           ; Altera_UP_Clock_Edge             ; work         ;
+;       |Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|audio_codec:codec|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges                                                                                                                                                ; Altera_UP_Clock_Edge             ; work         ;
+;    |bird_physics:bird_height|                                 ; 101 (101)           ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|bird_physics:bird_height                                                                                                                                                                                         ; bird_physics                     ; work         ;
+;    |clock_generator:my_clock_gen|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|clock_generator:my_clock_gen                                                                                                                                                                                     ; clock_generator                  ; work         ;
+;       |altpll:DE_Clock_Generator_Audio|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio                                                                                                                                                     ; altpll                           ; work         ;
+;          |altpll_1uu1:auto_generated|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated                                                                                                                          ; altpll_1uu1                      ; work         ;
+;    |collision_detector:checkForDead|                          ; 265 (265)           ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collision_detector:checkForDead                                                                                                                                                                                  ; collision_detector               ; work         ;
+;    |display_manager:display|                                  ; 1280 (57)           ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                                                                                                                                          ; display_manager                  ; work         ;
+;       |bird_drawer:bird_coords|                               ; 104 (104)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords                                                                                                                                                                  ; bird_drawer                      ; work         ;
+;       |clear_screen:clr|                                      ; 31 (31)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|clear_screen:clr                                                                                                                                                                         ; clear_screen                     ; work         ;
+;       |pipe_drawer:pipe1_coords|                              ; 234 (234)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords                                                                                                                                                                 ; pipe_drawer                      ; work         ;
+;       |pipe_drawer:pipe2_coords|                              ; 244 (244)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords                                                                                                                                                                 ; pipe_drawer                      ; work         ;
+;       |pipe_drawer_top:p1_top|                                ; 315 (315)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top                                                                                                                                                                   ; pipe_drawer_top                  ; work         ;
+;       |pipe_drawer_top:p2_top|                                ; 295 (295)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top                                                                                                                                                                   ; pipe_drawer_top                  ; work         ;
+;    |game_manager:control|                                     ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|game_manager:control                                                                                                                                                                                             ; game_manager                     ; work         ;
+;    |keyboard_press_driver:keyboard|                           ; 26 (12)             ; 55 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard                                                                                                                                                                                   ; keyboard_press_driver            ; work         ;
+;       |keyboard_inner_driver:kbd|                             ; 14 (14)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd                                                                                                                                                         ; keyboard_inner_driver            ; work         ;
+;    |score_manager:my_score|                                   ; 307 (21)            ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score                                                                                                                                                                                           ; score_manager                    ; work         ;
+;       |lpm_divide:Div0|                                       ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0                                                                                                                                                                           ; lpm_divide                       ; work         ;
+;          |lpm_divide_8am:auto_generated|                      ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0|lpm_divide_8am:auto_generated                                                                                                                                             ; lpm_divide_8am                   ; work         ;
+;             |sign_div_unsign_ekh:divider|                     ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider                                                                                                                 ; sign_div_unsign_ekh              ; work         ;
+;                |alt_u_div_2te:divider|                        ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider                                                                                           ; alt_u_div_2te                    ; work         ;
+;       |lpm_divide:Div1|                                       ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1                                                                                                                                                                           ; lpm_divide                       ; work         ;
+;          |lpm_divide_5am:auto_generated|                      ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1|lpm_divide_5am:auto_generated                                                                                                                                             ; lpm_divide_5am                   ; work         ;
+;             |sign_div_unsign_bkh:divider|                     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider                                                                                                                 ; sign_div_unsign_bkh              ; work         ;
+;                |alt_u_div_sse:divider|                        ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider                                                                                           ; alt_u_div_sse                    ; work         ;
+;       |lpm_divide:Div2|                                       ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2                                                                                                                                                                           ; lpm_divide                       ; work         ;
+;          |lpm_divide_8am:auto_generated|                      ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2|lpm_divide_8am:auto_generated                                                                                                                                             ; lpm_divide_8am                   ; work         ;
+;             |sign_div_unsign_ekh:divider|                     ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider                                                                                                                 ; sign_div_unsign_ekh              ; work         ;
+;                |alt_u_div_2te:divider|                        ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div2|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider                                                                                           ; alt_u_div_2te                    ; work         ;
+;       |lpm_divide:Div3|                                       ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3                                                                                                                                                                           ; lpm_divide                       ; work         ;
+;          |lpm_divide_5am:auto_generated|                      ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3|lpm_divide_5am:auto_generated                                                                                                                                             ; lpm_divide_5am                   ; work         ;
+;             |sign_div_unsign_bkh:divider|                     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider                                                                                                                 ; sign_div_unsign_bkh              ; work         ;
+;                |alt_u_div_sse:divider|                        ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Div3|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider                                                                                           ; alt_u_div_sse                    ; work         ;
+;       |lpm_divide:Mod0|                                       ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0                                                                                                                                                                           ; lpm_divide                       ; work         ;
+;          |lpm_divide_82m:auto_generated|                      ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                                                                                                             ; lpm_divide_82m                   ; work         ;
+;             |sign_div_unsign_bkh:divider|                     ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                 ; sign_div_unsign_bkh              ; work         ;
+;                |alt_u_div_sse:divider|                        ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider                                                                                           ; alt_u_div_sse                    ; work         ;
+;       |lpm_divide:Mod1|                                       ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1                                                                                                                                                                           ; lpm_divide                       ; work         ;
+;          |lpm_divide_82m:auto_generated|                      ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1|lpm_divide_82m:auto_generated                                                                                                                                             ; lpm_divide_82m                   ; work         ;
+;             |sign_div_unsign_bkh:divider|                     ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                                                                                                                 ; sign_div_unsign_bkh              ; work         ;
+;                |alt_u_div_sse:divider|                        ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider                                                                                           ; alt_u_div_sse                    ; work         ;
+;       |score_display:high_hundreds|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:high_hundreds                                                                                                                                                               ; score_display                    ; work         ;
+;       |score_display:high_ones|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:high_ones                                                                                                                                                                   ; score_display                    ; work         ;
+;       |score_display:high_tens|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:high_tens                                                                                                                                                                   ; score_display                    ; work         ;
+;       |score_display:hundreds|                                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:hundreds                                                                                                                                                                    ; score_display                    ; work         ;
+;       |score_display:ones|                                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:ones                                                                                                                                                                        ; score_display                    ; work         ;
+;       |score_display:tens|                                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score_manager:my_score|score_display:tens                                                                                                                                                                        ; score_display                    ; work         ;
++---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                  ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated|ALTSYNCRAM                                                                                                                                   ; AUTO ; Simple Dual Port ; 307200       ; 1            ; 307200       ; 1            ; 307200 ; None ;
+; audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072   ; None ;
+; audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072   ; None ;
+; audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072   ; None ;
+; audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072   ; None ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
 
 
 Encoding Type:  User-Encoded
@@ -253,6 +492,45 @@ Encoding Type:  User-Encoded
 ; count.10 ; 1       ; 0                                        ;
 ; count.11 ; 1       ; 1                                        ;
 +----------+---------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                          ;
++------------------------------------------------------------+----------------------------------------------------------------+
+; Register name                                              ; Reason for Removal                                             ;
++------------------------------------------------------------+----------------------------------------------------------------+
+; bird_physics:bird_height|ps[3..31]                         ; Stuck at GND due to stuck port data_in                         ;
+; display_manager:display|ps[3..31]                          ; Stuck at GND due to stuck port data_in                         ;
+; display_manager:display|bird_drawer:bird_coords|ps[2..31]  ; Stuck at GND due to stuck port data_in                         ;
+; display_manager:display|pipe_drawer_top:p2_top|ps[3..31]   ; Stuck at GND due to stuck port data_in                         ;
+; display_manager:display|pipe_drawer_top:p1_top|ps[3..31]   ; Stuck at GND due to stuck port data_in                         ;
+; display_manager:display|pipe_drawer:pipe2_coords|ps[3..31] ; Stuck at GND due to stuck port data_in                         ;
+; display_manager:display|pipe_drawer:pipe1_coords|ps[3..31] ; Stuck at GND due to stuck port data_in                         ;
+; collision_detector:checkForDead|ps[1..31]                  ; Stuck at GND due to stuck port data_in                         ;
+; game_manager:control|ps[2..31]                             ; Stuck at GND due to stuck port data_in                         ;
+; pipe1_y[9]                                                 ; Merged with pipe1_y[10]                                        ;
+; pipe2_y[9]                                                 ; Merged with pipe2_y[10]                                        ;
+; audio_and_video_config:cfg|num_bits_to_transfer[1,2]       ; Merged with audio_and_video_config:cfg|num_bits_to_transfer[0] ;
+; pipe2_y[10]                                                ; Stuck at GND due to stuck port data_in                         ;
+; pipe1_y[10]                                                ; Stuck at GND due to stuck port data_in                         ;
+; divided_clocks[20..25]                                     ; Lost fanout                                                    ;
+; Total Number of Removed Registers = 277                    ;                                                                ;
++------------------------------------------------------------+----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 679   ;
+; Number of registers using Synchronous Clear  ; 404   ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 314   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------+
@@ -352,6 +630,15 @@ Encoding Type:  User-Encoded
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                                                        ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0|altsyncram_acq1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
 
 
 +-----------------------------------------------------------------------------+
@@ -1433,12 +1720,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 679                         ;
+;     CLR               ; 1                           ;
+;     ENA               ; 98                          ;
+;     ENA SCLR          ; 207                         ;
+;     ENA SLD           ; 9                           ;
+;     SCLR              ; 196                         ;
+;     SCLR SLD          ; 1                           ;
+;     SLD               ; 6                           ;
+;     plain             ; 161                         ;
+; arriav_io_obuf        ; 1                           ;
+; arriav_lcell_comb     ; 2622                        ;
+;     arith             ; 1149                        ;
+;         0 data inputs ; 72                          ;
+;         1 data inputs ; 793                         ;
+;         2 data inputs ; 115                         ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 31                          ;
+;         5 data inputs ; 56                          ;
+;     extend            ; 15                          ;
+;         7 data inputs ; 15                          ;
+;     normal            ; 1388                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 199                         ;
+;         3 data inputs ; 113                         ;
+;         4 data inputs ; 218                         ;
+;         5 data inputs ; 322                         ;
+;         6 data inputs ; 522                         ;
+;     shared            ; 70                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 1                           ;
+; boundary_port         ; 107                         ;
+; generic_pll           ; 1                           ;
+; stratixv_ram_block    ; 134                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.10                       ;
+; Average LUT depth     ; 5.21                        ;
++-----------------------+-----------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1448,7 +1782,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun 07 17:51:25 2020
+    Info: Processing started: Sun Jun 07 18:55:14 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1487,9 +1821,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file keyboar
     Info (12023): Found entity 1: keyboard_inner_driver File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_inner_driver.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file keyboard_press_driver.v
     Info (12023): Found entity 1: keyboard_press_driver File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at DE1_SoC.sv(100): ignored dangling comma in List of Port Connections File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 100
+Warning (10275): Verilog HDL Module Instantiation warning at DE1_SoC.sv(104): ignored dangling comma in List of Port Connections File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 104
 Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.sv
     Info (12023): Found entity 1: DE1_SoC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file vga_framebuffer.sv
+    Info (12023): Found entity 1: VGA_framebuffer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv Line: 32
 Info (12021): Found 2 design units, including 2 entities, in source file clear_screen.sv
     Info (12023): Found entity 1: clear_screen File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 4
     Info (12023): Found entity 2: clear_screen_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 34
@@ -1514,34 +1850,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file game_ma
     Info (12023): Found entity 1: game_manager File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/game_manager.sv Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file collision_detector.sv
     Info (12023): Found entity 1: collision_detector File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 1
-    Info (12023): Found entity 2: collision_detector_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 57
-Info (12021): Found 1 design units, including 1 entities, in source file vga_framebuffer.sv
-    Info (12023): Found entity 1: VGA_framebuffer File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/VGA_framebuffer.sv Line: 32
+    Info (12023): Found entity 2: collision_detector_testbench File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 56
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(43): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(44): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(48): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 48
 Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(51): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 51
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(54): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 54
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(171): truncated value with size 32 to match size of target (26) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 171
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(176): truncated value with size 10 to match size of target (8) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 176
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(52): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(56): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(59): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(62): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(175): truncated value with size 32 to match size of target (26) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 175
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(180): truncated value with size 10 to match size of target (8) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 180
 Warning (10030): Net "game_reset" at DE1_SoC.sv(36) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 36
-Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:rand_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 90
-Info (12128): Elaborating entity "score_manager" for hierarchy "score_manager:my_score" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 100
+Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:rand_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 44
+Info (12128): Elaborating entity "score_manager" for hierarchy "score_manager:my_score" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 104
 Warning (10036): Verilog HDL or VHDL warning at score_manager.sv(13): object "new_highscore" assigned a value but never read File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_manager.sv Line: 13
 Warning (10230): Verilog HDL assignment warning at score_manager.sv(34): truncated value with size 32 to match size of target (8) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_manager.sv Line: 34
 Info (12128): Elaborating entity "score_display" for hierarchy "score_manager:my_score|score_display:high_hundreds" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_manager.sv Line: 42
 Warning (10030): Net "digits.data_a" at score_display.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_display.sv Line: 13
 Warning (10030): Net "digits.waddr_a" at score_display.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_display.sv Line: 13
 Warning (10030): Net "digits.we_a" at score_display.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_display.sv Line: 13
-Info (12128): Elaborating entity "keyboard_press_driver" for hierarchy "keyboard_press_driver:keyboard" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 109
+Info (12128): Elaborating entity "keyboard_press_driver" for hierarchy "keyboard_press_driver:keyboard" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 113
 Info (12128): Elaborating entity "keyboard_inner_driver" for hierarchy "keyboard_press_driver:keyboard|keyboard_inner_driver:kbd" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/keyboard_press_driver.v Line: 38
-Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:control" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 116
-Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:checkForDead" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 127
-Warning (10230): Verilog HDL assignment warning at collision_detector.sv(47): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 47
-Warning (10230): Verilog HDL assignment warning at collision_detector.sv(49): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 49
-Info (12128): Elaborating entity "display_manager" for hierarchy "display_manager:display" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 142
+Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:control" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 120
+Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:checkForDead" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 131
+Warning (10230): Verilog HDL assignment warning at collision_detector.sv(46): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at collision_detector.sv(48): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/collision_detector.sv Line: 48
+Info (12128): Elaborating entity "display_manager" for hierarchy "display_manager:display" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 146
 Info (12128): Elaborating entity "clear_screen" for hierarchy "display_manager:display|clear_screen:clr" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/display_manager.sv Line: 46
 Warning (10230): Verilog HDL assignment warning at clear_screen.sv(18): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at clear_screen.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clear_screen.sv Line: 21
@@ -1567,8 +1901,8 @@ Warning (10230): Verilog HDL assignment warning at bird_drawer.sv(75): truncated
 Warning (10030): Net "template.data_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
 Warning (10030): Net "template.waddr_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
 Warning (10030): Net "template.we_a" at bird_drawer.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_drawer.sv Line: 8
-Info (12128): Elaborating entity "VGA_framebuffer" for hierarchy "VGA_framebuffer:fb" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 158
-Info (12128): Elaborating entity "bird_physics" for hierarchy "bird_physics:bird_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 167
+Info (12128): Elaborating entity "VGA_framebuffer" for hierarchy "VGA_framebuffer:fb" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 162
+Info (12128): Elaborating entity "bird_physics" for hierarchy "bird_physics:bird_height" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 171
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(51): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 51
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(53): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 53
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(55): truncated value with size 32 to match size of target (11) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 55
@@ -1578,7 +1912,7 @@ Warning (10230): Verilog HDL assignment warning at bird_physics.sv(61): truncate
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(66): truncated value with size 32 to match size of target (3) File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/bird_physics.sv Line: 66
 Warning (12125): Using design file clock_generator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clock_generator File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clock_generator.v Line: 14
-Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:my_clock_gen" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 211
+Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:my_clock_gen" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 215
 Info (12128): Elaborating entity "altpll" for hierarchy "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clock_generator.v Line: 55
 Info (12130): Elaborated megafunction instantiation "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clock_generator.v Line: 55
 Info (12133): Instantiated megafunction "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" with the following parameter: File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/clock_generator.v Line: 55
@@ -1641,11 +1975,11 @@ Info (12133): Instantiated megafunction "clock_generator:my_clock_gen|altpll:DE_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_1uu1.tdf
     Info (12023): Found entity 1: altpll_1uu1 File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altpll_1uu1.tdf Line: 26
 Info (12128): Elaborating entity "altpll_1uu1" for hierarchy "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "audio_and_video_config" for hierarchy "audio_and_video_config:cfg" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 218
+Info (12128): Elaborating entity "audio_and_video_config" for hierarchy "audio_and_video_config:cfg" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 222
 Info (12128): Elaborating entity "Altera_UP_Slow_Clock_Generator" for hierarchy "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_and_video_config.v Line: 90
 Info (12128): Elaborating entity "Altera_UP_I2C_AV_Auto_Initialize" for hierarchy "audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_and_video_config.v Line: 107
 Info (12128): Elaborating entity "Altera_UP_I2C" for hierarchy "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_and_video_config.v Line: 142
-Info (12128): Elaborating entity "audio_codec" for hierarchy "audio_codec:codec" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 234
+Info (12128): Elaborating entity "audio_codec" for hierarchy "audio_codec:codec" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 238
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "audio_codec:codec|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_codec.v Line: 103
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/audio_codec.v Line: 136
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/Altera_UP_Audio_In_Deserializer.v Line: 99
@@ -1740,6 +2074,12 @@ Info (12133): Instantiated megafunction "VGA_framebuffer:fb|altsyncram:framebuff
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_acq1.tdf
+    Info (12023): Found entity 1: altsyncram_acq1 File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/altsyncram_acq1.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3na.tdf
+    Info (12023): Found entity 1: decode_3na File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/decode_3na.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
+    Info (12023): Found entity 1: mux_chb File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/mux_chb.tdf Line: 23
 Info (12130): Elaborated megafunction instantiation "score_manager:my_score|lpm_divide:Div0" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_manager.sv Line: 40
 Info (12133): Instantiated megafunction "score_manager:my_score|lpm_divide:Div0" with the following parameter: File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/score_manager.sv Line: 40
     Info (12134): Parameter "LPM_WIDTHN" = "8"
@@ -1772,56 +2112,50 @@ Info (12133): Instantiated megafunction "score_manager:my_score|lpm_divide:Mod0"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
     Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/db/lpm_divide_82m.tdf Line: 25
-Error (12002): Port "address_a[0]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[10]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[11]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[12]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[13]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[14]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[15]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[16]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[17]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[18]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[1]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[2]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[3]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[4]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[5]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[6]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[7]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[8]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_a[9]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[0]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[10]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[11]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[12]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[13]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[14]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[15]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[16]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[17]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[18]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[1]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[2]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[3]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[4]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[5]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[6]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[7]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[8]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "address_b[9]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "clock0" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "data_a[0]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "q_b[0]" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "rden_b" does not exist in macrofunction "framebuffer_rtl_0"
-Error (12002): Port "wren_a" does not exist in macrofunction "framebuffer_rtl_0"
 Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 17
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 18
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 25
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/output_files/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 43 errors, 50 warnings
-    Error: Peak virtual memory: 4831 megabytes
-    Error: Processing ended: Sun Jun 07 17:51:48 2020
-    Error: Elapsed time: 00:00:23
-    Error: Total CPU time (on all processors): 00:00:46
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 11
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/casey/OneDrive/Documents/Spring 20/EE 371/Lab6/371Lab6/DE1_SoC.sv Line: 12
+Info (21057): Implemented 2993 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 84 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 2751 logic cells
+    Info (21064): Implemented 134 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Sun Jun 07 18:55:43 2020
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:52
 
 
 +------------------------------------------+
