@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Sun Jun 07 16:35:03 2020
+Sun Jun 07 16:50:22 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -99,7 +99,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 07 16:35:03 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 07 16:50:22 2020       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
@@ -303,14 +303,14 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1509           ;
+; Estimate of Logic utilization (ALMs needed) ; 1529           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2534           ;
-;     -- 7 input functions                    ; 19             ;
-;     -- 6 input functions                    ; 449            ;
-;     -- 5 input functions                    ; 348            ;
-;     -- 4 input functions                    ; 216            ;
-;     -- <=3 input functions                  ; 1502           ;
+; Combinational ALUT usage for logic          ; 2578           ;
+;     -- 7 input functions                    ; 17             ;
+;     -- 6 input functions                    ; 448            ;
+;     -- 5 input functions                    ; 351            ;
+;     -- 4 input functions                    ; 213            ;
+;     -- <=3 input functions                  ; 1549           ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 679            ;
 ;                                             ;                ;
@@ -325,8 +325,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 706            ;
-; Total fan-out                               ; 13813          ;
-; Average fan-out                             ; 3.88           ;
+; Total fan-out                               ; 13889          ;
+; Average fan-out                             ; 3.85           ;
 +---------------------------------------------+----------------+
 
 
@@ -335,7 +335,7 @@ agreement for further details.
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                       ; Entity Name                      ; Library Name ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
-; |DE1_SoC                                                      ; 2534 (100)          ; 679 (64)                  ; 319488            ; 0          ; 107  ; 0            ; |DE1_SoC                                                                                                                                                                                                                  ; DE1_SoC                          ; work         ;
+; |DE1_SoC                                                      ; 2578 (148)          ; 679 (64)                  ; 319488            ; 0          ; 107  ; 0            ; |DE1_SoC                                                                                                                                                                                                                  ; DE1_SoC                          ; work         ;
 ;    |LFSR:rand_height|                                         ; 1 (1)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|LFSR:rand_height                                                                                                                                                                                                 ; LFSR                             ; work         ;
 ;    |VGA_framebuffer:fb|                                       ; 116 (65)            ; 28 (22)                   ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb                                                                                                                                                                                               ; VGA_framebuffer                  ; work         ;
 ;       |altsyncram:framebuffer_rtl_0|                          ; 51 (0)              ; 6 (0)                     ; 307200            ; 0          ; 0    ; 0            ; |DE1_SoC|VGA_framebuffer:fb|altsyncram:framebuffer_rtl_0                                                                                                                                                                  ; altsyncram                       ; work         ;
@@ -390,13 +390,13 @@ agreement for further details.
 ;       |altpll:DE_Clock_Generator_Audio|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio                                                                                                                                                     ; altpll                           ; work         ;
 ;          |altpll_1uu1:auto_generated|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated                                                                                                                          ; altpll_1uu1                      ; work         ;
 ;    |collision_detector:checkForDead|                          ; 294 (294)           ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collision_detector:checkForDead                                                                                                                                                                                  ; collision_detector               ; work         ;
-;    |display_manager:display|                                  ; 1222 (60)           ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                                                                                                                                          ; display_manager                  ; work         ;
+;    |display_manager:display|                                  ; 1218 (59)           ; 201 (3)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display                                                                                                                                                                                          ; display_manager                  ; work         ;
 ;       |bird_drawer:bird_coords|                               ; 102 (102)           ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords                                                                                                                                                                  ; bird_drawer                      ; work         ;
 ;       |clear_screen:clr|                                      ; 31 (31)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|clear_screen:clr                                                                                                                                                                         ; clear_screen                     ; work         ;
 ;       |pipe_drawer:pipe1_coords|                              ; 230 (230)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords                                                                                                                                                                 ; pipe_drawer                      ; work         ;
 ;       |pipe_drawer:pipe2_coords|                              ; 241 (241)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords                                                                                                                                                                 ; pipe_drawer                      ; work         ;
-;       |pipe_drawer_top:p1_top|                                ; 279 (279)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top                                                                                                                                                                   ; pipe_drawer_top                  ; work         ;
-;       |pipe_drawer_top:p2_top|                                ; 279 (279)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top                                                                                                                                                                   ; pipe_drawer_top                  ; work         ;
+;       |pipe_drawer_top:p1_top|                                ; 277 (277)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top                                                                                                                                                                   ; pipe_drawer_top                  ; work         ;
+;       |pipe_drawer_top:p2_top|                                ; 278 (278)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top                                                                                                                                                                   ; pipe_drawer_top                  ; work         ;
 ;    |game_manager:control|                                     ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|game_manager:control                                                                                                                                                                                             ; game_manager                     ; work         ;
 ;    |keyboard_press_driver:keyboard|                           ; 26 (12)             ; 55 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard                                                                                                                                                                                   ; keyboard_press_driver            ; work         ;
 ;       |keyboard_inner_driver:kbd|                             ; 14 (14)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd                                                                                                                                                         ; keyboard_inner_driver            ; work         ;
@@ -547,44 +547,44 @@ Encoding Type:  User-Encoded
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|rom_address_counter[1]                                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|score_manager:my_score|highscore[6]                                                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|x[4]                                                                                            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|rom_address_counter[4]                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|score_manager:my_score|highscore[2]                                                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|x[2]                                                                                            ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|filter_scan[0]                                                                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_byte[1]                                                                  ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[20]                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|data_to_transfer[6]                                                                                           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz|clk_counter[8]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|score_manager:my_score|score[6]                                                                                                          ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[3]                                                                                                                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_byte[2]                                                                  ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[5]                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|data_to_transfer[7]                                                                                           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz|clk_counter[5]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE1_SoC|score_manager:my_score|score[5]                                                                                                          ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[2]                                                                                                                               ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe1_x[6]                                                                                                                               ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|y[8]                                                                                      ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[7]                                                                                      ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|y[10]                                                                                     ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|y[1]                                                                                      ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[9]                                                                                    ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[3]                                                                                    ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|y[5]                                                                                    ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[9]                                                                                    ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[5]                                                                                    ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|y[1]                                                                                            ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|bird_physics:bird_height|bird_y[10]                                                                                                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|incnt[1]                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[1] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_bit[2]                                                                   ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|y[3]                                                                                    ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|clear_screen:clr|y[0]                                                                                            ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|bird_physics:bird_height|bird_y[1]                                                                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|keyboard_press_driver:keyboard|keyboard_inner_driver:kbd|incnt[0]                                                                        ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[3] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_bit[0]                                                                   ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|data_out[3]                                                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|data_out[2]                                                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[9]                                                                                                                               ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[10]                                                                                                                              ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|x[9]                                                                                      ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|x[9]                                                                                    ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|x[9]                                                                                      ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|x[9]                                                                                    ;
-; 6:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[22]                                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|data_out[5]                                                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[3]                                                                                                                               ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe2_x[7]                                                                                                                               ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|x[4]                                                                                      ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe2_coords|x[4]                                                                                    ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|x[8]                                                                                      ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|pipe_drawer:pipe1_coords|x[6]                                                                                    ;
+; 6:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |DE1_SoC|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[3]                                              ;
 ; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[8]                                                                                     ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|x[0]                                                                                     ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[0]                                                                                     ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[8]                                                                                     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[1]                                                                                     ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|display_manager:display|bird_drawer:bird_coords|y[7]                                                                                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer_top:p2_top|Add9                                                                                      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SoC|display_manager:display|pipe_drawer_top:p1_top|Add9                                                                                      ;
-; 8:1                ; 22 bits   ; 110 LEs       ; 88 LEs               ; 22 LEs                 ; No         ; |DE1_SoC|display_manager:display|x[5]                                                                                                             ;
+; 8:1                ; 22 bits   ; 110 LEs       ; 88 LEs               ; 22 LEs                 ; No         ; |DE1_SoC|display_manager:display|y[4]                                                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1727,7 +1727,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 6                           ;
 ;     plain             ; 161                         ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 2544                        ;
+; arriav_lcell_comb     ; 2588                        ;
 ;     arith             ; 1163                        ;
 ;         0 data inputs ; 78                          ;
 ;         1 data inputs ; 833                         ;
@@ -1735,16 +1735,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 70                          ;
 ;         4 data inputs ; 25                          ;
 ;         5 data inputs ; 22                          ;
-;     extend            ; 19                          ;
-;         7 data inputs ; 19                          ;
-;     normal            ; 1204                        ;
+;     extend            ; 17                          ;
+;         7 data inputs ; 17                          ;
+;     normal            ; 1250                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 124                         ;
-;         3 data inputs ; 100                         ;
-;         4 data inputs ; 191                         ;
-;         5 data inputs ; 326                         ;
-;         6 data inputs ; 449                         ;
+;         2 data inputs ; 172                         ;
+;         3 data inputs ; 99                          ;
+;         4 data inputs ; 188                         ;
+;         5 data inputs ; 329                         ;
+;         6 data inputs ; 448                         ;
 ;     shared            ; 158                         ;
 ;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 36                          ;
@@ -1755,7 +1755,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 134                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.40                       ;
-; Average LUT depth     ; 4.90                        ;
+; Average LUT depth     ; 4.86                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1764,7 +1764,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -1774,7 +1774,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun 07 16:34:32 2020
+    Info: Processing started: Sun Jun 07 16:49:55 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1904,7 +1904,7 @@ Warning (10230): Verilog HDL assignment warning at bird_physics.sv(61): truncate
 Warning (10230): Verilog HDL assignment warning at bird_physics.sv(66): truncated value with size 32 to match size of target (3) File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/bird_physics.sv Line: 66
 Warning (12125): Using design file clock_generator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clock_generator File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clock_generator.v Line: 14
-Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:my_clock_gen" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 209
+Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:my_clock_gen" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 215
 Info (12128): Elaborating entity "altpll" for hierarchy "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clock_generator.v Line: 55
 Info (12130): Elaborated megafunction instantiation "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clock_generator.v Line: 55
 Info (12133): Instantiated megafunction "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" with the following parameter: File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/clock_generator.v Line: 55
@@ -1967,11 +1967,11 @@ Info (12133): Instantiated megafunction "clock_generator:my_clock_gen|altpll:DE_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_1uu1.tdf
     Info (12023): Found entity 1: altpll_1uu1 File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/db/altpll_1uu1.tdf Line: 26
 Info (12128): Elaborating entity "altpll_1uu1" for hierarchy "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "audio_and_video_config" for hierarchy "audio_and_video_config:cfg" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 216
+Info (12128): Elaborating entity "audio_and_video_config" for hierarchy "audio_and_video_config:cfg" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 222
 Info (12128): Elaborating entity "Altera_UP_Slow_Clock_Generator" for hierarchy "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/audio_and_video_config.v Line: 90
 Info (12128): Elaborating entity "Altera_UP_I2C_AV_Auto_Initialize" for hierarchy "audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/audio_and_video_config.v Line: 107
 Info (12128): Elaborating entity "Altera_UP_I2C" for hierarchy "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/audio_and_video_config.v Line: 142
-Info (12128): Elaborating entity "audio_codec" for hierarchy "audio_codec:codec" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 232
+Info (12128): Elaborating entity "audio_codec" for hierarchy "audio_codec:codec" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 238
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "audio_codec:codec|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/audio_codec.v Line: 103
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/audio_codec.v Line: 136
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/Altera_UP_Audio_In_Deserializer.v Line: 99
@@ -2136,18 +2136,18 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 12
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 12
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/aavan/Documents/School/EE 371/lab6/371Lab6/DE1_SoC.sv Line: 12
-Info (21057): Implemented 2912 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2956 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 2670 logic cells
+    Info (21061): Implemented 2714 logic cells
     Info (21064): Implemented 134 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
     Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Sun Jun 07 16:35:03 2020
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Processing ended: Sun Jun 07 16:50:22 2020
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +------------------------------------------+

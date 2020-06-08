@@ -195,10 +195,16 @@ module DE1_SoC(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR,
 	wire [23:0] readdata_left, readdata_right;
 	wire [23:0] writedata_left, writedata_right;
 
-	/* Your code goes here */
-	
-	assign writedata_left = readdata_left;
-	assign writedata_right = readdata_right;
+    always_comb begin
+        if (collision) begin
+            writedata_left = 24'b0;
+            writedata_right = 24'b0;
+        end else begin 
+            writedata_left = readdata_left;
+	        writedata_right = readdata_right;
+        end
+    end // always_comb
+
 	assign read = read_ready;
 	assign write = write_ready; 
 	
